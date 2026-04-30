@@ -4,15 +4,16 @@
 }
 
 .login-container h1 {
-  font-size: 26px;
-  color: #5f7f68;
+  font-size: 30px;
+  font-weight: 600;
+  color: #28402C;
   margin-bottom: 18px;
 }
 
 .login-container p {
   margin-bottom: 18px;
   color: #111;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .google-btn {
@@ -28,8 +29,8 @@
 
 .divider {
   text-align: center;
-  margin-bottom: 28px;
-  font-size: 11px;
+  margin-bottom: 20px;
+  font-size: 15px;
   color: #aaa;
 }
 
@@ -40,7 +41,7 @@ form {
 
 form label {
   margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -55,7 +56,7 @@ form input {
 
 .forgot {
   text-align: right;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: -4px;
   color: #2f4f3f;
 }
