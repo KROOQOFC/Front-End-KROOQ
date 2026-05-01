@@ -1,0 +1,96 @@
+.senhaRedefinida-container {
+    width: 100%;
+    max-width: 410px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: "Inter", sans-serif;
+}
+
+.senhaRedefinida-logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 42px;
+}
+
+.senhaRedefinida-icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcfce7;
+    margin-bottom: 22px;
+}
+
+.senhaRedefinida-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.senhaRedefinida-container h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #101828;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.senhaRedefinida-subtitle {
+    max-width: 330px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #667085;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 34px 0;
+}
+
+.btn-continuar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 7px;
+    background: #5f7f68;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-continuar:hover {
+    background: #4f6f58;
+}
+
+.back-login {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #667085;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.back-login:hover {
+    color: #5f7f68;
+}
+
+.back-login span {
+    font-size: 15px;
+    line-height: 1;
+}

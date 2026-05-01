@@ -1,0 +1,125 @@
+.esqueceuSenha-container {
+  width: 100%;
+  max-width: 330px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.esqueceuSenha-logo {
+  width: 210px;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+.esqueceuSenha-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbf0ff;
+  margin-bottom: 14px;
+}
+
+.esqueceuSenha-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.esqueceuSenha-container h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #101828;
+  text-align: center;
+}
+
+.esqueceuSenha-subtitle {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 0 26px;
+
+  font-size: 13px;
+  line-height: 1.45;
+  color: #667085;
+  text-align: center;
+}
+
+.esqueceuSenha-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.esqueceuSenha-campo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.esqueceuSenha-campo label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.esqueceuSenha-campo input {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 13px;
+  color: #101828;
+  background: #ffffff;
+}
+
+.esqueceuSenha-campo input::placeholder {
+  color: #98a2b3;
+}
+
+.esqueceuSenha-campo input:focus {
+  border-color: #66856f;
+  box-shadow: 0 0 0 3px rgba(102, 133, 111, 0.15);
+}
+
+.btn-forgot {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 6px;
+  background: #5F7D6A;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-forgot:hover {
+  background: #55745e;
+}
+
+.back-login {
+  margin-top: 28px;
+  font-size: 15px;
+  color: #667085;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.back-login:hover {
+  color: #344054;
+}

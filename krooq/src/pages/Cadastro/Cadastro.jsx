@@ -15,33 +15,32 @@ function Cadastro() {
         </p>
 
         <form className="cadastro-form">
-          <div className="form-group">
+          <div className="cadastro-campo">
             <label>Nome</label>
             <input type="text" placeholder="Digite seu nome" />
           </div>
 
-          <div className="form-group">
+          <div className="cadastro-campo">
             <label>Sobrenome</label>
             <input type="text" placeholder="Digite seu sobrenome" />
           </div>
 
-          <div className="form-group">
+          <div className="cadastro-campo">
             <label>Senha</label>
+            <input type="password" placeholder="Crie uma senha" />
+            <small>Deve ter pelo menos 8 caracteres.</small>
+          </div>
+
+          <div className="cadastro-campo">
+            <label>Confirme senha</label>
             <input type="password" placeholder="Digite sua senha" />
-            <span>Deve ter pelo menos 8 caracteres.</span>
+            <small>Deve ter pelo menos 8 caracteres.</small>
           </div>
 
-          <div className="form-group">
-            <label>Confirme sua senha</label>
-            <input type="password" placeholder="Confirme sua senha" />
-            <span>Deve ter pelo menos 8 caracteres.</span>
-          </div>
-
-          <label className="termos">
+          <label className="cadastro-termos">
             <input type="checkbox" />
             <span>
-              Aceito os <a href="#">Termos de Uso</a> e a{" "}
-              <a href="#">Política de Privacidade</a>.
+              Aceitar termos e condições política de privacidade
             </span>
           </label>
 
@@ -50,11 +49,12 @@ function Cadastro() {
           </button>
 
           <button type="button" className="btn-google">
-            <span>G</span> Entrar com o Google
+            <span>G</span>
+            Entrar com o Google
           </button>
 
-          <p className="login-link">
-            Já tem uma conta? <a href="#">Entrar</a>
+          <p className="cadastro-login">
+            Não tem uma conta? <a href="#">Entrar</a>
           </p>
         </form>
       </div>

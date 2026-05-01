@@ -1,118 +1,139 @@
 .cadastro-container {
   width: 100%;
-  max-width: 330px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cadastro-container h1 {
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: -3px;
-  color: #31583f;
-  margin-bottom: 4px;
-}
-
-.cadastro-container h2 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1f2933;
+.cadastro-logo {
+  display: block;
   margin-bottom: 8px;
 }
 
-.cadastro-subtitle {
-  font-size: 11px;
-  color: #6b7280;
-  margin-bottom: 22px;
+.cadastro-container h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
   text-align: center;
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+
+.cadastro-subtitle {
+  font-size: 12px;
+  color: #111827;
+  text-align: center;
+  margin: 0 0 22px;
+  line-height: 1.3;
 }
 
 .cadastro-form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
-.form-group {
+.cadastro-campo {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  margin-bottom: 11px;
 }
 
-.form-group label {
-  font-size: 11px;
-  font-weight: 600;
-  color: #1f2933;
-}
-
-.form-group input {
-  width: 100%;
-  height: 36px;
-  border: 1px solid #d6dce1;
-  border-radius: 5px;
-  padding: 0 12px;
+.cadastro-campo label {
+  display: block;
   font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.cadastro-campo input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d7dde2;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 0 14px;
+  font-size: 12px;
+  color: #111827;
   outline: none;
-  color: #1f2933;
+  font-family: inherit;
 }
 
-.form-group input::placeholder {
-  color: #a0a7ad;
+.cadastro-campo input::placeholder {
+  color: #9ca3af;
 }
 
-.form-group input:focus {
-  border-color: #31583f;
+.cadastro-campo input:focus {
+  border-color: #5f7f68;
 }
 
-.form-group span {
-  font-size: 10px;
-  color: #7a8188;
+.cadastro-campo small {
+  display: block;
+  font-size: 9px;
+  color: #111827;
+  margin-top: 5px;
+  line-height: 1.2;
 }
 
-.termos {
+.cadastro-termos {
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  margin-top: 2px;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 14px;
   font-size: 10px;
-  color: #4b5563;
+  color: #111827;
   line-height: 1.3;
 }
 
-.termos input {
-  margin-top: 2px;
-  accent-color: #31583f;
+.cadastro-termos input {
+  width: 13px ;
+  height: 13px ;
+  min-width: 13px;
+  margin: 0;
+  accent-color: #5f7f68;
+}
+
+.cadastro-termos span {
+  flex: 1;
+  font-size: 11px;
 }
 
 .btn-cadastrar {
   width: 100%;
-  height: 36px;
+  height: 42px;
   border: none;
   border-radius: 5px;
-  background: #47765a;
-  color: white;
+  background: #5f7f68;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 6px;
+  margin-bottom: 12px;
+  font-family: inherit;
 }
 
 .btn-cadastrar:hover {
-  background: #31583f;
+  background: #4d6b55;
 }
 
 .btn-google {
   width: 100%;
-  height: 36px;
-  border: 1px solid #d6dce1;
+  height: 40px;
+  border: 1px solid #d1d5db;
   border-radius: 5px;
-  background: #fff;
-  color: #1f2933;
+  background: #ffffff;
+  color: #111827;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
+  font-family: inherit;
 
   display: flex;
   align-items: center;
@@ -121,24 +142,26 @@
 }
 
 .btn-google span {
-  font-weight: 900;
-  color: #db4437;
+  color: #4285f4;
+  font-weight: 800;
 }
 
-.login-link {
-  margin-top: 14px;
-  font-size: 11px;
-  color: #6b7280;
+.cadastro-login {
+  width: 100%;
+  font-size: 14px;
+  color: #111827;
   text-align: center;
+  margin: 18px 0 0;
+  line-height: 1.2;
 }
 
-.login-link a {
-  color: #31583f;
+.cadastro-login a {
+  font-size: 14px;
+  color: #5F7D6A;
   font-weight: 700;
   text-decoration: none;
 }
 
-.cadastro-logo {
-  width: 120px;
-  margin-bottom: 8px;
+.cadastro-login a:hover {
+  text-decoration: underline;
 }
