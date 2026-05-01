@@ -1,8 +1,16 @@
+import { Link } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./Cadastro.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
 
 function Cadastro() {
+  function handleCadastro(e) {
+    e.preventDefault();
+
+    // Futuramente aqui entra a lógica de cadastro
+    console.log("Tentando cadastrar usuário");
+  }
+
   return (
     <AuthLayout>
       <div className="cadastro-container">
@@ -14,7 +22,7 @@ function Cadastro() {
           Bem-vindo de volta! Por favor, insira seus dados.
         </p>
 
-        <form className="cadastro-form">
+        <form className="cadastro-form" onSubmit={handleCadastro}>
           <div className="cadastro-campo">
             <label>Nome</label>
             <input type="text" placeholder="Digite seu nome" />
@@ -52,11 +60,12 @@ function Cadastro() {
             <span>G</span>
             Entrar com o Google
           </button>
-
-          <p className="cadastro-login">
-            Não tem uma conta? <a href="#">Entrar</a>
-          </p>
         </form>
+
+        <p className="cadastro-login">
+          Já tem uma conta?{" "}
+          <Link to="/escolha-login">Entrar</Link>
+        </p>
       </div>
     </AuthLayout>
   );

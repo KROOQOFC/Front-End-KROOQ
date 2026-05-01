@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./VerificacaoEmail.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
@@ -7,17 +8,17 @@ function VerificacaoEmail() {
   return (
     <AuthLayout>
       <div className="verificacaoEmail-container">
-        <img 
-          src={Banner} 
-          alt="Krooq" 
-          className="verificacaoEmail-logo" 
+        <img
+          src={Banner}
+          alt="Krooq"
+          className="verificacaoEmail-logo"
         />
 
         <div className="verificacaoEmail-icon-box">
-          <img 
-            src={IconEmail} 
-            alt="Ícone de e-mail" 
-            className="verificacaoEmail-icon" 
+          <img
+            src={IconEmail}
+            alt="Ícone de e-mail"
+            className="verificacaoEmail-icon"
           />
         </div>
 
@@ -27,18 +28,18 @@ function VerificacaoEmail() {
           Abra o aplicativo de e-mail para verificar
         </p>
 
-        <button type="button" className="verificacaoEmail-button">
+        <Link to="/nova-senha" className="verificacaoEmail-button">
           Abrir aplicativo de e-mail
-        </button>
+        </Link>
 
         <p className="verificacaoEmail-resend">
           Não recebeu o e-mail?{" "}
-          <a href="/verificacao-email">Clique para reenviar</a>
+          <Link to="/esqueceu-senha">Clique para reenviar</Link>
         </p>
 
-        <a href="/login" className="verificacaoEmail-back">
+        <Link to="/escolha-login" className="verificacaoEmail-back">
           Voltar para o login
-        </a>
+        </Link>
       </div>
     </AuthLayout>
   );

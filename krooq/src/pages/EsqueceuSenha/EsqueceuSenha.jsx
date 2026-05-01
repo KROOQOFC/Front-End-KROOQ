@@ -1,41 +1,50 @@
+import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./EsqueceuSenha.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
 import IconKey from "../../assets/icon_chave.png";
 
 function EsqueceuSenha() {
-    return (
-        <AuthLayout>
-            <div className="esqueceuSenha-container">
-                <img src={Banner} alt="Krooq" className="esqueceuSenha-logo" />
+  const navigate = useNavigate();
 
-                <div className="esqueceuSenha-icon-box">
-                    <img src={IconKey} alt="Ícone chave" className="esqueceuSenha-icon" />
-                </div>
+  function handleSubmit(e) {
+    e.preventDefault();
 
-                <h2>Esqueceu a senha?</h2>
+    navigate("/verificacao-email");
+  }
 
-                <p className="esqueceuSenha-subtitle">
-                    Não se preocupe, enviaremos instruções de redefinição.
-                </p>
+  return (
+    <AuthLayout>
+      <div className="esqueceuSenha-container">
+        <img src={Banner} alt="Krooq" className="esqueceuSenha-logo" />
 
-                <form className="esqueceuSenha-form">
-                    <div className="esqueceuSenha-campo">
-                        <label>E-mail</label>
-                        <input type="email" placeholder="Digite seu e-mail" />
-                    </div>
+        <div className="esqueceuSenha-icon-box">
+          <img src={IconKey} alt="Ícone chave" className="esqueceuSenha-icon" />
+        </div>
 
-                    <button type="button" className="btn-forgot">
-                        Redefinir senha
-                    </button>
-                </form>
+        <h2>Esqueceu a senha?</h2>
 
-                <a href="/login" className="back-login">
-                    Voltar para o login
-                </a>
-            </div>
-        </AuthLayout>
-    );
+        <p className="esqueceuSenha-subtitle">
+          Não se preocupe, enviaremos instruções de redefinição.
+        </p>
+
+        <form className="esqueceuSenha-form" onSubmit={handleSubmit}>
+          <div className="esqueceuSenha-campo">
+            <label>E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" />
+          </div>
+
+          <button type="submit" className="btn-forgot">
+            Redefinir senha
+          </button>
+        </form>
+
+        <Link to="/escolha-login" className="back-login">
+          Voltar para o login
+        </Link>
+      </div>
+    </AuthLayout>
+  );
 }
 
 export default EsqueceuSenha;
