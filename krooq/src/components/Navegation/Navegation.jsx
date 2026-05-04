@@ -1,24 +1,44 @@
-import "./Navegation.css"
-import logoTipo from "../../assets/logoTipo.png"
-
+import { useState } from "react";
+import "./Navegation.css";
+import logoTipo from "../../assets/logoTipo.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navegation() {
-    return (
-        <header>
-           
-            <nav className="conteiner">
-                 <img src= {logoTipo}/>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Projetos</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Profissionais</a></li>
-                    <li><a href="">Jornada</a></li>
-                </ul>
-                 <button type="button" className="btn">Cadastrar</button>
-            </nav>
+  const [menuAberto, setMenuAberto] = useState(false);
+  const navigate = useNavigate();
 
-        </header>
-    )
+  return (
+    <header className="header">
+      <nav className="conteiner">
+
+        <img src={logoTipo} alt="Logo KROOQ" className="logo"
+          onClick={() => setMenuAberto(!menuAberto)}/>
+
+       
+        <ul className={menuAberto ? "menu ativo" : "menu"}>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/projetos">Projetos</Link></li>
+          <li><Link to="/servicos">Serviços</Link></li>
+          <li><Link to="/profissionais">Profissionais</Link></li>
+          <li><Link to="/jornada">Jornada</Link></li>
+          {/*desktop*/}
+          <li>
+            <button
+              type="button"
+              className="btn desktop-btn"
+              onClick={() => navigate("/escolha-login")}>Cadastrar</button>
+          </li>
+        </ul>
+
+
+        {/* mobile*/}
+        <Link to="/escolha-login" className="btn mobile-btn">
+          Cadastrar
+        </Link>
+
+      </nav>
+    </header>
+  );
 }
-export default Navegation
+
+export default Navegation;

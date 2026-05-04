@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.Container-home {
+    min-height: 100vh;
+    background-image:
+        url("../../assets/FundoHome1.png"),
+        url("../../assets/FundoHome2.png");
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-blend-mode: multiply;
+    /*mescla*/
+}
+
+.alinhar {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+
+}
+
+.alinhar h1 {
+    color: #5F7D6A;
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.1;
+    margin-bottom: 15px;
+
+}
+
+.alinhar p {
+    color: #5F7D6A;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.layoubtn {
+    position: relative;
+    right: 5px;
+}
+
+#container-paragrafo {
+  position: absolute; /* move só ele */
+  top: 75%;
+  left: 50%;
+  transform: translateX(55%);
+  max-width: 400px;
+}
+
+#container-paragrafo p {
+  background-color: rgba(186, 168, 136, 0.8);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  max-width: 650px;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+
+
+.cards-section {
+  background-color: #fff;
+  padding: 90px 8% 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.titulo-cards {
+  max-width: 850px;
+  margin: 0 auto 70px;
+  text-align: center;
+  color: #5F7D6A;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  max-width: 1050px;
+  margin: 0 auto;
+
+}
+
+.card-info {
+  width: 33.33%;
+  padding: 0 28px;
+  border-right: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.card-info:last-child {
+  border-right: none;
+}
+
+.card-info h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000;
+}
+
+.titulo-cards {
+    font-size: 17px;
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+.destaque {
+  color: #5F7D6A; 
+  font-weight: 600; 
+}
+
+.card-info p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+
+.grid-section {
+  background: #cfc0a3;
+  font-family: "Poppins", sans-serif;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* bloco */
+.box {
+  aspect-ratio: 1 / 1; 
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* remova bordas ex */
+.grid .box:nth-child(3n) {
+  border-right: none;
+}
+
+.grid .box:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+
+.branco {
+  background: #fff;
+  color: #333;
+  
+}
+
+.bege {
+  background: #cfc0a3;
+  color: #5F7D6A;
+}
+
+.box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.box p {
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* img*/
+.imagem {
+  background-image: url("../../assets/CasaHome.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+

@@ -1,0 +1,33 @@
+.card-info {
+  padding: 30px;
+  min-height: 180px;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-info:last-child {
+  border-right: none;
+}
+
+/* texto*/
+.card-info h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-info p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔥 fundo card*/
+.estudio {
+  background-image: url("../../assets/CasaHome2.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.95;
+}
