@@ -11,7 +11,7 @@ import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Navigate to="/escolha-login" />} />
 
         <Route path="/escolha-login" element={<EscolhaLogin />} />

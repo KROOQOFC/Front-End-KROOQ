@@ -1,0 +1,43 @@
+.galeria-home {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 20px 70px;
+  font-family: "Inter", sans-serif;
+}
+
+.galeria-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.galeria-texto {
+  margin-bottom: 22px;
+}
+
+.galeria-texto h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2f5f44;
+  margin-bottom: 8px;
+}
+
+.galeria-texto p {
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.galeria-imagem-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.galeria-imagem {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
