@@ -1,8 +1,9 @@
-import "./Rodape.css"
-import logoNome from "../../assets/logoNome.png"
-import redeinsta from "../../assets/instagram.png"
-import redelinkedin from "../../assets/linkedin.png"
-import redegit from "../../assets/git.png"
+import "./Rodape.css";
+import logoNome from "../../assets/logoNome.png";
+import redeinsta from "../../assets/instagram.png";
+import redelinkedin from "../../assets/linkedin.png";
+import redegit from "../../assets/git.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function Rodape() {
   return (
@@ -37,10 +38,10 @@ function Rodape() {
         <div className="links">
           <h3>Links Rápidos</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Privacidade</a></li>
+            <li><Link to="/Home">Home</Link></li>
+            <li><Link to="/">Sobre Nós</Link></li>
+            <li><Link to="/">Contato</Link></li>
+            <li><Link to="/">Privacidade</Link></li>
           </ul>
         </div>
 
