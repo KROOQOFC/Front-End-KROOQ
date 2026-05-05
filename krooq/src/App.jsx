@@ -13,20 +13,11 @@ function App() {
   return (
 
     <BrowserRouter>
-     <Routes>
-        
-    <Route path="/" element={<Navigate to="/escolha-login" />} />
 
-    <Route path="/escolha-login" element={<EscolhaLogin />} />
+      <Navegation />
 
-    <Route path="/login" element={<Navigate to="/escolha-login" />} />
-    <Route path="/login/:tipoUsuario" element={<Login />} />
-
-      <Route path="/cadastro" element={<Cadastro />} />
-      <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
-      <Route path="/nova-senha" element={<NovaSenha />} />
-      <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
-      <Route path="/verificacao-email" element={<VerificacaoEmail />} />
+      <Routes>
+        <Route path="/" element={<HomeFront />} />
       </Routes>
      </BrowserRouter>
   );
