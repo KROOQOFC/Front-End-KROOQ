@@ -2,6 +2,11 @@ import "./HomeFront.css";
 import DoisButtons from "../../components/DoisButtons/DoisButtons";
 import Navegation from "../../components/Navegation/Navegation";
 import Card from "../../components/Card/Card";
+import CasaBasker from "../../assets/CasaBasker.png";
+import CasaFerrara from "../../assets/CasaFerrara.png"
+import ButtonGreen from "../../components/ButtonGreen/ButtonGreen"
+import CasaAlmeria from "../../assets/CasaAlmeria .png"
+import Rodape from "../../components/Rodape/Rodape"
 
 function HomeFront() {
   return (
@@ -82,7 +87,7 @@ function HomeFront() {
 
     <div className="box bege">
       <p>
-        Do visão à execução, cada projeto soma nosso repertório
+        Da visão à execução, cada projeto soma nosso repertório
         em métodos, processos e resultados.
       </p>
     </div>
@@ -100,6 +105,97 @@ function HomeFront() {
     <div className="box imagem"></div>
 
   </div>
+
+</section>
+<section className="projetos-section">
+  <div className="header-projetos">
+    <div className="linha-projetos"></div>
+
+    <div className="texto-projetos">
+      <h2>Projetos Atuais (Em Andamento)</h2>
+      <p>
+        Damos vida a visões arquitetônicas através de espaços que unem design, funcionalidade e contexto. Cada projeto reflete nosso compromisso com o detalhe, a inovação e o apelo atemporal.
+      </p>
+    </div>
+  </div>
+
+  <div className="linha-decorativa"></div>
+
+  <div className="projeto-item">
+    <div className="numero-projeto">
+      <h2>01</h2>
+      <p>
+        Residencial <br />
+        Basker <br />
+        430 m² <br />
+        Em Construção <br />
+        2025
+      </p>
+    </div>
+
+    <img src={CasaBasker} alt="Basker Residence" />
+
+    <div className="descricao-projeto">
+      <h3>Basker Residence</h3>
+      <p>
+        Elevado sobre a baía, esta residência une elegância moderna e geometria
+        orgânica. O design qualifica materiais refinados e permite natural,
+        criando uma fusão harmônica entre forma e sofisticação.
+      </p>
+      <ButtonGreen/>
+    </div>
+  </div>
+
+  <div className="projeto-item">
+    <div className="numero-projeto">
+      <h2>02</h2>
+      <p>
+        Residencial <br />
+        Ferrara <br />
+        430 m² <br />
+        Em Construção <br />
+        2025
+      </p>
+    </div>
+
+    <img src={CasaFerrara} alt="Casa Ferrara" />
+
+    <div className="descricao-projeto">
+      <h3>Casa Ferrara</h3>
+      <p>
+        A Casa Ferrara redefine o morar moderno com uma arquitetura elegante,
+        ampla e confortável. Seu design une estrutura contemporânea com fluidez,
+        criando uma experiência sofisticada.
+      </p>
+      <ButtonGreen/>
+    </div>
+  </div>
+</section>
+<section className="Casaalmeria">
+<img src= {CasaAlmeria} alt="" />
+
+  <div className="overlay">
+
+    <span className="tag">Projeto em Destaque</span>
+
+    <h2>Casa Almeria</h2>
+
+    <p>
+      Casa Almeria é uma residência contemporânea que combina
+      geometria arrojada com o ambiente natural.
+    </p>
+
+    <div className="botoes">
+      <button className="btn1">VER DETALHES</button>
+      <button className="btn2">PROJETO</button>
+    </div>
+
+  </div>
+</section>
+
+
+<section className="Footer-rodape">
+<Rodape/>
 
 </section>
     </main>

@@ -10,32 +10,30 @@ function Navegation() {
   return (
     <header className="header">
       <nav className="conteiner">
+        <img
+          src={logoTipo}
+          alt="Logo KROOQ"
+          className="logo"
+          onClick={() => setMenuAberto(!menuAberto)}
+        />
 
-        <img src={logoTipo} alt="Logo KROOQ" className="logo"
-          onClick={() => setMenuAberto(!menuAberto)}/>
-
-       
         <ul className={menuAberto ? "menu ativo" : "menu"}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projetos">Projetos</Link></li>
           <li><Link to="/servicos">Serviços</Link></li>
           <li><Link to="/profissionais">Profissionais</Link></li>
           <li><Link to="/jornada">Jornada</Link></li>
-          {/*desktop*/}
-          <li>
+
+          <li className="btn-area">
             <button
               type="button"
-              className="btn desktop-btn"
-              onClick={() => navigate("/escolha-login")}>Cadastrar</button>
+              className="btn"
+              onClick={() => navigate("/escolha-login")}
+            >
+              Cadastrar
+            </button>
           </li>
         </ul>
-
-
-        {/* mobile*/}
-        <Link to="/escolha-login" className="btn mobile-btn">
-          Cadastrar
-        </Link>
-
       </nav>
     </header>
   );

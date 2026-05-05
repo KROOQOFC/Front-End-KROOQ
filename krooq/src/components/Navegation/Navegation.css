@@ -26,26 +26,23 @@
 
 .logo {
   height: 70px;
-
+  cursor: pointer;
 }
-
 
 .menu {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 35px;
-   margin-left: 50px; /* 🔥 empurra pra direita */
-  padding: 0 ;
-
+  margin: 0;
+  padding: 0;
 }
 
-.menu li{
-display: flex;          
-  align-items: center; 
- 
-
+.menu li {
+  display: flex;
+  align-items: center;
 }
-  
+
 .menu a {
   position: relative;
   text-decoration: none;
@@ -62,7 +59,7 @@ display: flex;
   width: 0;
   height: 2px;
   background: #4F6F52;
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
 .menu a:hover::after {
@@ -77,29 +74,25 @@ display: flex;
   cursor: pointer;
   color: white;
   font-family: "Poppins", sans-serif;
-  transition: 0.3s ease;
-  transition: all 0.3s ease;
-  transform: scale(0.9);
-  
+  font-size: 14px;
+  text-decoration: none;
 
+  transform: scale(0.95);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #6f917d;
-  transform: translateY(-1px) scale(1.0);
+  transform: translateY(-1px) scale(1);
 }
 
-.mobile-btn {
+.desktop-btn-area {
+  margin-left: 50px;
+}
+
+.mobile-btn-area {
   display: none;
-  color: white;
-  text-decoration: none;
-
 }
-.menu li:last-child {
-  margin-left: 90px;
-}
-
-
 
 /* tablet / celular */
 @media (max-width: 900px) {
@@ -107,33 +100,59 @@ display: flex;
     height: auto;
     min-height: 60px;
     flex-direction: column;
-    padding: 10px 25px;
+    justify-content: center;
+    padding: 12px 25px;
   }
 
   .logo {
-    height: 65px;
-  }
-
-  .desktop-btn {
-    display: none;
+    height: 60px;
   }
 
   .menu {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
+    gap: 18px;
     width: 100%;
-    padding: 15px 0 10px;
+    margin: 0;
+    padding: 18px 0 10px;
   }
 
   .menu.ativo {
     display: flex;
   }
 
+  .menu li {
+    margin: 0;
+  }
+
+  .menu a {
+    font-size: 14px;
+    text-align: center;
+
+  }
+
+  .desktop-btn-area {
+    display: none;
+  }
+
+  .mobile-btn-area {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .menu.ativo .mobile-btn-area {
+    display: flex;
+  }
+
   .mobile-btn {
-    display: block;
-    margin-top: 5px;
+    display: inline-block;
+    padding: 9px 26px;
+    border-radius: 18px;
+    color: white;
   }
 }
 
@@ -141,23 +160,23 @@ display: flex;
 @media (max-width: 480px) {
   .conteiner {
     width: 90%;
-    padding: 8px 20px;
+    padding: 10px 20px;
   }
 
   .logo {
     height: 55px;
   }
 
+  .menu {
+    gap: 16px;
+  }
+
   .menu a {
     font-size: 13px;
-    
   }
 
   .btn {
-    padding: 8px 18px;
+    padding: 8px 20px;
     font-size: 13px;
-     color: #fff;
-    
-   
   }
 }

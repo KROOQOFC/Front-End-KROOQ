@@ -7,10 +7,8 @@
     color: white;
     font-family: "Poppins", sans-serif;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.40);
-
-    width: 120px; /* 🔥 igualei */
+    width: 120px; 
     height: 35px;
-
     font-size: 12px;
     transition: all 0.3s ease;
     transform: scale(0.9);
@@ -31,7 +29,7 @@
     font-family: "Poppins", sans-serif;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.40);
 
-    width: 120px; /* 🔥 já estava certo */
+    width: 120px; 
     height: 35px;
 
     font-size: 12px;

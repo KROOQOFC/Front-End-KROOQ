@@ -189,11 +189,14 @@ footer {
   align-items: center;
   justify-content: center;
   height: 100%;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .input-group button:hover {
-  background: #eaeaea;
+   background-color: #5F7D6A;
+  color: white;
+  transform: translateY(-2px) scale(1);
+  border-color: #5F7D6A;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -204,9 +207,6 @@ footer {
   font-size: 11px;
   color: #ddd;
 }
-
-
-
 
 /* Telas grandes */
 @media (min-width: 1200px) {
