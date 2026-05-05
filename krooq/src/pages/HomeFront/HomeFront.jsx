@@ -7,6 +7,7 @@ import CasaFerrara from "../../assets/CasaFerrara.png"
 import ButtonGreen from "../../components/ButtonGreen/ButtonGreen"
 import CasaAlmeria from "../../assets/CasaAlmeria .png"
 import Rodape from "../../components/Rodape/Rodape"
+import GaleriaHome from "../../components/GaleriaHome/GaleriaHome";
 
 function HomeFront() {
   return (
@@ -192,6 +193,8 @@ function HomeFront() {
 
   </div>
 </section>
+
+<GaleriaHome />
 
 
 <section className="Footer-rodape">
