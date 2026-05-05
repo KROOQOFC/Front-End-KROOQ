@@ -8,12 +8,14 @@ import NovaSenha from "./pages/NovaSenha/NovaSenha";
 import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
+import Projetos from "./pages/Projetos/Projetos";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeFront />} />
+        <Route path="/projetos" element={<Projetos />} />
 
         <Route path="/escolha-login" element={<EscolhaLogin />} />
         <Route path="/login/:tipoUsuario" element={<Login />} />

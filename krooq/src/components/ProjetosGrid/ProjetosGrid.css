@@ -1,0 +1,164 @@
+.projetos-grid-section {
+  width: 100%;
+  background: #7f9582;
+  padding: 28px 36px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.projetos-grid-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.projetos-grid-header {
+  margin-bottom: 28px;
+}
+
+.projetos-grid-header h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+
+.galeria-projetos {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.imagem-principal,
+.imagem-secundaria {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.imagem-principal {
+  height: 530px;
+}
+
+.imagens-laterais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  height: 530px;
+}
+
+.imagem-secundaria {
+  height: 100%;
+}
+
+.imagem-principal img,
+.imagem-secundaria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Se quiser ajustar o enquadramento manualmente */
+.imagem-principal img {
+  object-position: center;
+}
+
+.imagem-secundaria img {
+  object-position: center;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 78px;
+  height: 78px;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.estatisticas-projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  padding: 34px 20px 22px;
+}
+
+.estatistica-item {
+  text-align: center;
+  min-width: 180px;
+}
+
+.estatistica-item h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+.estatistica-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.divisor {
+  width: 1px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 1024px) {
+  .galeria-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .imagem-principal {
+    height: 420px;
+  }
+
+  .imagens-laterais {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projetos-grid-section {
+    padding: 20px 16px 0;
+  }
+
+  .imagem-principal {
+    height: 300px;
+  }
+
+  .imagens-laterais {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .imagem-secundaria {
+    height: 240px;
+  }
+
+  .estatisticas-projetos {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .divisor {
+    width: 60px;
+    height: 1px;
+  }
+}
