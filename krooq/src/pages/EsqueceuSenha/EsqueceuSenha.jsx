@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./EsqueceuSenha.css";
@@ -7,8 +8,38 @@ import IconKey from "../../assets/icon_chave.png";
 function EsqueceuSenha() {
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const [emailRecuperacao, setEmailRecuperacao] = useState("");
+  const [mensagemErro, setMensagemErro] = useState("");
+
+  function atualizarEmailRecuperacao(evento) {
+    setEmailRecuperacao(evento.target.value);
+  }
+
+  function verificarEmailRecuperacao() {
+    if (!emailRecuperacao.trim()) {
+      return "Informe seu e-mail para continuar.";
+    }
+
+    if (!emailRecuperacao.includes("@")) {
+      return "Digite um e-mail válido contendo @.";
+    }
+
+    return "";
+  }
+
+  function enviarInstrucaoDeSenha(evento) {
+    evento.preventDefault();
+
+    const erroEncontrado = verificarEmailRecuperacao();
+
+    if (erroEncontrado) {
+      setMensagemErro(erroEncontrado);
+      return;
+    }
+
+    setMensagemErro("");
+
+    console.log("Enviando instruções para:", emailRecuperacao);
 
     navigate("/verificacao-email");
   }
@@ -28,10 +59,23 @@ function EsqueceuSenha() {
           Não se preocupe, enviaremos instruções de redefinição.
         </p>
 
-        <form className="esqueceuSenha-form" onSubmit={handleSubmit}>
+        <form className="esqueceuSenha-form" onSubmit={enviarInstrucaoDeSenha}>
           <div className="esqueceuSenha-campo">
             <label>E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" />
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              value={emailRecuperacao}
+              onChange={atualizarEmailRecuperacao}
+              className={mensagemErro ? "input-com-erro" : ""}
+            />
+
+            {mensagemErro && (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagemErro}</p>
+              </div>
+            )}
           </div>
 
           <button type="submit" className="btn-forgot">

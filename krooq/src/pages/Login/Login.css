@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+.google-btn:hover {
+  background: #4d6b55;
+}
+
 .divider {
   text-align: center;
   margin-bottom: 20px;
@@ -34,24 +38,37 @@
   color: #aaa;
 }
 
-form {
+.login-form {
   display: flex;
   flex-direction: column;
 }
 
-form label {
+.login-campo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.login-campo label {
   margin-bottom: 6px;
   font-size: 15px;
   font-weight: 600;
 }
 
-form input {
+.login-campo input {
   height: 36px;
   padding: 0 10px;
-  margin-bottom: 12px;
   border: none;
   background: #e6eee9;
   border-radius: 3px;
+  outline: none;
+  font-family: inherit;
+}
+
+.login-campo input:focus {
+  border: 1px solid #5f7f68;
+  background: #ffffff;
 }
 
 .forgot {
@@ -59,6 +76,11 @@ form input {
   font-size: 16px;
   margin-top: -4px;
   color: #2f4f3f;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
 }
 
 .login-btn {
@@ -68,10 +90,77 @@ form input {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  color: #111827;
+  font-weight: 700;
+}
+
+.login-btn:hover {
+  background: #b99d73;
 }
 
 .register {
   margin-top: 18px;
   font-size: 11px;
   text-align: center;
+}
+
+.register a {
+  color: #5F7D6A;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+.input-com-erro {
+  border: 1px solid #dc2626 !important;
+  background-color: #fff7f7 !important;
+}
+
+.input-com-erro:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.caixa-mensagem-erro {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  margin-top: 7px;
+  padding: 8px 10px;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-left: 4px solid #dc2626;
+  border-radius: 6px;
+}
+
+.caixa-mensagem-erro span {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dc2626;
+  color: #ffffff;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.caixa-mensagem-erro p {
+  margin: 0;
+  color: #991b1b;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
 }

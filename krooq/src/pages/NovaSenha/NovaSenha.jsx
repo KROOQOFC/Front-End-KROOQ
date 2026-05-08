@@ -1,4 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./NovaSenha.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
@@ -7,8 +8,58 @@ import IconKey from "../../assets/icon_chave.png";
 function NovaSenha() {
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const [dadosNovaSenha, setDadosNovaSenha] = useState({
+    novaSenha: "",
+    confirmarNovaSenha: "",
+  });
+
+  const [mensagensErro, setMensagensErro] = useState({});
+
+  function atualizarCampoDaSenha(evento) {
+    const { name, value } = evento.target;
+
+    setDadosNovaSenha({
+      ...dadosNovaSenha,
+      [name]: value,
+    });
+  }
+
+  function verificarCamposDaNovaSenha() {
+    const errosEncontrados = {};
+
+    if (!dadosNovaSenha.novaSenha) {
+      errosEncontrados.novaSenha = "Crie uma nova senha para continuar.";
+    } else if (dadosNovaSenha.novaSenha.length < 8) {
+      errosEncontrados.novaSenha =
+        "A nova senha precisa ter pelo menos 8 caracteres.";
+    }
+
+    if (!dadosNovaSenha.confirmarNovaSenha) {
+      errosEncontrados.confirmarNovaSenha =
+        "Confirme sua nova senha para continuar.";
+    } else if (
+      dadosNovaSenha.confirmarNovaSenha !== dadosNovaSenha.novaSenha
+    ) {
+      errosEncontrados.confirmarNovaSenha =
+        "As senhas precisam ser iguais.";
+    }
+
+    return errosEncontrados;
+  }
+
+  function redefinirSenha(evento) {
+    evento.preventDefault();
+
+    const erros = verificarCamposDaNovaSenha();
+
+    if (Object.keys(erros).length > 0) {
+      setMensagensErro(erros);
+      return;
+    }
+
+    setMensagensErro({});
+
+    console.log("Nova senha cadastrada com sucesso:", dadosNovaSenha);
 
     navigate("/senha-redefinida");
   }
@@ -22,34 +73,58 @@ function NovaSenha() {
           <img src={IconKey} alt="Ícone chave" className="novaSenha-icon" />
         </div>
 
-        <h2>Definir nova senha</h2>
+        <h2>Nova senha</h2>
 
         <p className="novaSenha-subtitle">
-          Sua nova senha deve ser diferente das senhas usadas anteriormente.
+          Sua nova senha deve ser diferente da senha usada anteriormente.
         </p>
 
-        <form className="novaSenha-form" onSubmit={handleSubmit}>
+        <form className="novaSenha-form" onSubmit={redefinirSenha}>
           <div className="novaSenha-campo">
-            <label>Senha</label>
+            <label>Nova senha</label>
             <input
               type="password"
-              placeholder="Crie uma nova senha"
+              name="novaSenha"
+              placeholder="Digite sua nova senha"
+              value={dadosNovaSenha.novaSenha}
+              onChange={atualizarCampoDaSenha}
+              className={mensagensErro.novaSenha ? "input-com-erro" : ""}
             />
-          </div>
 
-          <p className="novaSenha-info">
-            Deve ter pelo menos 8 caracteres.
-          </p>
+            {mensagensErro.novaSenha ? (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.novaSenha}</p>
+              </div>
+            ) : (
+              <small>Deve ter pelo menos 8 caracteres.</small>
+            )}
+          </div>
 
           <div className="novaSenha-campo">
-            <label>Confirme Senha</label>
+            <label>Confirmar senha</label>
             <input
               type="password"
-              placeholder="Digite sua senha novamente"
+              name="confirmarNovaSenha"
+              placeholder="Digite a senha novamente"
+              value={dadosNovaSenha.confirmarNovaSenha}
+              onChange={atualizarCampoDaSenha}
+              className={
+                mensagensErro.confirmarNovaSenha ? "input-com-erro" : ""
+              }
             />
+
+            {mensagensErro.confirmarNovaSenha ? (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.confirmarNovaSenha}</p>
+              </div>
+            ) : (
+              <small>Digite a mesma senha informada acima.</small>
+            )}
           </div>
 
-          <button type="submit" className="btn-reset">
+          <button type="submit" className="btn-resetar">
             Redefinir senha
           </button>
         </form>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./Login.css";
@@ -13,10 +14,50 @@ function Login() {
 
   const tipoFormatado = nomesUsuarios[tipoUsuario] || "Usuário";
 
-  function handleLogin(e) {
-    e.preventDefault();
+  const [dadosLogin, setDadosLogin] = useState({
+    email: "",
+    senha: "",
+  });
 
-    console.log("Tentando fazer login como:", tipoFormatado);
+  const [mensagensErro, setMensagensErro] = useState({});
+
+  function atualizarCampoDoLogin(evento) {
+    const { name, value } = evento.target;
+
+    setDadosLogin({
+      ...dadosLogin,
+      [name]: value,
+    });
+  }
+
+  function verificarCamposDoLogin() {
+    const errosEncontrados = {};
+
+    if (!dadosLogin.email.trim()) {
+      errosEncontrados.email = "Informe seu e-mail para continuar.";
+    } else if (!dadosLogin.email.includes("@")) {
+      errosEncontrados.email = "Digite um e-mail válido contendo @.";
+    }
+
+    if (!dadosLogin.senha) {
+      errosEncontrados.senha = "Informe sua senha para continuar.";
+    }
+
+    return errosEncontrados;
+  }
+
+  function entrarNaConta(evento) {
+    evento.preventDefault();
+
+    const erros = verificarCamposDoLogin();
+
+    if (Object.keys(erros).length > 0) {
+      setMensagensErro(erros);
+      return;
+    }
+
+    setMensagensErro({});
+
   }
 
   return (
@@ -34,12 +75,44 @@ function Login() {
           <span>ou entre com seu e-mail</span>
         </div>
 
-        <form onSubmit={handleLogin}>
-          <label>Email</label>
-          <input type="email" placeholder="Digite seu e-mail" />
+        <form className="login-form" onSubmit={entrarNaConta}>
+          <div className="login-campo">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              value={dadosLogin.email}
+              onChange={atualizarCampoDoLogin}
+              className={mensagensErro.email ? "input-com-erro" : ""}
+            />
 
-          <label>Senha</label>
-          <input type="password" placeholder="Digite sua senha" />
+            {mensagensErro.email && (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.email}</p>
+              </div>
+            )}
+          </div>
+
+          <div className="login-campo">
+            <label>Senha</label>
+            <input
+              type="password"
+              name="senha"
+              placeholder="Digite sua senha"
+              value={dadosLogin.senha}
+              onChange={atualizarCampoDoLogin}
+              className={mensagensErro.senha ? "input-com-erro" : ""}
+            />
+
+            {mensagensErro.senha && (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.senha}</p>
+              </div>
+            )}
+          </div>
 
           <Link to="/esqueceu-senha" className="forgot">
             Esqueceu a senha?
@@ -51,8 +124,7 @@ function Login() {
         </form>
 
         <p className="register">
-          Ainda não tem uma conta?{" "}
-          <Link to="/cadastro">Cadastre-se</Link>
+          Ainda não tem uma conta? <Link to="/cadastro">Cadastre-se</Link>
         </p>
       </div>
     </AuthLayout>
