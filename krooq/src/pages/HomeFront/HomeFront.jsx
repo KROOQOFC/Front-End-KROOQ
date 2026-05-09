@@ -194,11 +194,12 @@ function HomeFront() {
   </div>
 </section>
 
-<GaleriaHome />
-
+<section className="galeria-section">
+  <GaleriaHome />
+</section>
 
 <section className="Footer-rodape">
-<Rodape/>
+  <Rodape/>
 
 </section>
     </main>
