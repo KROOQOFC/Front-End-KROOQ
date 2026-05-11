@@ -1,5 +1,3 @@
-
-
 .Container-home {
   min-height: 100vh;
   background-image:
@@ -42,7 +40,7 @@
 
 #container-paragrafo {
   position: absolute;
-  
+
   top: 75%;
   left: 50%;
   transform: translateX(55%);
@@ -157,7 +155,7 @@
 .projetos-section {
   background: #cfc0a3;
   padding: 60px 8% 90px;
- 
+
 }
 
 .header-projetos {
@@ -197,7 +195,7 @@
   justify-self: end;
   transform: translateX(-60px);
   margin-top: -100px;
-  
+
 }
 
 .texto-projetos h2 {
@@ -316,7 +314,8 @@
   opacity: 0.8;
   margin-bottom: 15px;
   padding: 10px 18px;
-  text-align: center;justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .overlay h2 {
@@ -356,11 +355,13 @@
   padding: 10px 18px;
   border-radius: 10px;
   cursor: pointer;
-  transform: scale(0.95); 
-  transition: background 0.3s ease, color 0.3s ease, 
-  transform 0.3s ease, 
-  border-color 0.3s ease;
-}/*Estava mechendo o texto*/
+  transform: scale(0.95);
+  transition: background 0.3s ease, color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/*Estava mechendo o texto*/
 
 .btn1:hover {
   background-color: #D8C7AD;
@@ -373,13 +374,13 @@
   color: white;
 
   transform: translateY(-2px) scale(1);
-  border-color: #5F7D6A; 
+  border-color: #5F7D6A;
 }
 
 
 
 .galeria-section {
-  background: #f5f5f5; 
+  background: #f5f5f5;
   padding: 60px 0;
 }
 
@@ -401,4 +402,412 @@
   color: #5F7D6A;
   line-height: 1.6;
   max-width: 500px;
+}
+
+
+
+/* RResponsivo celular*/
+@media (max-width: 600px) {
+
+  .Container-home {
+    min-height: 100vh;
+    background-size: cover, cover;
+    background-position: center top, center;
+   
+  }
+
+  .alinhar {
+    position: absolute;
+    top: 22%;
+    left: 20px;
+    transform: none;
+    max-width: calc(100% - 40px);
+  }
+
+  .alinhar h1 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .alinhar p {
+    font-size: 13px;
+  }
+
+  .layoubtn {
+    margin-top: 20px;
+  }
+
+  #container-paragrafo {
+    position: absolute;
+    top: 58%;
+    left: 20px;
+    transform: none;
+    max-width: calc(100% - 40px);
+    margin-top: 5px;
+  }
+
+  #container-paragrafo p {
+    font-size: 12px;
+    padding: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .titulo-cards {
+    margin-top: -5px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-section {
+    margin-top: -40px;
+  }
+
+  .box {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+
+  .grid .box:nth-last-child(3) {
+    border-bottom: 1px solid white;
+  }
+  
+
+  .linha-projetos {
+    display: none;
+  }
+
+  .header-projetos::before {
+    display: none;
+  }
+
+  .texto-projetos {
+    transform: none;
+    margin-top: 0;
+    justify-self: center;
+  }
+
+  .texto-projetos h2,
+  .texto-projetos p {
+    text-align: center;
+  }
+
+  .header-projetos {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .projeto-item {
+    grid-template-columns: 1fr;
+
+  }
+
+  .projeto-item img {
+    height: 300px;
+  }
+
+  .numero-projeto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+  }
+
+  .numero-projeto h2,
+  .numero-projeto p {
+    transform: none;
+
+  }
+
+  .texto-projetos {
+    transform: none;
+    margin-top: 0;
+  }
+
+  .texto-projetos h2,
+  .texto-projetos p {
+    text-align: center;
+  }
+
+  .descricao-projeto p {
+    max-width: 100%;
+  }
+
+  .Casaalmeria {
+    height: 600px;
+  }
+
+  .Casaalmeria img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+/* Responsivo tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .Container-home {
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+
+  .alinhar {
+    top: 28%;
+    left: 50px;
+    max-width: 600px;
+  }
+
+  .alinhar h1 {
+    font-size: 48px;
+  }
+
+  .alinhar p {
+    font-size: 15px;
+  }
+
+  #container-paragrafo {
+    top: 62%;
+    left: 45%;
+    transform: translateX(0);
+    max-width: 360px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   .grid .box:nth-child(1),
+  .grid .box:nth-child(3) {
+    border-right: 1px solid white !important;
+  }
+
+  .linha-projetos {
+  display: none;
+}
+ .header-projetos {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  
+  }
+
+  .texto-projetos {
+    max-width: 700px;
+    width: 100%;
+
+    transform: none;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .texto-projetos h2,
+  .texto-projetos p {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .projeto-item {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .projeto-item img {
+    height: 380px;
+  }
+
+  .numero-projeto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .numero-projeto h2,
+  .numero-projeto p {
+    transform: none;
+  }
+
+  .texto-projetos {
+    max-width: 100%;
+    width: 100%;
+    transform: none;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .descricao-projeto p {
+    max-width: 100%;
+  }
+
+  .Casaalmeria {
+    height: 700px;
+  }
+
+  .overlay {
+    left: 40px;
+    right: 40px;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 200px;
+    margin-left: -7px;
+  }
+}
+
+
+/* Responsivo computador grande*/
+@media (min-width: 1025px) {
+
+  .Container-home {
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+
+  .alinhar {
+    left: 130px;
+  }
+
+  .alinhar h1 {
+    font-size: 74px;
+  }
+
+  .alinhar p {
+    font-size: 17px;
+  }
+
+  #container-paragrafo {
+    top: 76%;
+    left: 40%;
+    max-width: 480px;
+  }
+
+  #container-paragrafo p {
+    font-size: 15px;
+    padding: 24px 34px;
+  }
+
+  .cards {
+    gap: 35px;
+    max-width: 1350px;
+  }
+   
+
+
+  .grid {
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+
+
+  .projeto-item {
+    max-width: 1300px;
+    grid-template-columns: 170px 1fr 320px;
+    gap: 45px;
+  }
+
+  .projeto-item img {
+    height: 500px;
+  }
+
+  .descricao-projeto p {
+    max-width: 280px;
+  }
+
+  .Casaalmeria {
+    height: 850px;
+  }
+
+  .overlay {
+    left: 10%;
+    bottom: 80px;
+  }
+
+  .overlay h2 {
+    font-size: 54px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 260px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .header-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .linha-projetos {
+    height: 120px !important;
+    margin-left: 310px !important;
+    margin-top: -160px !important;
+  }
+    .header-projetos::before {
+    content: "";
+
+    position: absolute;
+
+    top: -141px;
+
+    left: 65%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    height: 1px;
+
+    background: #fff;
+  }
+
+  
 }

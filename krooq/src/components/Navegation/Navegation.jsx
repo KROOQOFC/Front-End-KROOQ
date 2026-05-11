@@ -9,15 +9,20 @@ function Navegation() {
 
   return (
     <header className="header">
-      <nav className="conteiner">
+
+      <nav
+        className="conteiner"
+        onClick={() => setMenuAberto(!menuAberto)}
+      >
+
         <img
           src={logoTipo}
           alt="Logo KROOQ"
           className="logo"
-          onClick={() => setMenuAberto(!menuAberto)}
         />
 
         <ul className={menuAberto ? "menu ativo" : "menu"}>
+
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projetos">Projetos</Link></li>
           <li><Link to="/servicos">Serviços</Link></li>
@@ -28,10 +33,9 @@ function Navegation() {
             <button
               type="button"
               className="btn"
-              onClick={() => navigate("/escolha-login")}
-            >
-              Cadastrar
-            </button>
+              onClick={(e) => {
+                e.stopPropagation();
+                navigate("/escolha-login");}}>Cadastrar</button>
           </li>
         </ul>
       </nav>

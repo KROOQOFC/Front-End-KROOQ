@@ -31,3 +31,32 @@
   background-position: bottom right;
   opacity: 0.95;
 }
+
+@media (max-width: 600px) {
+
+.card-info h3{
+text-align: center;
+}
+.card-info p{
+
+  text-align: center;
+}
+ .cards>*:nth-child(1),
+  .cards>*:nth-child(2) {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .cards{
+
+    gap: 5px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+.cards>*:nth-child(1),
+  .cards>*:nth-child(2) {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+}
