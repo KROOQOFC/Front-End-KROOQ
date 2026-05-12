@@ -1,6 +1,6 @@
 import "./Projetos.css";
 import Navegation from "../../components/Navegation/Navegation";
-import Rodape from "../../components/Rodape/Rodape";
+import RodapeProjetos from "../../components/RodapeProjetos/RodapeProjetos";
 import ProjetoHero from "../../components/ProjetoHero/ProjetoHero";
 import ProjetosGrid from "../../components/ProjetosGrid/ProjetosGrid";
 import ComentariosProjetos from "../../components/ComentariosProjetos/ComentariosProjeto";
@@ -16,7 +16,7 @@ function Projetos() {
 
       <ComentariosProjetos />
 
-      <Rodape />
+      <RodapeProjetos />
     </main>
   );
 }
