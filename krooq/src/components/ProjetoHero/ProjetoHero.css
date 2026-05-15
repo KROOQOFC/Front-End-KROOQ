@@ -1,12 +1,15 @@
 .projeto-hero {
   width: 100%;
-  padding: 70px 8%;
+  min-height: 100vh;
+  padding: 70px 0 0 0;
   background-color: #CEC0A8;
+  display:flex;
 }
 
 .projeto-hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0 ;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   align-items: center;
@@ -15,6 +18,8 @@
 
 .projeto-hero-texto {
   color: #557c65;
+  margin-left: 100px;
+  padding-bottom: 200px;
 }
 
 .projeto-tag {
@@ -56,14 +61,27 @@
   transform: translateY(-1px) scale(1);
 }
 
-.projeto-hero-imagem img {
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-  border-radius: 4px;
+.projeto-hero-imagem{
+  
+  display: flex;
+  justify-content: flex-end;
+ align-self: flex-end;
+  
 }
 
-@media (max-width: 900px) {
+
+.projeto-hero-imagem img {
+ 
+  width: 100%;
+  height: 900px;
+  
+  object-fit: cover;
+  border-radius: 4px 0 0 0px;
+display: block;
+
+}
+
+ @media (max-width: 900px) {
   .projeto-hero-container {
     grid-template-columns: 1fr;
   }
@@ -74,5 +92,7 @@
 
   .projeto-hero-imagem img {
     height: 420px;
-  }
+    
 }
+   
+  } 

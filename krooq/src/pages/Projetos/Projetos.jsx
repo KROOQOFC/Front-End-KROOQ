@@ -8,10 +8,11 @@ import ComentariosProjetos from "../../components/ComentariosProjetos/Comentario
 function Projetos() {
   return (
     <main className="projetos-page">
+      <section id="parteCima">
       <Navegation />
-
+  
       <ProjetoHero />
-
+</section>
       <ProjetosGrid />
 
       <ComentariosProjetos />
