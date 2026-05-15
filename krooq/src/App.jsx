@@ -9,6 +9,7 @@ import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
 import Projetos from "./pages/Projetos/Projetos";
+import profissionais from "./pages/profissionais/profissionais";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/nova-senha" element={<NovaSenha />} />
         <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
+        <Route path="/profissionais" element={<profissionais />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
