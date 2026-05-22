@@ -7,7 +7,7 @@ function DoisButtons(){
 <>
 <button type="button" className="btn-sobre-nos">SOBRE NÓS</button>
 
-<button type="button" className="btn-novo-projeto">NOVO PROJETO</button>
+<button type="button" className="btn-iniciar-projeto">INICIAR UM PROJETO</button>
 
 
 </>

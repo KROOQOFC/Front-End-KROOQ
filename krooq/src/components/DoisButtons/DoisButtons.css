@@ -8,7 +8,7 @@
     font-family: "Poppins", sans-serif;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.40);
     width: 120px; 
-    height: 35px;
+    height: 50px;
     font-size: 12px;
     transition: all 0.3s ease;
     transform: scale(0.9);
@@ -19,8 +19,8 @@
     transform: translateY(-1px) scale(1.0);
 }
 
-.btn-novo-projeto {
-    background-color: #5F7D6A;
+.btn-iniciar-projeto {
+    background-color: #E35336;
     border: none;
     padding: 6px 12px;
     border-radius: 10px;
@@ -29,15 +29,15 @@
     font-family: "Poppins", sans-serif;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.40);
 
-    width: 120px; 
-    height: 35px;
+    width: 200px; 
+    height: 50px;
 
     font-size: 12px;
     transition: all 0.3s ease;
     transform: scale(0.9);
 }
 
-.btn-novo-projeto:hover {
-    background-color: #6f917d;
+.btn-iniciar-projeto:hover {
+    background-color: #E35336;
     transform: translateY(-1px) scale(1.0);
 }

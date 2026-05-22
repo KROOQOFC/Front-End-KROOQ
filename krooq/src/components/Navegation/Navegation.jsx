@@ -23,11 +23,10 @@ function Navegation() {
 
         <ul className={menuAberto ? "menu ativo" : "menu"}>
 
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/projetos">Projetos</Link></li>
-          <li><Link to="/servicos">Serviços</Link></li>
-          <li><Link to="/profissionais">Profissionais</Link></li>
-          <li><Link to="/jornada">Jornada</Link></li>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/projetos">SERVIÇOS</Link></li>
+          <li><Link to="/profissionais">PROFISSIONAIS</Link></li>
+          <li><Link to="/krooqia">KROOQ IA</Link></li>
 
           <li className="btn-area">
             <button
@@ -35,7 +34,7 @@ function Navegation() {
               className="btn"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate("/escolha-login");}}>Cadastrar</button>
+                navigate("/escolha-login");}}>ENTRAR</button>
           </li>
         </ul>
       </nav>
