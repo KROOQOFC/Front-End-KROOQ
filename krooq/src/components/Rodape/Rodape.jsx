@@ -5,9 +5,13 @@ import redelinkedin from "../../assets/linkedin.png";
 import redegit from "../../assets/git.png";
 import { Link, useNavigate } from "react-router-dom";
 
-function Rodape() {
+function Rodape(props) {
+  
   return (
-    <footer className="footer">
+    <footer  style={{
+        backgroundColor: props.cor}}className="footer" 
+    
+    >
       <div className="container">
 
         <div className="logonome-left">

@@ -90,11 +90,11 @@
 }
 
 .perfil-btn-gold {
-    background: #c8b28d;
+    background: #E35336;
 }
 
 .perfil-btn-gold:hover {
-    background: #b9a27c;
+    background: #c63f26;
     transform: translateY(-2px);
 }
 

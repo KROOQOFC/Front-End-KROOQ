@@ -2,7 +2,6 @@
   margin-top: auto;
 }
 
-
 footer {
   background-color: #54715E;
   color: white;
@@ -143,7 +142,7 @@ footer {
 .input-group input {
   flex: 1;
   border: none;
-  background-color: #54715E;
+  background-color: transparent;
 
   padding: 0 10px;
   font-size: 12px;
