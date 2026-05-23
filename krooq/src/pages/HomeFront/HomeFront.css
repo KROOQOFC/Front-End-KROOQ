@@ -306,7 +306,7 @@
   z-index: 2;
 }
 
-.tag {
+.tag-home {
   display: flex;
   max-width: 150px;
   font-size: 10px;

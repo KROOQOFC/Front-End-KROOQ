@@ -24,9 +24,9 @@ function Navegation() {
         <ul className={menuAberto ? "menu ativo" : "menu"}>
 
           <li><Link to="/">HOME</Link></li>
-          <li><Link to="/projetos">SERVIÇOS</Link></li>
-          <li><Link to="/profissionais">PROFISSIONAIS</Link></li>
-          <li><Link to="/krooqia">KROOQ IA</Link></li>
+          <li><Link to="/servico">SERVIÇOS</Link></li>
+          <li><Link to="/Profissionais">PROFISSIONAIS</Link></li>
+          <li><Link to="/Ia">KROOQ IA</Link></li>
 
           <li className="btn-area">
             <button

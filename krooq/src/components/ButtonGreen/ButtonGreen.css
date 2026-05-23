@@ -13,12 +13,8 @@
     height: 45px;
     font-size: 12px;
     transition: all 0.3s ease;
-    
 }
 
 .btn-verde:hover {
-    background-color: #5F7D6A;
     transform: translateY(-2px);
-
-
 }

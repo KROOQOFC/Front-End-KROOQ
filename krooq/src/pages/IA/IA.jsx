@@ -116,33 +116,33 @@ style={{ backgroundImage: `url(${HeroBg})` }}>
 
     <div className="divider"></div>
 
-    <div className="grid">
+    <div className="grid-ia">
       <div className="item">
         <h3>Escreva e-mails e respostas</h3>
         <p>Somos visionários. Fornecemos tudo o que você precisa saber sobre o mercado atual e prevemos como o custo da construção na sua área mudará nos próximos anos.</p>
       </div>
 
-      <div className="item">
+      <div className="item-ia">
         <h3>Digitalize Imagens:</h3>
         <p>Oferecemos suporte completo desde a busca por referências visuais até a execução técnica e documentação final do seu projeto.</p>
       </div>
 
-      <div className="item">
+      <div className="item-ia">
         <h3>Pesquisa Integrada:</h3>
         <p>Temos acesso a um vasto portfólio de referências, mas para você, faremos uma seleção individual baseada apenas nas opções que realmente se encaixam no seu perfil.</p>
       </div>
 
-      <div className="item">
+      <div className="item-ia">
         <h3>Leia PDFs e anexos:</h3>
         <p>Não queremos apenas sugerir objetos; nosso objetivo é encontrar o projeto “certo” para você e ser seu parceiro tecnológico por muitos anos.</p>
       </div>
 
-      <div className="item">
+      <div className="item-ia">
         <h3>Escreva códigos e programas:</h3>
         <p>A moradia deve melhorar sua vida. Por isso, ao selecionar um estilo, analisamos cuidadosamente seu pedido para encontrar apenas o que é ideal.</p>
       </div>
 
-      <div className="item">
+      <div className="item-ia">
         <h3>Automação de Cálculos:</h3>
         <p>Seja a execução legal de uma transação, o design de interiores baseado na sua personalidade ou os detalhes técnicos e cálculos de materiais de um edifício; nossa IA resolve tudo.</p>
       </div>

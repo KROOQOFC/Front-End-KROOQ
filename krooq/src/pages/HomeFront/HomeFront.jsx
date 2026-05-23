@@ -177,7 +177,7 @@ function HomeFront() {
 
   <div className="overlay">
 
-    <span className="tag">Projeto em Destaque</span>
+    <span className="tag-home">Projeto em Destaque</span>
 
     <h2>Casa Almeria</h2>
 
