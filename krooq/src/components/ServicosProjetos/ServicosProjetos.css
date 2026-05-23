@@ -1,0 +1,131 @@
+.ServicosProjetosContainer {
+  width: 100%;
+  min-height: 75vh;
+  background-color: #6f8973;
+  padding: 70px 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  box-shadow:
+    inset 35px 0 45px rgba(255, 255, 255, 0.12),
+    inset -35px 0 45px rgba(255, 255, 255, 0.12);
+}
+
+.ProjetosDetalhes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ProjetosDetalhes h4 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-left: 5.5%;
+}
+
+.LinhaAvancoProjetos {
+  margin-top: 100px;
+  width: 500px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-left: 180px;
+  overflow: hidden;
+}
+
+.LinhaProgressoProjetos {
+  height: 100%;
+  background-color: white;
+  transition: width 0.4s ease;
+}
+
+.BotoesSetaProjetos {
+  margin-top: 100px;
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.BotoesSetaProjetos button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.BotoesSetaProjetos button:first-child {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.BotoesSetaProjetos button:last-child {
+  background-color: #f45135;
+}
+
+.BotoesSetaProjetos button:hover {
+  transform: scale(1.05);
+}
+
+.ImagensServicosProjetos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: visible;
+  position: relative;
+}
+
+.ReformaCozinha,
+.CroquiPc,
+.DesignSala {
+  width: 33.3%;
+  height: 250px;
+  object-fit: cover;
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
+  opacity: 0.75;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.imagemAtiva {
+  opacity: 1;
+  transform: scale(1.12);
+  z-index: 2;
+}
+
+.MetricasProjetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+
+.MetricaItem {
+  color: white;
+  text-align: center;
+}
+
+.MetricaItem h4 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+.MetricaItem p {
+  margin-top: 14px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 1.7;
+}
+
+.DivisorMetricas {
+  width: 2px;
+  height: 85px;
+  background-color: rgba(255, 255, 255, 0.45);
+}

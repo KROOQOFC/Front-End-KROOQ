@@ -10,6 +10,7 @@
   box-shadow:
     inset 35px 0 45px rgba(255, 255, 255, 0.12),
     inset -35px 0 45px rgba(255, 255, 255, 0.12);
+     padding-bottom:70px;
 }
 
 .ArquitetaServicos {
