@@ -1,6 +1,5 @@
 import "./AuthLayout.css";
 import bannerAuth from "../../assets/krooq_cadastre_se.png";
-import ImagemEscolhaLoginAuth from "../../assets/ImagemEscolhaLogin.png"
 // import bannerAuth from "../../assets/telaNova.png.png";
 
 function AuthLayout({ children }) {
