@@ -1,0 +1,91 @@
+.ServicosDesejoContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #d6cbb6;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    inset 35px 0 45px rgba(255, 255, 255, 0.18),
+    inset -35px 0 45px rgba(255, 255, 255, 0.18);
+}
+
+.servicosDesejo {
+  position: absolute;
+  top: 34%;
+  left: 9%;
+  z-index: 3;
+}
+
+.Servicos-Titulo {
+  color: #5F7D6A;
+  font-size: 75px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0;
+  
+}
+
+.servicosDesejo p {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 18px 0 35px;
+}
+
+.btn-ServicosProjeto {
+  background-color: #f45135;
+  height: 55px;
+  width: 230px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.18);
+}
+
+.RedesSociais {
+  position: absolute;
+  top: 580px;
+  left: 32px;
+  bottom: 65px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.linkedinServicos{
+    height: 29px;
+    object-fit: contain;
+}
+.instagramServicos {
+  height: 29px;
+  object-fit: contain;
+}
+.githubServicos{
+    height: 20px;
+    object-fit: contain;
+}
+
+.ImagemDesejos CardServicosContainer{
+  position: relative;
+  right: 100px;
+  bottom: 0;
+  width: 62%;
+  height: 88%;
+  z-index: 2;
+}
+
+.pessoasCasa {
+  position: absolute;
+  right: 10%;
+  bottom: 20px;
+  top: 30px;
+  width: 660px;
+  height: auto;
+}
+
