@@ -1,19 +1,4 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* footer no final */
-html, body, #root {
-  min-height: 100vh;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-}
 
 .footer {
   margin-top: auto;
