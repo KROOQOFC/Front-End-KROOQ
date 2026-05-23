@@ -29,7 +29,7 @@ function EscolhaLogin() {
 
         <div className="escolhaLogin-options">
           <Link to="/login/arquiteto" className="perfil-btn perfil-btn-green">
-            Sou Arquiteto
+            Sou Profissional
           </Link>
 
           <Link to="/login/cliente" className="perfil-btn perfil-btn-gold">

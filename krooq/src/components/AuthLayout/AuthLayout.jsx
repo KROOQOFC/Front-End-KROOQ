@@ -1,5 +1,6 @@
 import "./AuthLayout.css";
 import bannerAuth from "../../assets/krooq_cadastre_se.png";
+import ImagemEscolhaLoginAuth from "../../assets/ImagemEscolhaLogin.png"
 // import bannerAuth from "../../assets/telaNova.png.png";
 
 function AuthLayout({ children }) {
@@ -11,7 +12,7 @@ function AuthLayout({ children }) {
         </section>
 
         <section className="auth-image-area">
-          <img src={bannerAuth} alt="Imagem da KROOQ" />
+          <img src={ImagemEscolhaLoginAuth} alt="Imagem da KROOQ" />
         </section>
       </div>
     </main>

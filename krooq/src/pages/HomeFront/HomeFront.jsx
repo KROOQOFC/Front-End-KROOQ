@@ -2,11 +2,11 @@ import "./HomeFront.css";
 import DoisButtons from "../../components/DoisButtons/DoisButtons";
 import Navegation from "../../components/Navegation/Navegation";
 import Card from "../../components/Card/Card";
-import CasaBasker from "../../assets/CasaBasker.png";
-import CasaFerrara from "../../assets/CasaFerrara.png"
+import CasaExecu from "../../assets/CasaExecu.png";
+import CasaPlaneja from "../../assets/CasaPlaneja.png";
 import ButtonGreen from "../../components/ButtonGreen/ButtonGreen"
-import CasaAlmeria from "../../assets/CasaAlmeria .png"
-import Rodape from "../../components/Rodape/Rodape"
+import CasaAlmeria from "../../assets/CasaAlmeria .png";
+import Rodape from "../../components/Rodape/Rodape";
 import GaleriaHome from "../../components/GaleriaHome/GaleriaHome";
 
 function HomeFront() {
@@ -56,18 +56,18 @@ function HomeFront() {
   <div className="cards">
     <Card
       titulo="Nosso Estúdio"
-      texto="Na KROOQ, criatividade e Na KROOQ, criatividade e técnica se encontram. Projetamos espaços com propósito, baseados na compreensão real de como as pessoas vivem. Cada projeto é uma chance de redefinir ambientes e conectar quem constrói a quem habita. se encontram para criar espaços com propósito."
+      texto="Na KROOQ, criatividade e técnica se encontram. Projetamos espaços com propósito, baseados na compreensão real de como as pessoas vivem. Cada projeto é uma chance de redefinir ambientes e conectar quem constrói a quem habita."
     tipo="estudio"
     />
 
     <Card
       titulo="Nossa Prática"
-      texto="Integramos arquitetura, Integramos arquitetura, interiores e estratégia em um processo único e fluido. Colaboramos com especialistas e fornecedores para entregar soluções que equilibram estética, funcionalidade e eficiência na obra. e estratégia em um processo único."
+      texto="Integramos arquitetura, interiores e estratégia em um processo único e fluido. Colaboramos com especialistas e fornecedores para entregar soluções que equilibram estética, funcionalidade e eficiência na obra."
     />
 
     <Card
       titulo="Nossa Gente"
-      texto="Somos um ecossistema que Somos um ecossistema que valoriza a curiosidade e a parceria. Acreditamos que grandes projetos nascem da confiança e da troca constante entre arquitetos, parceiros e clientes. a conexão entre pessoas."
+      texto="Somos um ecossistema que valoriza a curiosidade e a parceria. Acreditamos que grandes projetos nascem da confiança e da troca constante entre arquitetos, parceiros e clientes."
     />
   </div>
 </section>
@@ -83,24 +83,23 @@ function HomeFront() {
 
     <div className="box bege">
       <h2>175</h2>
-      <p>Casos práticos e construídos nos últimos 5 anos.</p>
+      <p>Casas projetadas e construídas nos últimos 5 anos.</p>
     </div>
 
     <div className="box bege">
       <p>
-        Da visão à execução, cada projeto soma nosso repertório
-        em métodos, processos e resultados.
+       Da visão à execução, cada projeto soma à nossa experiência em moldar espaços diversos. Ao abraçar desafios e explorar diferentes escalas e estilos, continuamos a refinar nosso ofício e a aprofundar nosso impacto no ambiente construído.
       </p>
     </div>
 
     <div className="box bege">
       <h2>40+</h2>
-      <p>Categorias de projetos concluídos.</p>
+      <p>Categorias de projetos concluídos, abrangendo residências, cafés e espaços públicos.</p>
     </div>
 
     <div className="box bege">
       <h2>125</h2>
-      <p>Conceitos comerciais e estudos entregues.</p>
+      <p>Conceitos comerciais e estudos entregues em todo o país.</p>
     </div>
 
     <div className="box imagem"></div>
@@ -127,21 +126,19 @@ function HomeFront() {
       <h2>01</h2>
       <p>
         Residencial <br />
-        Basker <br />
-        430 m² <br />
-        Em Construção <br />
-        2025
+        São Paulo-Sp <br />
+        200 m² <br />
+        Planejamento <br />
+        2026
       </p>
     </div>
 
-    <img src={CasaBasker} alt="Basker Residence" />
+    <img src={CasaPlaneja} alt="Casa planejamento" />
 
     <div className="descricao-projeto">
-      <h3>Basker Residence</h3>
+      <h3>Conceito Arquitetônico</h3>
       <p>
-        Elevado sobre a baía, esta residência une elegância moderna e geometria
-        orgânica. O design qualifica materiais refinados e permite natural,
-        criando uma fusão harmônica entre forma e sofisticação.
+        O croqui apresenta a visão inicial do projeto, traduzindo identidade visual, volumetria e intenção arquitetônica que orientam todo o desenvolvimento da residência.
       </p>
       <ButtonGreen/>
     </div>
@@ -152,28 +149,26 @@ function HomeFront() {
       <h2>02</h2>
       <p>
         Residencial <br />
-        Ferrara <br />
-        430 m² <br />
-        Em Construção <br />
-        2025
+        São Paulo-Sp <br />
+        200 m² <br />
+       Execução <br />
+        2026
       </p>
     </div>
 
-    <img src={CasaFerrara} alt="Casa Ferrara" />
+    <img src={CasaExecu} alt="Casa execução" />
 
     <div className="descricao-projeto">
-      <h3>Casa Ferrara</h3>
+      <h3>Resultado Construído</h3>
       <p>
-        A Casa Ferrara redefine o morar moderno com uma arquitetura elegante,
-        ampla e confortável. Seu design une estrutura contemporânea com fluidez,
-        criando uma experiência sofisticada.
+       A execução final preserva a essência do conceito original, transformando planejamento e desenho em um espaço funcional, harmônico e construído para o cotidiano.
       </p>
       <ButtonGreen/>
     </div>
   </div>
 </section>
 <section className="Casaalmeria">
-<img src= {CasaAlmeria} alt="" />
+<img src= {CasaAlmeria} alt="Casa Almeria" />
 
   <div className="overlay">
 
@@ -190,7 +185,6 @@ function HomeFront() {
       <button className="btn1">VER DETALHES</button>
       <button className="btn2">PROJETO</button>
     </div>
-
   </div>
 </section>
 
