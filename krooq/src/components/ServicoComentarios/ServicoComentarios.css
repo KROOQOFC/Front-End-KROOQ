@@ -22,11 +22,22 @@
   margin-left: 48px;
 }
 
+.ComentariosCarrossel {
+  width: 1190px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .ComentariosLista {
   display: flex;
-  justify-content: center;
   gap: 70px;
   flex-wrap: nowrap;
+  transition: transform 0.45s ease;
+}
+
+.ComentarioItem {
+  flex: 0 0 auto;
 }
 
 .BarraComentarios {

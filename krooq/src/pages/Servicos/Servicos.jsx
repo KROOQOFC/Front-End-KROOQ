@@ -5,6 +5,7 @@ import ServicosEspecialista from "../../components/ServicosEspecialistas/Servico
 import ServicosProjetos from "../../components/ServicosProjetos/ServicosProjetos"
 import ServicosFornecedor from "../../components/ServicosFornecedor/ServicosFornecedor"
 import ServicoComentarios from "../../components/ServicoComentarios/ServicoComentarios"
+import Rodape from "../../components/Rodape/Rodape";
 
 function Servicos() {
     return(
@@ -15,6 +16,7 @@ function Servicos() {
       <ServicosEspecialista/>
       <ServicosFornecedor/>
       <ServicoComentarios/>
+      <Rodape/>
        </>
     )
 }
