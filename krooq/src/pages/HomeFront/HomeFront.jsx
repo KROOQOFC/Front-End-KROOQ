@@ -109,7 +109,7 @@ function HomeFront() {
 </section>
 <section className="projetos-section">
   <div className="header-projetos">
-    <div className="linha-projetos"></div>
+    {/* <div className="linha-projetos"></div> */}
 
     <div className="texto-projetos">
       <h2>Projetos Atuais (Em Andamento)</h2>
