@@ -9,6 +9,7 @@ import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
 import Profissionais from "./pages/Profissionais/Profissionais";
+import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 // import Ia from "./pages/Ia/Ia";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
         <Route path="/Profissionais" element={<Profissionais />} />
-
+        <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

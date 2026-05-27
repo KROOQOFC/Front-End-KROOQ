@@ -1,0 +1,121 @@
+.nav-menu-lateral {
+  width: 16%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  border-radius: 0 25px 25px 0;
+  
+}
+
+.layout-links-menu-lateral {
+  width: 590%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-lateral {
+  width: 170px;
+margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.layout-links-menu-lateral nav {
+  width: 190px;
+}
+
+.layout-links-menu-lateral ul {
+  list-style: none;
+  width: 100%;
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.layout-links-menu-lateral li {
+  width: 100%;
+}
+
+.link-menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 14px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link-menu img {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+
+  transition: 0.3s;
+}
+
+/* ícone painel e krooq ia */
+
+.icone-painel {
+  width: 40px !important;
+  height: 40px !important;
+  margin-left: -10px;
+  object-fit: contain;
+}
+.texto-painel{
+  position: relative;
+  left: -10px;
+
+}
+.imagem-krooq-ia{
+ width: 40px !important;
+  height: 40px !important;
+  margin-left: -10px;
+  object-fit: contain;
+}
+.texto-krooq-ia-painel{
+ position: relative;
+  left: -10px;
+}
+
+.link-menu span {
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+/* houver */
+
+.link-menu:hover {
+  background-color:#7F9785;
+}
+
+.link-menu:hover span {
+  color: white;
+}
+
+.link-menu:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* ativo */
+
+.link-menu.active {
+  background-color: #5E7664;
+}
+
+.link-menu.active span {
+  color: white;
+}
+
+.link-menu.active img {
+  filter: brightness(0) invert(1);
+}

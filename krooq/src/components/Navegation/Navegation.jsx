@@ -32,8 +32,7 @@ function Navegation() {
             <button
               type="button"
               className="btn"
-              onClick={(e) => {
-                e.stopPropagation();
+              onClick={() => {
                 navigate("/escolha-login");}}>ENTRAR</button>
           </li>
         </ul>

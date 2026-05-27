@@ -46,7 +46,10 @@
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+  transform: scale(0.9);
 }
+
 
 .RedesSociais {
   position: absolute;
@@ -89,4 +92,6 @@
   width: 660px;
   height: auto;
 }
-
+.btn-ServicosProjeto:hover{
+  transform: translateY(-2px)
+}
