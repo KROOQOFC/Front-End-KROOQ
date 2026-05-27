@@ -6,6 +6,6 @@ import IA from './pages/IA/IA.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {<IA />} 
+    {<App />} 
   </StrictMode>,
 )
