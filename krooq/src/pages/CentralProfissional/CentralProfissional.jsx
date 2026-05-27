@@ -1,10 +1,13 @@
-import "./CentralProfissional.css"
-import "../../components/NavegationLateral/NavegationLateral";
+import "./CentralProfissional.css";
+
 import NavegationLateral from "../../components/NavegationLateral/NavegationLateral";
 import CentralHeader from "../../components/CentralHeader/CentralHeader"
 import ProjetosRecentesCards from "../../components/ProjetosRecentesCards/ProjetosRecentesCards";
 import BotaoTransparenteAdd from "../../components/BotaoTransparenteAdd/BotaoTransparenteAdd";
-
+import SimboloProcesso from "../../assets/SimboloProcesso.png";
+import SimboloProcessoBranco from "../../assets/SimboloProcessoBranco.png";
+import ProcessoIconeComunidade from "../../assets/ProcessoIconeComunidade.png";
+import SimboloIconeExecutivo from "../../assets/SimboloIconeExecutivo.png";
 
 function CentralProfissional() {
     return (  
@@ -17,8 +20,6 @@ function CentralProfissional() {
 <div className="LayoutCentralHeader">
 <CentralHeader/>
 </div>
-
-
 
 <div className="componentes-projetos-andamento">
 <ProjetosRecentesCards
@@ -39,7 +40,6 @@ function CentralProfissional() {
   porcentagem={100}
 />
 </div>
-
 
 </section>
 
