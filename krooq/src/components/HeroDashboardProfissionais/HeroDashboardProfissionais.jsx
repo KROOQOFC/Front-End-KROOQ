@@ -1,5 +1,5 @@
 import "./HeroDashboardProfissionais.css";
-import DashboardKrooq from "../../assets/dashboard-krooq.png.png";
+import DashboardKrooq from "../../assets/dashboard-krooq.png";
 
 function HeroDashboardProfissionais() {
   return (

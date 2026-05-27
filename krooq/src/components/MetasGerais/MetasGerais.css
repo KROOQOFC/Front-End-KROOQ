@@ -1,0 +1,122 @@
+.ContainerMetas {
+  width: 300px;
+  height: 215px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 18px 28px;
+  box-sizing: border-box;
+  margin-left: 18.5%;
+  position: fixed;
+  top: 280px;
+}
+
+.TopoMetas {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.TituloMetas {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 10px;
+  color: #000000;
+}
+
+.AcoesTopoMetas {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.ProgressoMetas {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CentroProgresso {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.EditarMetasBotao {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.EditarMetasBotao img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.ListaMetas {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+
+.ItemMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.BotaoCheck {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BotaoCheck img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+
+  transition: transform 0.22s ease, opacity 0.25s ease;
+}
+
+.BotaoCheck:hover img {
+  transform: scale(1.08);
+}
+
+.ItemMeta p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.MetaConcluida {
+  color: #000000;
+  transition: 0.25s ease;
+}
+
+.MetaPendente {
+  color: #8b8b8b;
+  transition: 0.25s ease;
+}

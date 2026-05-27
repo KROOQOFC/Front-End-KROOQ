@@ -1,0 +1,86 @@
+.CardProcesso {
+  width: 215px;
+  height: 190px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 22px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.TopoCardProcesso {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.IconeTopoProcesso {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.MenuProcesso {
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  color: #000000;
+}
+
+.TituloProcesso {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.05;
+  margin: 0;
+  color: #000000;
+}
+
+.RodapeProcesso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RodapeProcesso p {
+  margin: 0;
+  color: #8b8b8b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.StatusSimples {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.StatusLaranja {
+  width: 66px;
+  height: 66px;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  background-color: #ef553d;
+
+  border-top-left-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.IconeStatusProcesso {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
