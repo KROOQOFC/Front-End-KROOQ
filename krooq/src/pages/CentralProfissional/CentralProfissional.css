@@ -1,20 +1,26 @@
-.conteiner-central-profissional{
+.conteiner-central-profissional {
     background-image: url("../../assets/FundoCentral.png");
 }
 
-.componentes-projetos-andamento{
-display: flex;
-gap: 30px;
- position: fixed;
-  bottom: 0;
-  left: 18.5%;
-  width: 100%;
+
+.botão-transparente-geral {
+    position: relative;
+    bottom: 300px;
+    left: 1015px;
+}
+
+.componentes-projetos-andamento {
+    display: flex;
+    gap: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 18.5%;
+    width: 100%;
 
 }
 
-
 .card-completo p {
-  font-weight: 500;
-  font-size: 14px;
-  margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
 }
