@@ -69,11 +69,7 @@ function AvaliacoesProfissionais() {
 
         <div className="avaliacoes-profissionais-card">
           <div className="avaliacoes-profissionais-coluna-esquerda">
-            <img
-              src={AspasComentario}
-              alt="Aspas"
-              className="avaliacoes-profissionais-aspas"
-            />
+<div className="avaliacoes-profissionais-aspas">“</div>
 
             <div className="avaliacoes-profissionais-depoimento-principal">
               <h3>{depoimentos[0].texto}</h3>
