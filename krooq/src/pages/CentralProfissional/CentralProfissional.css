@@ -2,11 +2,3 @@
     
     background-image: url("../../assets/FundoCentral.png");
 }
-.AreaProcessos {
-  position: fixed;
-  top: 405px;
-  left: 605px;
-
-  display: flex;
-  gap: 26px;
-}
