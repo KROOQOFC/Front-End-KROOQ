@@ -87,12 +87,24 @@
 }
 
 .avaliacoes-profissionais-aspas {
-  width: 62px;
-  height: 62px;
-  object-fit: contain;
+  width: 56px;
+  height: 56px;
+  background: #ef5a36;
+  color: #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+
   position: absolute;
-  left: -56px;
-  top: -20px;
+  left: -44px;
+  top: -24px;
+  z-index: 5;
 }
 
 .avaliacoes-profissionais-depoimento-principal {
