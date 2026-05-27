@@ -1,0 +1,31 @@
+.card-evento {
+    background: green;
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-height: 120px;
+}
+
+.horario-evento {
+    color: black;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+.card-evento h3 {
+    font-size: 22px;
+
+    color: #1f3527;
+}
+
+.card-evento p {
+    color: #4e4e4e;
+}

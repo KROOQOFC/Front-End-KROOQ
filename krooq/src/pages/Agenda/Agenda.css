@@ -1,0 +1,111 @@
+.container-agenda {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 40px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.painel-eventos {
+    width: 420px;
+    height: 720px;
+
+
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.topo-eventos {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo-eventos h2 {
+    font-size: 36px;
+
+    color: black;
+}
+
+.botao-adicionar {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #8FB996;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.botao-voltar {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    color: #1f3527;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.08);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+.logo-krooq-agenda {
+    position: absolute;
+
+    right: 40px;
+    bottom: 30px;
+
+    width: 180px;
+
+    opacity: 0.9;
+}

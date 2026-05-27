@@ -4,6 +4,7 @@ import NavegationLateral from "../../components/NavegationLateral/NavegationLate
 import CentralHeader from "../../components/CentralHeader/CentralHeader"
 
 
+
 function CentralProfissional() {
     return (  
 <section className="conteiner-central-profissional">
