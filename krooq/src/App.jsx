@@ -9,7 +9,7 @@ import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
 // import Profissionais from "./pages/Profissionais/Profissionais";
-// import Ia from "./pages/Ia/Ia";
+
 
 function App() {
   return (

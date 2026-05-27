@@ -13,6 +13,7 @@ import CtaBg from "../../assets/Frame 46.png";
 
 function IA() {
   return (
+     
     <>
 <section className="hero"
 style={{ backgroundImage: `url(${HeroBg})` }}>
@@ -36,7 +37,7 @@ style={{ backgroundImage: `url(${HeroBg})` }}>
     <p>
         Sua visão criativa com a precisão de um especialista. Nossa IA de design de interiores transforma suas medidas em projetos visuais deslumbrantes, enquanto calcula instantaneamente a lista completa de materiais e custos para sua obra.
     </p>
-    <button className="verdebtn">Criar Agora<img src={Vector} alt="ícone de varinha"/></button>
+    <button className="verdebtn">Gerar Agora<img src={Vector} alt="ícone de varinha"/></button>
     <br/>
     <img src={NewChat} alt="Escreve o que tem na imagem"/>
 
