@@ -8,6 +8,7 @@ import NovaSenha from "./pages/NovaSenha/NovaSenha";
 import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
+import IA from "./pages/IA/IA"
 
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeFront />} />
         <Route path="/servicos" element={<Servicos />} />
+        <Route path="/IA" element={<IA />} />
         <Route path="/escolha-login" element={<EscolhaLogin />} />
         <Route path="/login/:tipoUsuario" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
