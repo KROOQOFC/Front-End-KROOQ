@@ -7,8 +7,11 @@ import CentralHeader from "../../components/CentralHeader/CentralHeader"
 function CentralProfissional() {
     return (  
 <section className="conteiner-central-profissional">
-<CentralHeader/>
+
 <NavegationLateral/>
+<div className="LayoutCentralHeader">
+<CentralHeader/>
+</div>
 
 
 </section>
