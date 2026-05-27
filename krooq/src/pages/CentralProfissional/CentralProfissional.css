@@ -3,7 +3,6 @@
     background-image: url("../../assets/FundoCentral.png");
 }
 
-
 .botão-transparente-geral {
     position: relative;
     bottom: 300px;
@@ -24,4 +23,12 @@
     font-weight: 500;
     font-size: 14px;
     margin-top: 10px;
+}
+.AreaProcessos {
+  position: fixed;
+  top: 50%;
+  left: 550px;
+
+  display: flex;
+  gap: 25px;
 }
