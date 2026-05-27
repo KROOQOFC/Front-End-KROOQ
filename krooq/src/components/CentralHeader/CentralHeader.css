@@ -1,23 +1,23 @@
 .CentralHeaderGeral {
-    width:75%;
+    width:77%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-left: 20%;
+    margin-left: 19%;
     box-sizing:border-box;
     position: fixed;
-    top: 25px;
+    top: 30px;
 }
 
 .SaudacaoHeader {
     font-size:30px;
-    font-weight:700;
+    font-weight:600;
     margin-right: 200px;
 }
 
 .AcoesHeader {
     display:flex;
-    gap:10px;
+    gap:20px;
 }
 
 .BuscaContainer {
@@ -60,7 +60,8 @@
     border:none;
     outline:none;
     color:white;
-    font-size:20px;
+    font-size:18px;
+    font-weight: 100;
     border-bottom:
     2px solid rgba(255,255,255,0.35);
     padding-bottom:2px;
