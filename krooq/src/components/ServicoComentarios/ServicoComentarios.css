@@ -1,0 +1,62 @@
+.ServicoComentariosContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #6F8973;
+  padding: 90px 90px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  box-shadow:
+    inset 35px 0 45px rgba(255,255,255,0.12),
+    inset -35px 0 45px rgba(255,255,255,0.12);
+}
+
+.ServicoComentariosContainer::before {
+  content: "Comentários";
+  display: block;
+  color: white;
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 70px;
+  margin-left: 48px;
+}
+
+.ComentariosCarrossel {
+  width: 1190px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ComentariosLista {
+  display: flex;
+  gap: 70px;
+  flex-wrap: nowrap;
+  transition: transform 0.45s ease;
+}
+
+.ComentarioItem {
+  flex: 0 0 auto;
+}
+
+.BarraComentarios {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.BarraComentarios button {
+  width: 45px;
+  height: 4px;
+  border: none;
+  background-color: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.BarraComentarios button.ativo {
+  width: 65px;
+  background-color: white;
+}

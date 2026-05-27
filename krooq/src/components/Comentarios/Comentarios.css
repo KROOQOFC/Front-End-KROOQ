@@ -1,0 +1,98 @@
+.ComentariosServicoCard {
+  width: 520px;
+  height: 340px;
+
+  position: relative;
+
+  border: none;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+
+  border-image:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05) 0%,
+      rgba(255,255,255,0.18) 55%,
+      rgba(255,255,255,0.65) 100%
+    ) 1;
+
+  padding: 60px 50px 35px 150px;
+
+  color: white;
+  box-sizing: border-box;
+
+  opacity: 0.45;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.ComentariosServicoCard.ativo {
+  opacity: 1;
+}
+
+.ComentariosAspas {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  z-index: 1;
+}
+
+.ComentariosConteudo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ComentariosConteudo h4 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+.ComentariosConteudo p {
+  font-size: 15px;
+  line-height: 1.45;
+
+  color: rgba(255,255,255,0.9);
+
+  flex-grow: 1;
+
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
+
+.ComentariosPessoa {
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  margin-top:auto;
+}
+
+.ComentariosPessoa img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ComentariosPessoa h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ComentariosPessoa span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+}

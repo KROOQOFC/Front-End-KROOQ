@@ -1,0 +1,331 @@
+.avaliacoes-profissionais {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 70px 0 110px;
+}
+
+.avaliacoes-profissionais-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.avaliacoes-profissionais-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.avaliacoes-profissionais-tag {
+  display: inline-block;
+  background: #ef5a36;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.avaliacoes-profissionais-header h2 {
+  margin: 0;
+  color: #19304b;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.avaliacoes-profissionais-video {
+  width: 100%;
+  max-width: 980px;
+  height: 320px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.avaliacoes-profissionais-video-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avaliacoes-profissionais-play {
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: #ef5a36;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avaliacoes-profissionais-card {
+  width: min(860px, 92%);
+  margin: -12px auto 0;
+  background: #ccb892;
+  border-radius: 4px;
+  padding: 26px 28px 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  position: relative;
+}
+
+.avaliacoes-profissionais-coluna-esquerda {
+  position: relative;
+}
+
+.avaliacoes-profissionais-aspas {
+  width: 56px;
+  height: 56px;
+  background: #ef5a36;
+  color: #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+
+  position: absolute;
+  left: -44px;
+  top: -24px;
+  z-index: 5;
+}
+
+.avaliacoes-profissionais-depoimento-principal {
+  margin-bottom: 18px;
+}
+
+.avaliacoes-profissionais-depoimento-principal h3,
+.avaliacoes-profissionais-item h3 {
+  margin: 0 0 12px;
+  color: #222222;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.avaliacoes-profissionais-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avaliacoes-profissionais-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.avaliacoes-profissionais-user-info strong {
+  display: block;
+  color: #1f1f1f;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.avaliacoes-profissionais-user-info p {
+  margin: 2px 0 0;
+  color: rgba(31, 31, 31, 0.7);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.avaliacoes-profissionais-coluna-direita {
+  display: flex;
+  flex-direction: column;
+}
+
+.avaliacoes-profissionais-item {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.avaliacoes-profissionais-button {
+  width: fit-content;
+  border: none;
+  background: #ef5a36;
+  color: #ffffff;
+  padding: 10px 22px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+
+.avaliacoes-profissionais-numeros {
+  width: 240px;
+  background: #0f2b49;
+  padding: 22px 24px;
+  border-radius: 4px;
+  margin-top: 18px;
+}
+
+.avaliacoes-profissionais-numero {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(70, 190, 122, 0.45);
+}
+
+.avaliacoes-profissionais-numero:first-child {
+  padding-top: 0;
+}
+
+.avaliacoes-profissionais-numero:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.avaliacoes-profissionais-numero strong {
+  display: block;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.avaliacoes-profissionais-numero p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.avaliacoes-profissionais-numero.com-icone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avaliacoes-profissionais-numero.com-icone img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .avaliacoes-profissionais-header h2 {
+    font-size: 26px;
+  }
+
+  .avaliacoes-profissionais-video {
+    height: 300px;
+  }
+
+  .avaliacoes-profissionais-card {
+    width: min(900px, 95%);
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .avaliacoes-profissionais-aspas {
+    left: -40px;
+  }
+}
+
+/* CELULAR / TABLET PEQUENO */
+@media (max-width: 768px) {
+  .avaliacoes-profissionais {
+    padding: 60px 0 80px;
+  }
+
+  .avaliacoes-profissionais-header h2 {
+    font-size: 22px;
+  }
+
+  .avaliacoes-profissionais-video {
+    height: 250px;
+  }
+
+  .avaliacoes-profissionais-play {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+
+  .avaliacoes-profissionais-card {
+    grid-template-columns: 1fr;
+    width: 94%;
+    padding: 24px 20px;
+    gap: 22px;
+  }
+
+  .avaliacoes-profissionais-aspas {
+    width: 54px;
+    height: 54px;
+    left: -10px;
+    top: -40px;
+  }
+
+  .avaliacoes-profissionais-numeros {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .avaliacoes-profissionais-depoimento-principal h3,
+  .avaliacoes-profissionais-item h3 {
+    font-size: 16px;
+  }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+  .avaliacoes-profissionais {
+    padding: 50px 0 70px;
+  }
+
+  .avaliacoes-profissionais-header h2 {
+    font-size: 20px;
+  }
+
+  .avaliacoes-profissionais-tag {
+    font-size: 8px;
+    padding: 6px 14px;
+  }
+
+  .avaliacoes-profissionais-video {
+    height: 220px;
+  }
+
+  .avaliacoes-profissionais-card {
+    width: 95%;
+    padding: 20px 16px;
+  }
+
+  .avaliacoes-profissionais-user-info strong {
+    font-size: 12px;
+  }
+
+  .avaliacoes-profissionais-user-info p {
+    font-size: 10px;
+  }
+
+  .avaliacoes-profissionais-numero strong {
+    font-size: 24px;
+  }
+
+  .avaliacoes-profissionais-numero p {
+    font-size: 10px;
+  }
+}

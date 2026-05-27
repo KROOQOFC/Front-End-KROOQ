@@ -23,16 +23,16 @@ function EscolhaLogin() {
 
         <div className="escolhaLogin-divider">
           <span></span>
-          <p>Escolha uma opção abaixo</p>
+          <p>ou entre com seu e-mail</p>
           <span></span>
         </div>
 
         <div className="escolhaLogin-options">
           <Link to="/login/arquiteto" className="perfil-btn perfil-btn-green">
-            Sou Arquiteto
+            Sou Profissional
           </Link>
 
-          <Link to="/login/cliente" className="perfil-btn perfil-btn-gold">
+          <Link to="/login/cliente" className="perfil-btn perfil-btn-orange">
             Sou Cliente
           </Link>
 
@@ -40,10 +40,6 @@ function EscolhaLogin() {
             Sou Fornecedor
           </Link>
         </div>
-
-        <p className="escolhaLogin-footer">
-          Acesse sua conta de acordo com seu tipo de usuário.
-        </p>
       </div>
     </AuthLayout>
   );

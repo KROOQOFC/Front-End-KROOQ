@@ -1,0 +1,116 @@
+.ServicosEspecialistaContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #6f8973;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  box-shadow:
+    inset 35px 0 45px rgba(255, 255, 255, 0.12),
+    inset -35px 0 45px rgba(255, 255, 255, 0.12);
+     padding-bottom:70px;
+}
+
+.ArquitetaServicos {
+  margin-left: 100px;
+  width: 650px;
+  max-width: 48%;
+  object-fit: contain;
+}
+
+.ExplicacaoEspecialista {
+  width: 570px;
+  color: white;
+  margin-top: 60px;
+  transform: translateX(-25px);
+}
+
+.PqEspecialista {
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+
+.TextoArquiteto {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 45px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.CardsEspecialistas {
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ServicosConfiaveis,
+.AdaptabilidadeEspecialista {
+  width: 100%;
+  height: 58px;
+  background-color: #d2c09d;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 22px;
+  box-sizing: border-box;
+}
+
+.ProfissionaisNivel {
+  width: 100%;
+  min-height: 165px;
+  background-color: #f45135;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  align-items: start;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.IconUsuarioEspecialista {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.IconSetaEspecialista {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  margin-left: auto;
+}
+
+.TituloServicosConfiaveis,
+.TituloAdaptabilidadeEspecialista,
+.TituloProfissionaisNivel {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 0 12px;
+}
+
+.ProfissionaisNivel .TituloProfissionaisNivel {
+  margin: 0;
+}
+
+.ProfissionaisNivel .IconSetaEspecialista {
+  margin-left: 0;
+  justify-self: end;
+}
+
+.TextoProfissionaisNivel {
+  grid-column: 2 / 4;
+  color: white;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 18px 0 0;
+}
