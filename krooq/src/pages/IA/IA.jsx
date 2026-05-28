@@ -1,4 +1,6 @@
 import './IA.css'
+import Navegation from "../../components/Navegation/Navegation";
+import Rodape from "../../components/Rodape/Rodape";
 import Vector1 from "../../assets/Vector1.png";
 import Vector from "../../assets/Vector.png";
 import NewChat from "../../assets/New chat 1.png";
@@ -15,6 +17,7 @@ function IA() {
   return (
      
     <>
+    <Navegation/>
 <div className="hero-page">
   <section className="hero"
    style={{ backgroundImage: `url(${HeroBg})` }}>
@@ -160,6 +163,7 @@ style={{ backgroundImage: `url(${CtaBg})` }}>
     <button className="btnBranco">Comece Agora</button>
 </section>
 </div>
+<Rodape/>
     </>
   )
 }
