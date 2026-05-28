@@ -43,6 +43,10 @@
   border:1px solid #C5B18F;
 }
 
+.hero-page{
+  background-color: #000;
+}
+
 .logobtn img {
   width: 20px;
   height: 20px;
