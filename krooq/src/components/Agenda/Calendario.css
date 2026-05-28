@@ -1,0 +1,110 @@
+.container-calendario {
+    width: 720px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.topo-calendario {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo-calendario h2 {
+    font-size: 42px;
+    color: #1f3527;
+}
+
+.botoes-mes {
+    display: flex;
+    gap: 20px;
+}
+
+.botoes-mes button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+.linha-verde {
+    width: 100%;
+    height: 3px;
+
+    background: #8FB996;
+}
+
+.dias-semana {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+.grid-dias {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 25px;
+}
+
+.dia {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.selecionado {
+    background: #8FB996;
+
+    color: white;
+}
+.espaco-vazio {
+    width: 60px;
+    height: 60px;
+}
+.conteudo-dia {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.pontinho-evento {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #8FB996;
+}

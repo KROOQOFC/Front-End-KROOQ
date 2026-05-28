@@ -1,27 +1,28 @@
 .CentralHeaderGeral {
-    width:100%;
+    width:77%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:45px 55px 25px 40px;
+    margin-left: 18%;
     box-sizing:border-box;
+    position: fixed;
+    top: 22px;
 }
 
 .SaudacaoHeader {
-    font-size:42px;
-    font-weight:700;
-    margin:0;
+    font-size:30px;
+    font-weight:600;
+    margin-right: 200px;
 }
 
 .AcoesHeader {
     display:flex;
-    align-items:center;
-    gap:15px;
+    gap:20px;
 }
 
 .BuscaContainer {
-    width:62px;
-    height:62px;
+    width:45px;
+    height:45px;
     display:flex;
     align-items:center;
     overflow:hidden;
@@ -59,7 +60,8 @@
     border:none;
     outline:none;
     color:white;
-    font-size:20px;
+    font-size:18px;
+    font-weight: 100;
     border-bottom:
     2px solid rgba(255,255,255,0.35);
     padding-bottom:2px;
@@ -72,8 +74,8 @@
 
 .NotificacaoBotao,
 .PerfilBotao {
-    width:62px;
-    height:62px;
+    width:45px;
+    height:45px;
     border:none;
     border-radius:50%;
     display:flex;
@@ -85,8 +87,8 @@
 }
 
 .BuscaBotao {
-    width:60px;
-    height:60px;
+    width:43px;
+    height:43px;
     border:none;
     border-radius:50%;
     display:flex;

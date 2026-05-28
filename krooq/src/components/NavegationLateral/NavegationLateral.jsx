@@ -22,7 +22,7 @@ function NavegationLateral() {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to="/" className="link-menu">
+                            <NavLink to="/CentralProfissional" className="link-menu">
 
                                 <img
                                     className="icone-painel"
