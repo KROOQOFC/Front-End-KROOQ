@@ -15,8 +15,9 @@ function IA() {
   return (
      
     <>
-<section className="hero"
-style={{ backgroundImage: `url(${HeroBg})` }}>
+<div className="hero-page">
+  <section className="hero"
+   style={{ backgroundImage: `url(${HeroBg})` }}>
     
     <small className="logo">KROOQ IA</small>
 
@@ -158,6 +159,7 @@ style={{ backgroundImage: `url(${CtaBg})` }}>
     
     <button className="btnBranco">Comece Agora</button>
 </section>
+</div>
     </>
   )
 }
