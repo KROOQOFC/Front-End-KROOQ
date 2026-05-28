@@ -33,7 +33,7 @@ function NavegationLateral() {
                         </li>
 
                         <li>
-                            <NavLink to="/" className="link-menu">
+                            <NavLink to="/agenda" className="link-menu">
                                 <img
                                     src={IconeAgenda}
                                     alt="Agenda"/>
