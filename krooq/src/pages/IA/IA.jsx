@@ -24,7 +24,7 @@ function IA() {
     
     <small className="logo">KROOQ IA</small>
 
-    <h1 className="logo">
+    <h1 className="logo1">
        Domine a Criatividade <br/> Ilimitada.Projete,<br/> Inove, Escalone e<br/> Execute.
     </h1>
 
