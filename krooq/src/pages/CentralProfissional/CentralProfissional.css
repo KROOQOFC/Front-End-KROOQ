@@ -5,7 +5,7 @@
 
 .botão-transparente-geral {
     position: relative;
-    bottom: 300px;
+    bottom: 275px;
     left: 1015px;
 }
 
@@ -26,9 +26,15 @@
 }
 .AreaProcessos {
   position: fixed;
-  top: 50%;
-  left: 550px;
-
+  top: 49.8%;
+  left: 566px;
   display: flex;
-  gap: 25px;
+  gap: 10px;
+}
+.paragrafo-processos-central{
+    color: #fff;
+  position: relative;
+  position: fixed;
+  top: 283px;
+  left: 569px;
 }

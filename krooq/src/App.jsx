@@ -23,7 +23,8 @@ function App() {
         <Route path="/IA" element={<IA />} />
         <Route path="/escolha-login" element={<EscolhaLogin />} />
         <Route path="/login/:tipoUsuario" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastro/:tipoUsuario" element={<Cadastro />} />
+        <Route path="/cadastro" element={<Navigate to="/escolha-login" />} />
         <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
         {/* <Route path="/Ia" element={<Ia />} /> */}

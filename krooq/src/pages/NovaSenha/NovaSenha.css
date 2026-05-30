@@ -9,12 +9,13 @@
   margin: 0 auto;
   padding: 24px;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 .novaSenha-logo {
-  width: 210px;
+  width: 190px;
   height: auto;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .novaSenha-icon-box {
@@ -24,31 +25,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fbf0ff;
-  margin-bottom: 14px;
+  background: #fff3f0;
+  border: 1.5px solid #5f7d6a;
+  margin-bottom: 16px;
 }
 
 .novaSenha-icon {
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   object-fit: contain;
 }
 
 .novaSenha-container h2 {
   margin: 0 0 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #101828;
+  font-size: 21px;
+  font-weight: 800;
+  color: #111827;
   text-align: center;
 }
 
 .novaSenha-subtitle {
   width: 100%;
-  max-width: 280px;
+  max-width: 285px;
   margin: 0 0 26px;
   font-size: 13px;
   line-height: 1.45;
-  color: #667085;
+  color: #475467;
   text-align: center;
 }
 
@@ -68,34 +70,74 @@
 
 .novaSenha-campo label {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   color: #344054;
 }
 
-.novaSenha-campo input {
+.senha-wrapper {
   width: 100%;
-  height: 40px;
-  padding: 0 14px;
-  box-sizing: border-box;
-  border: 1px solid #d0d5dd;
-  border-radius: 6px;
-  outline: none;
-  font-size: 13px;
-  color: #101828;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #5f7d6a;
+  border-radius: 7px;
   background: #ffffff;
+  transition: 0.2s ease;
 }
 
-.novaSenha-campo input::placeholder {
+.senha-wrapper:focus-within {
+  border-color: #e35336;
+  box-shadow: 0 0 0 3px rgba(227, 83, 54, 0.14);
+}
+
+.senha-wrapper input {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px 0 14px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #101828;
+  background: transparent;
+}
+
+.senha-wrapper input::placeholder {
   color: #98a2b3;
 }
 
-.novaSenha-campo input:focus {
-  border-color: #66856f;
-  box-shadow: 0 0 0 3px rgba(102, 133, 111, 0.15);
+.senha-eye {
+  width: 42px;
+  min-width: 42px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #5f7d6a;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.senha-eye:hover {
+  color: #e35336;
+  transform: scale(1.08);
+}
+
+.senha-wrapper-erro {
+  border-color: #e35336;
+  background-color: #fff7f5;
+}
+
+.senha-wrapper-erro:focus-within {
+  border-color: #e35336;
+  box-shadow: 0 0 0 3px rgba(227, 83, 54, 0.14);
 }
 
 .novaSenha-campo small {
   display: block;
+
   font-size: 10px;
   color: #667085;
   line-height: 1.3;
@@ -103,10 +145,10 @@
 
 .btn-resetar {
   width: 100%;
-  height: 42px;
+  height: 43px;
   border: none;
-  border-radius: 6px;
-  background: #5F7D6A;
+  border-radius: 7px;
+  background: #e35336;
   color: #ffffff;
   font-size: 13px;
   font-weight: 700;
@@ -116,29 +158,21 @@
 }
 
 .btn-resetar:hover {
-  background: #55745e;
+  background: #c9462d;
+  transform: translateY(-1px);
 }
 
 .back-login {
   margin-top: 28px;
-  font-size: 15px;
-  color: #667085;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f7d6a;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .back-login:hover {
-  color: #344054;
-}
-
-.input-com-erro {
-  border-color: #dc2626 !important;
-  background-color: #fff7f7 !important;
-}
-
-.input-com-erro:focus {
-  border-color: #dc2626 !important;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+  color: #e35336;
 }
 
 .caixa-mensagem-erro {
@@ -149,9 +183,9 @@
   margin-top: 2px;
   padding: 8px 10px;
   box-sizing: border-box;
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  border-left: 4px solid #dc2626;
+  background: #fff3f0;
+  border: 1px solid rgba(227, 83, 54, 0.35);
+  border-left: 4px solid #e35336;
   border-radius: 6px;
 }
 
@@ -162,7 +196,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #dc2626;
+  background: #e35336;
   color: #ffffff;
   border-radius: 50%;
   font-size: 10px;
@@ -172,8 +206,19 @@
 
 .caixa-mensagem-erro p {
   margin: 0;
-  color: #991b1b;
+  color: #9f2f1f;
   font-size: 10px;
   font-weight: 600;
   line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .novaSenha-container {
+    max-width: 100%;
+    padding: 24px 22px;
+  }
+
+  .novaSenha-logo {
+    width: 175px;
+  }
 }

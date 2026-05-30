@@ -17,21 +17,21 @@
   font-weight:100px;
 }
 
-.conteudo{
-    min-height:200vh;
-    background:#000000;
-    width: 100vw;
-}
 
 /* ========================= */
 /* LOGO + BOTÕES */
 /* ========================= */
 
-.hero-page .logo {
+.logo-IA {
   color: #C5B18F;
   letter-spacing: 3px;
   margin-bottom: -60px;
+}
 
+.logo {
+  color: #C5B18F;
+  letter-spacing: 3px;
+  font-size: 14px;
 }
 
 
@@ -52,7 +52,7 @@
   height: 20px;
 }
 
-.logobtn section p {
+.logobtn {
   justify-content: center;
 }
 
@@ -64,6 +64,11 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-top: -10px;
+}
+.verde {
+  color:#5F7D6A;
+  max-width:800px;
+
 }
 
 .verdebtn{
@@ -119,7 +124,7 @@
   color: #fff;
 }
 
-.hero-page p{
+.hero-page p {
   max-width:800px;
   color:#aaa;
   font-weight:300;
