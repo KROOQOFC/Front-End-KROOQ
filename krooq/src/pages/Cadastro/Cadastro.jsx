@@ -1,13 +1,37 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./Cadastro.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
+import GoogleIcon from "../../assets/google.png";
 
 function Cadastro() {
+  const { tipoUsuario } = useParams();
+
+  const tiposPermitidos = ["profissional", "cliente", "fornecedor"];
+
+  if (!tiposPermitidos.includes(tipoUsuario)) {
+    return <Navigate to="/escolha-login" />;
+  }
+
+  const nomesCadastro = {
+    profissional: "Profissional",
+    cliente: "Cliente",
+    fornecedor: "Fornecedor",
+  };
+
+  const tipoFormatado = nomesCadastro[tipoUsuario];
+
   const [dadosCadastro, setDadosCadastro] = useState({
     nome: "",
+    sobrenome: "",
     email: "",
+    telefone: "+55 ",
+    cpf: "",
+    cnpj: "",
+    areaAtuacao: "",
+    registroProfissional: "",
+    nomeEmpresa: "",
     senha: "",
     confirmarSenha: "",
     aceitouTermos: false,
@@ -15,8 +39,150 @@ function Cadastro() {
 
   const [mensagensErro, setMensagensErro] = useState({});
 
+  function pegarSomenteNumeros(valor) {
+    return valor.replace(/\D/g, "");
+  }
+
+  function formatarCPF(valor) {
+    const numeros = pegarSomenteNumeros(valor).slice(0, 11);
+
+    if (numeros.length <= 3) return numeros;
+    if (numeros.length <= 6) return `${numeros.slice(0, 3)}.${numeros.slice(3)}`;
+
+    if (numeros.length <= 9) {
+      return `${numeros.slice(0, 3)}.${numeros.slice(3, 6)}.${numeros.slice(6)}`;
+    }
+
+    return `${numeros.slice(0, 3)}.${numeros.slice(3, 6)}.${numeros.slice(
+      6,
+      9
+    )}-${numeros.slice(9, 11)}`;
+  }
+
+  function formatarTelefone(valor) {
+    let numeros = pegarSomenteNumeros(valor);
+
+    if (numeros.startsWith("55")) {
+      numeros = numeros.slice(2);
+    }
+
+    numeros = numeros.slice(0, 11);
+
+    if (numeros.length === 0) return "+55 ";
+    if (numeros.length <= 2) return `+55 (${numeros}`;
+
+    if (numeros.length <= 6) {
+      return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2)}`;
+    }
+
+    if (numeros.length <= 10) {
+      return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2, 6)}-${numeros.slice(6)}`;
+    }
+
+    return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2, 7)}-${numeros.slice(
+      7,
+      11
+    )}`;
+  }
+
+  function formatarCNPJ(valor) {
+    const numeros = pegarSomenteNumeros(valor).slice(0, 14);
+
+    if (numeros.length <= 2) return numeros;
+    if (numeros.length <= 5) return `${numeros.slice(0, 2)}.${numeros.slice(2)}`;
+
+    if (numeros.length <= 8) {
+      return `${numeros.slice(0, 2)}.${numeros.slice(2, 5)}.${numeros.slice(5)}`;
+    }
+
+    if (numeros.length <= 12) {
+      return `${numeros.slice(0, 2)}.${numeros.slice(2, 5)}.${numeros.slice(
+        5,
+        8
+      )}/${numeros.slice(8)}`;
+    }
+
+    return `${numeros.slice(0, 2)}.${numeros.slice(2, 5)}.${numeros.slice(
+      5,
+      8
+    )}/${numeros.slice(8, 12)}-${numeros.slice(12, 14)}`;
+  }
+
+  function senhaEhValida(senha) {
+    const temNoMinimo8Caracteres = senha.length >= 8;
+    const temArroba = senha.includes("@");
+    const temLetraMaiuscula = /[A-Z]/.test(senha);
+    const temLetraMinuscula = /[a-z]/.test(senha);
+
+    return (
+      temNoMinimo8Caracteres &&
+      temArroba &&
+      temLetraMaiuscula &&
+      temLetraMinuscula
+    );
+  }
+
+  function telefoneEhValido(telefone) {
+    const numeros = pegarSomenteNumeros(telefone);
+    return numeros.length === 12 || numeros.length === 13;
+  }
+
+  function emailEhValido(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function impedirCopiarEColar(evento) {
+    evento.preventDefault();
+  }
+
+  function limparErroDoCampo(nomeCampo) {
+    if (!mensagensErro[nomeCampo]) {
+      return;
+    }
+
+    setMensagensErro((errosAtuais) => {
+      const novosErros = { ...errosAtuais };
+      delete novosErros[nomeCampo];
+      return novosErros;
+    });
+  }
+
+  function mostrarErrosPorPoucoTempo(erros) {
+    setMensagensErro(erros);
+
+    setTimeout(() => {
+      setMensagensErro({});
+    }, 3500);
+  }
+
   function atualizarCampoDoFormulario(evento) {
     const { name, value, type, checked } = evento.target;
+
+    limparErroDoCampo(name);
+
+    if (name === "telefone") {
+      setDadosCadastro({
+        ...dadosCadastro,
+        telefone: formatarTelefone(value),
+      });
+      return;
+    }
+
+    if (name === "cpf") {
+      setDadosCadastro({
+        ...dadosCadastro,
+        cpf: formatarCPF(value),
+      });
+      return;
+    }
+
+    if (name === "cnpj") {
+      setDadosCadastro({
+        ...dadosCadastro,
+        cnpj: formatarCNPJ(value),
+      });
+      return;
+    }
 
     setDadosCadastro({
       ...dadosCadastro,
@@ -31,16 +197,63 @@ function Cadastro() {
       errosEncontrados.nome = "Informe seu nome para continuar.";
     }
 
+    if (!dadosCadastro.sobrenome.trim()) {
+      errosEncontrados.sobrenome = "Informe seu sobrenome para continuar.";
+    }
+
     if (!dadosCadastro.email.trim()) {
       errosEncontrados.email = "Informe seu e-mail para continuar.";
-    } else if (!dadosCadastro.email.includes("@")) {
-      errosEncontrados.email = "Digite um e-mail válido contendo @.";
+    } else if (!emailEhValido(dadosCadastro.email)) {
+      errosEncontrados.email = "Digite um e-mail válido.";
+    }
+
+    if (!dadosCadastro.telefone.trim() || dadosCadastro.telefone === "+55 ") {
+      errosEncontrados.telefone = "Informe seu telefone para continuar.";
+    } else if (!telefoneEhValido(dadosCadastro.telefone)) {
+      errosEncontrados.telefone =
+        "Digite um telefone válido com +55, DDD e número.";
+    }
+
+    if (tipoUsuario === "cliente" || tipoUsuario === "profissional") {
+      const cpfSomenteNumeros = pegarSomenteNumeros(dadosCadastro.cpf);
+
+      if (!cpfSomenteNumeros) {
+        errosEncontrados.cpf = "Informe seu CPF para continuar.";
+      } else if (cpfSomenteNumeros.length !== 11) {
+        errosEncontrados.cpf = "O CPF precisa conter exatamente 11 números.";
+      }
+    }
+
+    if (tipoUsuario === "profissional") {
+      if (!dadosCadastro.areaAtuacao.trim()) {
+        errosEncontrados.areaAtuacao = "Informe sua área de atuação.";
+      }
+
+      if (!dadosCadastro.registroProfissional.trim()) {
+        errosEncontrados.registroProfissional =
+          "Informe seu registro profissional.";
+      }
+    }
+
+    if (tipoUsuario === "fornecedor") {
+      const cnpjSomenteNumeros = pegarSomenteNumeros(dadosCadastro.cnpj);
+
+      if (!dadosCadastro.nomeEmpresa.trim()) {
+        errosEncontrados.nomeEmpresa = "Informe o nome da empresa.";
+      }
+
+      if (!cnpjSomenteNumeros) {
+        errosEncontrados.cnpj = "Informe o CNPJ da empresa.";
+      } else if (cnpjSomenteNumeros.length !== 14) {
+        errosEncontrados.cnpj = "O CNPJ precisa conter exatamente 14 números.";
+      }
     }
 
     if (!dadosCadastro.senha) {
       errosEncontrados.senha = "Crie uma senha para continuar.";
-    } else if (dadosCadastro.senha.length < 8) {
-      errosEncontrados.senha = "A senha precisa ter pelo menos 8 caracteres.";
+    } else if (!senhaEhValida(dadosCadastro.senha)) {
+      errosEncontrados.senha =
+        "A senha precisa ter no mínimo 8 caracteres, conter @, letra maiúscula e letra minúscula.";
     }
 
     if (!dadosCadastro.confirmarSenha) {
@@ -63,13 +276,27 @@ function Cadastro() {
     const erros = verificarCamposDoCadastro();
 
     if (Object.keys(erros).length > 0) {
-      setMensagensErro(erros);
+      mostrarErrosPorPoucoTempo(erros);
       return;
     }
 
     setMensagensErro({});
 
-    console.log("Cadastro realizado com sucesso:", dadosCadastro);
+    const dadosProntosParaEnviar = {
+      tipoUsuario,
+      nome: dadosCadastro.nome,
+      sobrenome: dadosCadastro.sobrenome,
+      email: dadosCadastro.email,
+      telefone: pegarSomenteNumeros(dadosCadastro.telefone),
+      cpf: pegarSomenteNumeros(dadosCadastro.cpf),
+      cnpj: pegarSomenteNumeros(dadosCadastro.cnpj),
+      areaAtuacao: dadosCadastro.areaAtuacao,
+      registroProfissional: dadosCadastro.registroProfissional,
+      nomeEmpresa: dadosCadastro.nomeEmpresa,
+      senha: dadosCadastro.senha,
+    };
+
+    console.log(dadosProntosParaEnviar);
   }
 
   return (
@@ -80,7 +307,7 @@ function Cadastro() {
         <h2>Cadastre-se</h2>
 
         <p className="cadastro-subtitle">
-          Bem-vindo de volta! Por favor, insira seus dados.
+          Bem-vindo! Por favor, insira seus dados.
         </p>
 
         <form className="cadastro-form" onSubmit={cadastrarUsuario}>
@@ -104,11 +331,51 @@ function Cadastro() {
           </div>
 
           <div className="cadastro-campo">
+            <label>Sobrenome</label>
+            <input
+              type="text"
+              name="sobrenome"
+              placeholder="Digite seu sobrenome"
+              value={dadosCadastro.sobrenome}
+              onChange={atualizarCampoDoFormulario}
+              className={mensagensErro.sobrenome ? "input-com-erro" : ""}
+            />
+
+            {mensagensErro.sobrenome && (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.sobrenome}</p>
+              </div>
+            )}
+          </div>
+
+          {tipoUsuario === "fornecedor" && (
+            <div className="cadastro-campo">
+              <label>Nome da empresa</label>
+              <input
+                type="text"
+                name="nomeEmpresa"
+                placeholder="Digite o nome da empresa"
+                value={dadosCadastro.nomeEmpresa}
+                onChange={atualizarCampoDoFormulario}
+                className={mensagensErro.nomeEmpresa ? "input-com-erro" : ""}
+              />
+
+              {mensagensErro.nomeEmpresa && (
+                <div className="caixa-mensagem-erro">
+                  <span>!</span>
+                  <p>{mensagensErro.nomeEmpresa}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="cadastro-campo">
             <label>Email</label>
             <input
               type="email"
               name="email"
-              placeholder="Digite seu email"
+              placeholder="Crie uma conta"
               value={dadosCadastro.email}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.email ? "input-com-erro" : ""}
@@ -123,11 +390,116 @@ function Cadastro() {
           </div>
 
           <div className="cadastro-campo">
+            <label>Telefone</label>
+            <input
+              type="text"
+              name="telefone"
+              placeholder="+5511999999999"
+              value={dadosCadastro.telefone}
+              onChange={atualizarCampoDoFormulario}
+              className={mensagensErro.telefone ? "input-com-erro" : ""}
+            />
+
+            {mensagensErro.telefone && (
+              <div className="caixa-mensagem-erro">
+                <span>!</span>
+                <p>{mensagensErro.telefone}</p>
+              </div>
+            )}
+          </div>
+
+          {(tipoUsuario === "cliente" || tipoUsuario === "profissional") && (
+            <div className="cadastro-campo">
+              <label>CPF</label>
+              <input
+                type="text"
+                name="cpf"
+                placeholder="Digite seu CPF"
+                value={dadosCadastro.cpf}
+                onChange={atualizarCampoDoFormulario}
+                className={mensagensErro.cpf ? "input-com-erro" : ""}
+              />
+
+              {mensagensErro.cpf && (
+                <div className="caixa-mensagem-erro">
+                  <span>!</span>
+                  <p>{mensagensErro.cpf}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {tipoUsuario === "fornecedor" && (
+            <div className="cadastro-campo">
+              <label>CNPJ</label>
+              <input
+                type="text"
+                name="cnpj"
+                placeholder="Digite o CNPJ"
+                value={dadosCadastro.cnpj}
+                onChange={atualizarCampoDoFormulario}
+                className={mensagensErro.cnpj ? "input-com-erro" : ""}
+              />
+
+              {mensagensErro.cnpj && (
+                <div className="caixa-mensagem-erro">
+                  <span>!</span>
+                  <p>{mensagensErro.cnpj}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {tipoUsuario === "profissional" && (
+            <>
+              <div className="cadastro-campo">
+                <label>Área de atuação</label>
+                <input
+                  type="text"
+                  name="areaAtuacao"
+                  placeholder="Ex: Arquitetura, Engenharia, Design"
+                  value={dadosCadastro.areaAtuacao}
+                  onChange={atualizarCampoDoFormulario}
+                  className={mensagensErro.areaAtuacao ? "input-com-erro" : ""}
+                />
+
+                {mensagensErro.areaAtuacao && (
+                  <div className="caixa-mensagem-erro">
+                    <span>!</span>
+                    <p>{mensagensErro.areaAtuacao}</p>
+                  </div>
+                )}
+              </div>
+
+              <div className="cadastro-campo">
+                <label>Registro profissional</label>
+                <input
+                  type="text"
+                  name="registroProfissional"
+                  placeholder="Digite seu CAU, CREA ou registro"
+                  value={dadosCadastro.registroProfissional}
+                  onChange={atualizarCampoDoFormulario}
+                  className={
+                    mensagensErro.registroProfissional ? "input-com-erro" : ""
+                  }
+                />
+
+                {mensagensErro.registroProfissional && (
+                  <div className="caixa-mensagem-erro">
+                    <span>!</span>
+                    <p>{mensagensErro.registroProfissional}</p>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+
+          <div className="cadastro-campo">
             <label>Senha</label>
             <input
               type="password"
               name="senha"
-              placeholder="Crie uma senha"
+              placeholder="Crie sua senha"
               value={dadosCadastro.senha}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.senha ? "input-com-erro" : ""}
@@ -139,7 +511,9 @@ function Cadastro() {
                 <p>{mensagensErro.senha}</p>
               </div>
             ) : (
-              <small>Deve ter pelo menos 8 caracteres.</small>
+              <small>
+                Deve ter no mínimo 8 caracteres, @, letra maiúscula e minúscula.
+              </small>
             )}
           </div>
 
@@ -151,6 +525,11 @@ function Cadastro() {
               placeholder="Digite sua senha novamente"
               value={dadosCadastro.confirmarSenha}
               onChange={atualizarCampoDoFormulario}
+              onPaste={impedirCopiarEColar}
+              onCopy={impedirCopiarEColar}
+              onCut={impedirCopiarEColar}
+              onDrop={impedirCopiarEColar}
+              autoComplete="new-password"
               className={mensagensErro.confirmarSenha ? "input-com-erro" : ""}
             />
 
@@ -160,7 +539,7 @@ function Cadastro() {
                 <p>{mensagensErro.confirmarSenha}</p>
               </div>
             ) : (
-              <small>Digite a mesma senha informada acima.</small>
+              <small>Digite manualmente a mesma senha informada acima.</small>
             )}
           </div>
 
@@ -186,13 +565,13 @@ function Cadastro() {
           </button>
 
           <button type="button" className="btn-google">
-            <span>G</span>
-            Entrar com o Google
+            <img src={GoogleIcon} alt="Google" />
+            <span>Entrar com Google</span>
           </button>
         </form>
 
         <p className="cadastro-login">
-          Já tem uma conta? <Link to="/escolha-login">Entrar</Link>
+          Já tem uma conta? <Link to={`/login/${tipoUsuario}`}>Entrar</Link>
         </p>
       </div>
     </AuthLayout>
