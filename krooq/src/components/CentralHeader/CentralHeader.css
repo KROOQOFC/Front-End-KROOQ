@@ -3,26 +3,28 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-left: 18%;
+    margin-left: 19%;
     box-sizing:border-box;
     position: fixed;
-    top: 22px;
+    top: 17px;
 }
 
 .SaudacaoHeader {
-    font-size:30px;
+    font-size:22px;
     font-weight:600;
     margin-right: 200px;
 }
 
 .AcoesHeader {
     display:flex;
-    gap:20px;
+    gap:10px; 
+    position: relative;
+    left: 20px;
 }
 
 .BuscaContainer {
-    width:45px;
-    height:45px;
+    width: 35px;
+    height:35px;
     display:flex;
     align-items:center;
     overflow:hidden;
@@ -35,7 +37,7 @@
 }
 
 .BuscaContainer.aberta {
-    width:340px;
+    width:300px;
     background:#5F7D6A;
     padding-left:25px;
 }
@@ -55,7 +57,7 @@
 }
 
 .CampoInput input {
-    width:95%;
+    width:85%;
     background:none;
     border:none;
     outline:none;
@@ -74,8 +76,8 @@
 
 .NotificacaoBotao,
 .PerfilBotao {
-    width:45px;
-    height:45px;
+    width:35px;
+    height:35px;
     border:none;
     border-radius:50%;
     display:flex;
@@ -87,8 +89,8 @@
 }
 
 .BuscaBotao {
-    width:43px;
-    height:43px;
+    width:35px;
+    height:35px;
     border:none;
     border-radius:50%;
     display:flex;
@@ -117,8 +119,8 @@
 
 .BuscaBotao img,
 .NotificacaoBotao img {
-    width:26px;
-    height:26px;
+    width:20px;
+    height:20px;
 }
 
 .PerfilBotao img {

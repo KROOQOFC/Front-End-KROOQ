@@ -100,7 +100,7 @@ function deletarEvento() {
     return (
         <section
             className="container-agenda"
-            style={{ backgroundImage: `url(${AgendaBG})` }}
+            style={{ backgroundImage: `url(${AgendaBG})`  }}
         >
             <button
             className="botao-voltar"

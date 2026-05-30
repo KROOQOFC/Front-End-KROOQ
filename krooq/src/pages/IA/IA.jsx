@@ -17,16 +17,15 @@ function IA() {
   return (
      
     <>
-    <Navegation/>
 <div className="hero-page">
   <section className="hero"
    style={{ backgroundImage: `url(${HeroBg})` }}>
     
-    <small className="logo">KROOQ IA</small>
+    <small className="logo-IA">KROOQ IA</small>
 
-    <h1 className="logo">
+    <h2 className="logo-IA">
        Domine a Criatividade <br/> Ilimitada.Projete,<br/> Inove, Escalone e<br/> Execute.
-    </h1>
+    </h2>
 
     <p className="verde">
        Bem-vindo ao PromptVerse. Transforme ideias em realidade visual e técnica sem esforço. Explore prompts infinitos, gere designs de interiores deslumbrantes e obtenha cálculos precisos de materiais e medidas em tempo real. Automatize seu fluxo de trabalho, do conceito à lista de compras, tudo em um design futurista feito para elevar sua produtividade.
@@ -38,7 +37,7 @@ function IA() {
 <section>
     <h2>Foco no Fluxo de Trabalho</h2>
 
-    <p>
+    <p className='paragrafo-cinza-fluxot'>
         Sua visão criativa com a precisão de um especialista. Nossa IA de design de interiores transforma suas medidas em projetos visuais deslumbrantes, enquanto calcula instantaneamente a lista completa de materiais e custos para sua obra.
     </p>
     <button className="verdebtn">Gerar Agora<img src={Vector} alt="ícone de varinha"/></button>

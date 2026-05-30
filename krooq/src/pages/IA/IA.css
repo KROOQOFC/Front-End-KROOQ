@@ -15,21 +15,15 @@
   position: relative;
 }
 
-.hero h1 br{
-  display:block;
-}
 
-.conteudo{
-    min-height:200vh;
-    background:#000000;
-    width: 100vw;
-}
+
+
 
 /* ========================= */
 /* LOGO + BOTÕES */
 /* ========================= */
 
-.hero-page .logo {
+.logo-IA {
   color: #C5B18F;
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -52,14 +46,15 @@
   height: 20px;
 }
 
-.logobtn section p {
+.logobtn {
   justify-content: center;
 }
 
 /* Verde */
 
-.verde p{
+.verde {
   color:#5F7D6A;
+  max-width:800px;
 }
 
 .verdebtn{
@@ -114,7 +109,7 @@
   color: #fff;
 }
 
-.hero-page p{
+.paragrafo-cinza-fluxot{
   max-width:800px;
   color:#aaa;
   font-size:18px;

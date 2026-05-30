@@ -20,6 +20,7 @@ function ProcessoCentral({
         <button className="MenuProcesso" onClick={onMenu}>
           ...
         </button>
+        
       </div>
 
       <h3 className="TituloProcesso">{titulo}</h3>
