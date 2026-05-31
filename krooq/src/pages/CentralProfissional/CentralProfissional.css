@@ -3,18 +3,31 @@
     background-image: url("../../assets/FundoCentral.png");
 }
 
+.AreaMetaMensal {
+  position: fixed;
+  top: 65px;
+  left: 1060px;
+  z-index: 5;
+}
+.AreaMetasGerais {
+  position: fixed;
+  top: 360px;
+  left: 240px;
+  z-index: 5;
+}
+
 .botão-transparente-geral {
     position: relative;
-    bottom: 275px;
-    left: 1015px;
+    bottom: 260px;
+    left: 1075px;
 }
 
 .componentes-projetos-andamento {
     display: flex;
-    gap: 30px;
+    gap: 42.5px;
     position: fixed;
     bottom: 0;
-    left: 18.5%;
+    left: 240px;
     width: 100%;
 
 }
@@ -26,15 +39,18 @@
 }
 .AreaProcessos {
   position: fixed;
-  top: 49.8%;
-  left: 566px;
+  top: 400px;
+  left: 572px;
   display: flex;
-  gap: 10px;
+  gap:45px;
 }
+
 .paragrafo-processos-central{
     color: #fff;
   position: relative;
   position: fixed;
-  top: 283px;
-  left: 569px;
+  top: 364px;
+  left: 573px;
 }
+
+

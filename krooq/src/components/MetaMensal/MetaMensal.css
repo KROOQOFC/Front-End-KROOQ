@@ -1,0 +1,167 @@
+.ContainerMetaMensal {
+  width: 310px;
+  height: 280px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 18px 30px;
+  box-sizing: border-box;
+}
+
+.SuperiorMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TituloMeta {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.NivelPerformance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.PorcentagemPerformance {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.PerformanceEcossistema {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #3f3f3f;
+}
+
+.ConteudoMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
+.TituloStatus {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.StatusItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.StatusItem p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+}
+
+.BolinhaExecucao,
+.BolinhaDesenvolvimento,
+.BolinhaHomologacao {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.BolinhaExecucao {
+  background-color: #54715E
+  ;
+}
+
+.BolinhaDesenvolvimento {
+  background-color: #e95134;
+}
+
+.BolinhaHomologacao {
+  background-color: #8f8f8f;
+}
+
+.StatusItem p:nth-child(3) {
+  color: #8f8f8f;
+}
+
+.GraficoCircular {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.GraficoCircular svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.anel-fundo {
+  fill: none;
+  stroke: #dedede;
+  stroke-width: 10;
+}
+
+.anel-progresso {
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.TextoGrafico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+.CompartilharMetas {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+.BotaoCompartilhar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+    cursor: pointer;
+}
+.IconeCompartilhar {
+  transform: translate(-2px, 1px);
+}
+
+.ExportarMeta {
+  width: 200px;
+  height: 30px;
+  border-radius: 45px;
+  border: 2px solid #000;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}

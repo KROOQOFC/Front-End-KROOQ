@@ -12,7 +12,7 @@ import IA from "./pages/IA/IA"
 import Agenda from "./pages/Agenda/Agenda";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
-// import Ia from "./pages/Ia/Ia";
+
 
 function App() {
   return (

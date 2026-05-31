@@ -10,6 +10,8 @@ import ProcessoIconeComunidade from "../../assets/ProcessoIconeComunidade.png";
 import SimboloIconeExecutivo from "../../assets/SimboloIconeExecutivo.png";
 import MetasGerais from "../../components/MetasGerais/MetasGerais";
 import ProcessoCentral from "../../components/ProcessoCentral/ProcessoCentral";
+import MetaMensal from "../../components/MetaMensal/MetaMensal";
+import PanoramaGeral from "../../components/PanoramaGeral/PanoramaGeral";
 
 
 function CentralProfissional() {
@@ -23,38 +25,46 @@ function CentralProfissional() {
 </div>
 
 
-<div className="LayoutCentralHeader">
-<CentralHeader/>
-</div>
+    <div className="LayoutCentralHeader">
+      <CentralHeader/>
+    </div>
 
-<MetasGerais titulo="Metas Gerais"
-        metas={[
-          { texto: "Especificação de Materiais", concluida: false },
-          { texto: "Detalhamento de Projeto", concluida: false },
-          { texto: "Modelagem 3D / Render", concluida: false },
-          { texto: "Entregas Prioritárias", concluida: false },
-        ]}/>
+    <PanoramaGeral/>
 
+    <div className="AreaMetasGerais">
+        <MetasGerais
+           titulo="Metas Gerais"
+           metas={[
+            { texto: "Especificação de Materiais", concluida: false },
+            { texto: "Detalhamento de Projeto", concluida: false },
+            { texto: "Modelagem 3D / Render", concluida: false },
+            { texto: "Entregas Prioritárias", concluida: false },
+           ]}
+        />
+    </div>
+
+    <p className="paragrafo-processos-central">Em processo  (2)</p>
    <div className="AreaProcessos">
         <ProcessoCentral
-  iconeTopo={ProcessoIconeComunidade}
-  titulo="Reunião com Engenheiro Civil"
-  responsavel="José Santos"
-  iconeStatus={SimboloProcessoBranco}
-  destaqueStatus={true}
-  onMenu={() => console.log("Abrir menu")}
-/> 
+          iconeTopo={ProcessoIconeComunidade}
+          titulo="Reunião com Engenheiro Civil"
+          responsavel="José Santos"
+          iconeStatus={SimboloProcessoBranco}
+          destaqueStatus={true}
+          onMenu={() => console.log("Abrir menu")}
+        /> 
 
         <ProcessoCentral
-  iconeTopo={SimboloIconeExecutivo}
-  titulo="Apresentação de Conceito"
-  responsavel="Marília Teresa"
-  iconeStatus={SimboloProcesso}
-  destaqueStatus={false}
-  onMenu={() => console.log("Abrir menu")}
-/>
-      </div>
-      <p className="paragrafo-processos-central">Em processo  (2)</p>
+          iconeTopo={SimboloIconeExecutivo}
+          titulo="Apresentação de Conceito"
+          responsavel="Marília Teresa"
+          iconeStatus={SimboloProcesso}
+          destaqueStatus={false}
+          onMenu={() => console.log("Abrir menu")}
+        />
+        
+    </div>
+      
 
 <div className="componentes-projetos-andamento">
 <ProjetosRecentesCards
@@ -75,6 +85,14 @@ function CentralProfissional() {
   porcentagem={100}
 />
 </div>
+
+<div className="AreaMetaMensal">
+<MetaMensal  
+  porcentagemPerformance={30}
+  execucao={72}
+  desenvolvimento={60}
+  homologacao={38}
+  porcentagemCentro={65}/></div>
 
 </section>
 

@@ -1,6 +1,6 @@
 .conteiner-projetos-andamento {
-    width: 340px;
-    height: 120px;
+    width: 350px;
+    height: 100px;
     min-height: 50px;
     background: #5E7664;
     border-radius: 18px;
@@ -14,21 +14,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px;
-    margin-top: -15px;
+    margin: 10px;
+    margin-top: -10px;
 
 }
 
 .topo-card h2 {
     margin: 5px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: -20px;
 }
 
 .circulo-progresso {
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     position: relative;
     top: 18px;
@@ -40,8 +40,8 @@
 .circulo-progresso::after {
     content: "";
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 25px;
+    height: 25px;
     background: #5E7664;
     border-radius: 50%;
 }
@@ -49,13 +49,13 @@
 .circulo-progresso span {
     position: relative;
     z-index: 2;
-    font-size: 10px;
+    font-size: 8px;
     color: white;
 }
 
 
 .topico-card-progresso-sub {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.75);
     margin-bottom: 1px;
@@ -63,7 +63,7 @@
 }
 
 .topico-card-progresso-paragrafo {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: #FFFDFD;
     line-height: 1.5;
