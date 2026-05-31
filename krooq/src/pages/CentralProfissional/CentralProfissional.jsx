@@ -17,6 +17,7 @@ function CentralProfissional() {
 <section className="conteiner-central-profissional">
 
 <NavegationLateral/>
+
 <div className="botão-transparente-geral">
     <BotaoTransparenteAdd/>
 </div>
@@ -42,7 +43,7 @@ function CentralProfissional() {
   iconeStatus={SimboloProcessoBranco}
   destaqueStatus={true}
   onMenu={() => console.log("Abrir menu")}
-/>
+/> 
 
         <ProcessoCentral
   iconeTopo={SimboloIconeExecutivo}
@@ -53,6 +54,7 @@ function CentralProfissional() {
   onMenu={() => console.log("Abrir menu")}
 />
       </div>
+      <p className="paragrafo-processos-central">Em processo  (2)</p>
 
 <div className="componentes-projetos-andamento">
 <ProjetosRecentesCards

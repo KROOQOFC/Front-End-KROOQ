@@ -2,14 +2,32 @@
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 120px;
+    height: 130px;
     font-size: 17px;
     color: #fff;
     position: fixed;
     font-weight: 400;
     background: transparent;
     border: 2px dashed rgba(255, 255, 255, 0.5);
-
     border-radius: 15px;
+
+}
+
+.btn-transparente-central {
+    position: fixed;
+}
+
+.paragrafo-do-btnt {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 13px;
+    position: relative;
+    top: -30px;
+    left: 168px;
+}
+.seta-btn-transparente{
+position: relative;
+left: 294px;
+bottom: 50px;
 
 }

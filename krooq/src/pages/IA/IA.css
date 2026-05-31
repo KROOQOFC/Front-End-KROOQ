@@ -1,39 +1,39 @@
-
 .hero{
   height:100vh; 
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
-  background-color: #000000;
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  justify-content:center;    /* CENTRALIZA VERTICAL */
+  align-items:center;        /* CENTRALIZA HORIZONTAL */
+  text-align:center;         /* TEXTO CENTRALIZADO */
   padding: 0 20px;
-  width: 100vw;
-  position: relative;
+  width: 100%;
 }
 
 .hero h1 br{
   display:block;
+  font-weight:100px;
 }
 
-.conteudo{
-    min-height:200vh;
-    background:#000000;
-    width: 100vw;
-}
 
 /* ========================= */
 /* LOGO + BOTÕES */
 /* ========================= */
 
-.hero-page .logo {
+.logo-IA {
   color: #C5B18F;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  margin-bottom: -60px;
 }
+
+.logo {
+  color: #C5B18F;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
 
 .logobtn{
   display: inline-flex;
@@ -52,14 +52,23 @@
   height: 20px;
 }
 
-.logobtn section p {
+.logobtn {
   justify-content: center;
 }
 
 /* Verde */
 
-.verde p{
+.hero-page .verde {
   color:#5F7D6A;
+  max-width: 780px;      
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: -10px;
+}
+.verde {
+  color:#5F7D6A;
+  max-width:800px;
+
 }
 
 .verdebtn{
@@ -93,8 +102,9 @@
 }
 
  .hero-page h1 {
+  font-weight: 400;
   font-size: 64px;
-  line-height: 1.1;
+  line-height: 1.0;
   max-width: 900px;
   text-align: center;
   color: #C5B18F;
@@ -114,12 +124,13 @@
   color: #fff;
 }
 
-.hero-page p{
+.hero-page p {
   max-width:800px;
   color:#aaa;
+  font-weight:300;
   font-size:18px;
   line-height:1.7;
-  margin-top:20px;
+  margin-top:-7px;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
@@ -254,6 +265,9 @@
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left; 
 }
 
 .content .small {
@@ -319,7 +333,7 @@
 /* CTA */
 .cta{
   border-radius: 30px;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 80px 40px;
   min-height: 300px;
   max-width: 1200px;
