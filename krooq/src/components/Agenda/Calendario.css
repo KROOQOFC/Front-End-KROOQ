@@ -1,15 +1,17 @@
 .container-calendario {
-    width: 720px;
+    width: 500px;
 
     background: white;
 
     border-radius: 30px;
 
-    padding: 40px;
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 48px;
+    position: relative;
+    z-index: 2;
 }
 
 .topo-calendario {
@@ -20,7 +22,7 @@
 }
 
 .topo-calendario h2 {
-    font-size: 42px;
+    font-size: 28px;
     color: #1f3527;
 }
 
@@ -53,7 +55,7 @@
 
     text-align: center;
 
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .grid-dias {
@@ -61,12 +63,12 @@
 
     grid-template-columns: repeat(7, 1fr);
 
-    gap: 25px;
+    gap: 12px;
 }
 
 .dia {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 
     border: none;
 
@@ -74,7 +76,7 @@
 
     background: transparent;
 
-    font-size: 28px;
+    font-size: 20px;
 
     cursor: pointer;
 }

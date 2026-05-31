@@ -1,0 +1,130 @@
+.card-cliente {
+    width: 320px;
+
+    background-color: #F7F7F7;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    transition: 0.3s;
+}
+
+.card-cliente:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- TOPO ---------- */
+
+.topo-cliente {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    position: relative;
+}
+
+.foto-cliente {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.info-cliente {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    flex: 1;
+}
+
+.info-cliente h3 {
+    margin: 0;
+
+    font-size: 1.7rem;
+
+    color: #111;
+}
+
+.info-cliente span {
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    color: #6E6E6E;
+}
+
+.info-cliente p {
+    margin: 0;
+
+    font-size: 1rem;
+
+    color: #666;
+
+    font-weight: 500;
+}
+
+/* ---------- STATUS ---------- */
+
+.status-cliente {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 70px;
+    top: 60px;
+
+    border: 3px solid white;
+}
+
+.status-cliente.ativo {
+    background-color: #16A034;
+}
+
+.status-cliente.inativo {
+    background-color: #D50000;
+}
+
+/* ---------- DADOS ---------- */
+
+.dados-cliente {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.dados-cliente p {
+    margin: 0;
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    color: #222;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
