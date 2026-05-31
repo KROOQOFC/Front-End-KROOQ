@@ -12,6 +12,8 @@ import IA from "./pages/IA/IA"
 import Agenda from "./pages/Agenda/Agenda";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
+import Teste from "./pages/Teste/Teste";
+
 // import Ia from "./pages/Ia/Ia";
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/teste" element={<Teste />} />
       </Routes>
     </BrowserRouter>
   );

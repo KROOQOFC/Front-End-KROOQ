@@ -2,7 +2,7 @@ import "./Agenda.css";
 import AgendaBG from "../../assets/AgendaBG.png";
 
 import { useState } from "react";
-
+import SemanaAgenda from "../../components/Agenda/SemanaAgenda";
 import Calendario from "../../components/Agenda/Calendario";
 import CardEvento from "../../components/Agenda/CardEvento";
 import EventModal from "../../components/Agenda/EventModal";
@@ -102,12 +102,10 @@ function deletarEvento() {
             className="container-agenda"
             style={{ backgroundImage: `url(${AgendaBG})` }}
         >
-            <button
-            className="botao-voltar"
+            <div
+            className="overlay-voltar"
             onClick={() => navigate("/CentralProfissional")}
-            >
-                {"<"}
-                </button>
+            />
 
             <Calendario
             dataSelecionada={dataSelecionada}
@@ -117,20 +115,26 @@ function deletarEvento() {
 
             <section className="painel-eventos">
 
-                <div className="topo-eventos">
+<SemanaAgenda
+    dataSelecionada={dataSelecionada}
+    setDataSelecionada={setDataSelecionada}
+/>
 
-                    <h2>Compromissos</h2>
+<div className="topo-eventos">
 
-                    <button
-                        className="botao-adicionar"
-                        onClick={() => setAbrirModal(true)}
-                    >
-                        +
-                    </button>
+    <h2>Compromissos</h2>
 
-                </div>
+    <button
+        className="botao-adicionar"
+        onClick={() => setAbrirModal(true)}
+    >
+        +
+    </button>
 
-                <div className="lista-eventos">
+</div>
+
+<div className="lista-eventos">
+
 
                     {eventos .filter( (evento) =>
                     evento.dia === dataSelecionada.dia &&

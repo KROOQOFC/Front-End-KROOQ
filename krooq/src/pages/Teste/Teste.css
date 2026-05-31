@@ -1,0 +1,24 @@
+.pagina-teste {
+    min-height: 100vh;
+
+    padding: 40px;
+
+    background-color: #ececec;
+}
+
+.pagina-teste h1 {
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.grid-clientes {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(320px, 1fr)
+    );
+
+    gap: 40px;
+}
