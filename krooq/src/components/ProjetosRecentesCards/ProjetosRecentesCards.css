@@ -2,7 +2,7 @@
     width: 350px;
     height: 100px;
     min-height: 50px;
-    background: #5E7664;
+    background: #000000;
     border-radius: 18px;
     padding: 5px 15px;
     box-sizing: border-box;
@@ -42,7 +42,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background: #5E7664;
+    background: #000000;
     border-radius: 50%;
 }
 

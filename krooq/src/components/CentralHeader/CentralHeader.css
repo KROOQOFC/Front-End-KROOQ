@@ -38,7 +38,7 @@
 
 .BuscaContainer.aberta {
     width:300px;
-    background:#5F7D6A;
+    background:#000000;
     padding-left:25px;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .NotificacaoBotao {
-    background:#6B816D;
+    background:#ffffff;
 }
 
 .PerfilBotao {

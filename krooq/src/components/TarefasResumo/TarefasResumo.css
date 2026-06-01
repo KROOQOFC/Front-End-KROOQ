@@ -1,0 +1,94 @@
+.ContainerResumoTarefas {
+  width: 1000px;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 10px;
+  padding: 14px 28px 28px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.TopoResumoTarefas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TopoResumoTarefas h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.TopoResumoTarefas p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ConteudoResumoTarefas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.IndicadoresTarefas {
+  display: flex;
+  align-items: center;
+}
+
+.BlocoIndicador {
+  display: flex;
+  align-items: center;
+}
+
+.TextoIndicador {
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+}
+
+.TextoIndicador strong {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.TextoIndicador span {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.SeparadorIndicador {
+  width: 2px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 0 18px;
+}
+
+.BotoesTarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.BotoesTarefas button {
+  width: 120px;
+  height: 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.BotaoAdicionarTarefa {
+  background-color: #f05a3c;
+}
+
+.BotaoRemoverTarefa {
+  background-color: #54715E;
+}

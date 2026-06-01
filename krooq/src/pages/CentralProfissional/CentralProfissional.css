@@ -1,12 +1,30 @@
 
 .conteiner-central-profissional {
-    background-image: url("../../assets/FundoCentral.png");
+  min-height: 100vh;
+  background-color: #54715E;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaPanoramaGeral {
+  position: fixed;
+  top: 65px;
+  left: 240px;
+  z-index: 2;
+}
+.AreaEvolucaoSemana {
+  position: fixed;
+  top: 65px;
+  left: 605px;
+  z-index: 2;
 }
 
 .AreaMetaMensal {
   position: fixed;
   top: 65px;
-  left: 1060px;
+  left: 1065px;
   z-index: 5;
 }
 .AreaMetasGerais {

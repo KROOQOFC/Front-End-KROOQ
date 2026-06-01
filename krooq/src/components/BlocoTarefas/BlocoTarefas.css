@@ -1,0 +1,133 @@
+.ContainerBlocoTarefas {
+  width: 255px;
+  height: 210px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  position: relative;
+  color: #000000;
+}
+
+.DataCardTarefa {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.TituloCardTarefa {
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.SubtituloCardTarefa {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.AreaProgressoCard {
+  margin-top: 10px;
+}
+
+.AreaProgressoCard p {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.BarraProgressoCard {
+  width: 100%;
+  height: 7px;
+  background-color: #e8e8e8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ProgressoAtualCard {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.AreaProgressoCard span {
+  display: block;
+  margin-top: 5px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.LinhaCardTarefa {
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-top: 5px;
+}
+
+.RodapeCardTarefa {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PessoasCardTarefa {
+  display: flex;
+  align-items: center;
+}
+
+.FotoPessoaCard {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -7px;
+  border: 1px solid #ffffff;
+}
+
+.FotoPessoaCard:first-child {
+  margin-left: 0;
+}
+
+.BotaoAdicionarPessoa {
+  width: 23px;
+  height: 23px;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-left: 7px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.PrazoCardTarefa {
+  min-width: 135px;
+  height: 26px;
+  padding: 0 15px;
+  border-radius: 18px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.BotaoEditarCard {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}

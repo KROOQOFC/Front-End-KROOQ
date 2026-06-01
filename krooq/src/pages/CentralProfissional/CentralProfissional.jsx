@@ -12,6 +12,7 @@ import MetasGerais from "../../components/MetasGerais/MetasGerais";
 import ProcessoCentral from "../../components/ProcessoCentral/ProcessoCentral";
 import MetaMensal from "../../components/MetaMensal/MetaMensal";
 import PanoramaGeral from "../../components/PanoramaGeral/PanoramaGeral";
+import EvolucaoSemana from "../../components/EvolucaoSemana/EvolucaoSemana";
 
 
 function CentralProfissional() {
@@ -24,12 +25,24 @@ function CentralProfissional() {
     <BotaoTransparenteAdd/>
 </div>
 
-
     <div className="LayoutCentralHeader">
       <CentralHeader/>
     </div>
 
-    <PanoramaGeral/>
+    <div className="AreaPanoramaGeral">
+    <PanoramaGeral 
+  tarefasConcluidas={43}
+  projetosPausados={2}
+  percentualProjetos={32}
+  progressoBarra={68}/>
+  </div>
+
+<div className="AreaEvolucaoSemana">
+<EvolucaoSemana
+   dadosProjeto={[45, 70, 35, 75, 42, 63, 82, 55, 28, 43, 25, 95, 45]}
+  dadosVisita={[45, 60, 82, 70, 58, 48, 65, 95, 72, 56, 45]}
+/></div>
+
 
     <div className="AreaMetasGerais">
         <MetasGerais

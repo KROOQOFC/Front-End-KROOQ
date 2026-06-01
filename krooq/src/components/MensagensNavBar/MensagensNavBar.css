@@ -1,0 +1,109 @@
+.ContainerMensagensNavBar {
+  width: 1000px;
+  height: 62px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 0 28px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TituloMensagens {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.AcoesMensagens {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ContainerIcone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.IconeMensagens {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.BadgeIcone {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f05a3c;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BadgeLaranja {
+  background-color: #f05a3c;
+}
+
+.LinhaSeparadora {
+  width: 2px;
+  height: 40px;
+  background-color: #d9d9d9;
+  margin: 0 4px;
+}
+
+.PerfilUsuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.FotoPerfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.PerfilPadrao {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f05a3c;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+}
+
+.DadosUsuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.NomeUsuario {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.EmailUsuario {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}

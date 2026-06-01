@@ -1,0 +1,121 @@
+.ContainerPanoramaGeral {
+  width: 350px;
+  height: 285px;
+  background-color: #000000;
+  border-radius: 22px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.SuperiorPanorama {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TituloPanoramaGeral {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.AcoesPanorama {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 25px;
+}
+
+.PanoramaNumeros {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 12px;
+}
+
+.InfoPanorama {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.InfoPanorama strong {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.InfoPanorama p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.LinhaDivisoria {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 25px;
+}
+
+.BarraProgresso {
+  width: 280px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  margin-left: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.BarraPreenchida {
+  height: 100%;
+  background-color: #e8eee9;
+  border-radius: 10px;
+}
+
+.CardsPanorama {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.MiniCard {
+  width: 90px;
+  height: 100px;
+  background-color: #eef3ef;
+  border-radius: 16px;
+  margin-top: 15px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MiniCardEscuro {
+  background-color: #dce4df;
+}
+
+.MiniCardClaro {
+  background-color: #ffffff;
+}
+
+.MiniCardIcone {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.MiniCard strong {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.MiniCard p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}

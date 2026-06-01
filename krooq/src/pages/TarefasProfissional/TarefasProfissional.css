@@ -1,0 +1,33 @@
+.ContainerTarefasProfissional {
+  min-height: 100vh;
+  background-color: #54715e;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaNavBarMensagens {
+  position: absolute;
+  top: 20px;
+  left: 305px;
+  z-index: 2;
+}
+
+.AreaTarefasResumo {
+  position: absolute;
+  top: 90px;
+  left: 305px;
+  z-index: 2;
+}
+
+.AreaCardsTarefas {
+  position: absolute;
+  top: 245px;
+  left: 250px;
+  z-index: 2;
+
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
