@@ -1,0 +1,251 @@
+.chat-ia-page {
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  padding: 110px 40px 40px;
+  gap: 28px;
+}
+
+.chat-ia-sidebar {
+  background: linear-gradient(180deg, #111111, #070707);
+  border: 1px solid rgba(197, 177, 143, 0.18);
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-ia-label {
+  color: #c5b18f;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.chat-ia-sidebar h1 {
+  color: #c5b18f;
+  font-size: 36px;
+  line-height: 1.1;
+  margin: 18px 0;
+  font-weight: 500;
+}
+
+.chat-ia-sidebar p {
+  color: #9ca3af;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.chat-ia-limits {
+  margin-top: 40px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(95, 125, 106, 0.12);
+  border: 1px solid rgba(95, 125, 106, 0.35);
+}
+
+.chat-ia-limits h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.chat-ia-limits p {
+  margin: 6px 0;
+  color: #b7c8bd;
+  font-size: 14px;
+}
+
+.chat-ia-container {
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-ia-header {
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-ia-header h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.chat-ia-header p {
+  margin: 6px 0 0;
+  color: #5f7d6a;
+  font-size: 14px;
+}
+
+.chat-ia-new-chat {
+  background: transparent;
+  color: #c5b18f;
+  border: 1px solid #c5b18f;
+  border-radius: 999px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-ia-new-chat:hover {
+  background: #c5b18f;
+  color: #000000;
+}
+
+.chat-ia-messages {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.chat-ia-message {
+  max-width: 70%;
+  padding: 16px 20px;
+  border-radius: 22px;
+}
+
+.chat-ia-message p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.chat-ia-message.ia {
+  align-self: flex-start;
+  background: #171717;
+  color: #e5e7eb;
+  border-bottom-left-radius: 6px;
+}
+
+.chat-ia-message.usuario {
+  align-self: flex-end;
+  background: #5f7d6a;
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-ia-actions {
+  padding: 22px 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.chat-ia-image-button {
+  background: transparent;
+  border: 1px solid #5f7d6a;
+  color: #5f7d6a;
+  border-radius: 999px;
+  padding: 14px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.chat-ia-image-button:hover {
+  background: #5f7d6a;
+  color: #ffffff;
+}
+
+.chat-ia-input-area {
+  flex: 1;
+  display: flex;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.chat-ia-input-area input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+.chat-ia-input-area input::placeholder {
+  color: #6b7280;
+}
+
+.chat-ia-input-area button {
+  background: #c5b18f;
+  color: #000000;
+  border: none;
+  padding: 0 26px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .chat-ia-page {
+    grid-template-columns: 1fr;
+    padding: 100px 20px 30px;
+  }
+
+  .chat-ia-sidebar {
+    gap: 24px;
+  }
+
+  .chat-ia-message {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-ia-page {
+    padding: 90px 14px 24px;
+  }
+
+  .chat-ia-sidebar {
+    padding: 24px;
+  }
+
+  .chat-ia-sidebar h1 {
+    font-size: 30px;
+  }
+
+  .chat-ia-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .chat-ia-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chat-ia-image-button {
+    width: 100%;
+  }
+
+  .chat-ia-input-area {
+    border-radius: 22px;
+  }
+
+  .chat-ia-input-area input {
+    min-height: 56px;
+  }
+
+  .chat-ia-input-area button {
+    padding: 0 20px;
+  }
+}
