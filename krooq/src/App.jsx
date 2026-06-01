@@ -13,7 +13,7 @@ import Agenda from "./pages/Agenda/Agenda";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
-
+import ChatIA from "./pages/ChatIA/ChatIA";
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/ia/chat" element={<ChatIA />} />
       </Routes>
     </BrowserRouter>
   );
