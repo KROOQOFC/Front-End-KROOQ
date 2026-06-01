@@ -1,6 +1,6 @@
 .ContainerResumoTarefas {
   width: 1000px;
-  height: 135px;
+  height: 115px;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 10px;
   padding: 14px 28px 28px;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .IndicadoresTarefas {
@@ -71,7 +71,7 @@
 .BotoesTarefas {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .BotoesTarefas button {
@@ -80,7 +80,7 @@
   border: none;
   border-radius: 8px;
   font-size: 9px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   cursor: pointer;
 }

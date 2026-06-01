@@ -70,6 +70,64 @@ function TarefasProfissional() {
           prazo="2 Meses"
           cor="#13b54a"
         />
+
+<BlocoTarefas
+          dataInicio="22 de Mai, 2026"
+          dataFim="5 de Jun, 2026"
+          titulo="Memorial Descritivo"
+          subtitulo="Revestimentos e Acabamentos"
+          progresso={30}
+          prazo="2 Semanas"
+          cor="#5F7D6A"
+        />
+
+        <BlocoTarefas
+          dataInicio="08 de Jun, 2026"
+          dataFim="19 de Jun, 2026"
+          titulo="Compatibilização Engenharia"
+          subtitulo="Estrutural e Hidráulico"
+          progresso={41}
+          prazo="1 Mês"
+          cor="#E35336"
+        />
+
+        <BlocoTarefas
+          dataInicio="22 de Mai, 2026"
+          dataFim="29 de Mai, 2026"
+          titulo="Cotação de Materiais"
+          subtitulo="Fornecedores da Obra"
+          progresso={31}
+          prazo="5 dias"
+          cor="#BAA888"
+        />
+
+        <BlocoTarefas
+          dataInicio="01 de Jul, 2026"
+          dataFim="01 de Dez, 2026"
+          titulo=" Acompanhamento de Obra"
+          subtitulo=" Execução e Visita Técnica"
+          progresso={8}
+          prazo="5 Meses"
+          cor="#474BCA"
+        />
+         <BlocoTarefas
+          dataInicio="01 de Jul, 2026"
+          dataFim="01 de Dez, 2026"
+          titulo=" Acompanhamento de Obra"
+          subtitulo=" Execução e Visita Técnica"
+          progresso={8}
+          prazo="5 Meses"
+          cor="#474BCA"
+        />
+
+        
+
+
+
+
+
+
+
       </div>
     </section>
   );

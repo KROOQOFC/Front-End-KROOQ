@@ -1,5 +1,5 @@
 .ContainerTarefasProfissional {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #54715e;
   background-size: cover;
   background-position: center;
@@ -23,11 +23,42 @@
 
 .AreaCardsTarefas {
   position: absolute;
-  top: 245px;
-  left: 250px;
+  top: 220px;
+  left: 246px;
+  right: 30px;
+  bottom: 20px;
   z-index: 2;
 
-  display: flex;
-  gap: 25px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, 255px);
+  column-gap: 25px;
+  row-gap: 14px;
+
+  align-content: start;
+  grid-auto-rows: max-content;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 10px;
+  padding-bottom: 80px;
+}
+
+/* Scrollbar */
+
+.AreaCardsTarefas::-webkit-scrollbar {
+  width: 5px;
+}
+
+.AreaCardsTarefas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.AreaCardsTarefas::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+}
+
+.AreaCardsTarefas::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
