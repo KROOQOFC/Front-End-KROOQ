@@ -129,3 +129,104 @@
   height: 85px;
   background-color: rgba(255, 255, 255, 0.45);
 }
+
+/* ==========================
+   RESPONSIVO CELULAR
+========================== */
+
+@media (max-width: 600px) {
+  .ServicosProjetosContainer {
+    min-height: auto;
+    padding: 38px 18px 35px;
+  }
+
+  .ProjetosDetalhes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    row-gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .ProjetosDetalhes h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .LinhaAvancoProjetos {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    width: 100%;
+    margin: 0;
+  }
+
+  .BotoesSetaProjetos {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  .BotoesSetaProjetos button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .ImagensServicosProjetos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 35px;
+    overflow: visible;
+  }
+
+  .ReformaCozinha,
+  .CroquiPc,
+  .DesignSala {
+    width: calc(33.33% - 6px);
+    height: 115px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0.75;
+  }
+
+  .imagemAtiva {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+
+  .MetricasProjetos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .MetricaItem {
+    flex: 1;
+  }
+
+  .MetricaItem h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .MetricaItem p {
+    margin-top: 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 1.35;
+  }
+
+  .DivisorMetricas {
+    width: 1px;
+    height: 45px;
+  }
+}
