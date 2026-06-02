@@ -8,7 +8,7 @@ import NovaSenha from "./pages/NovaSenha/NovaSenha";
 import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
-import IA from "./pages/IA/IA"
+import IA from "./pages/IA/IA";
 import Agenda from "./pages/Agenda/Agenda";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
@@ -31,7 +31,7 @@ function App() {
         <Route path="/cadastro" element={<Navigate to="/escolha-login" />} />
         <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
-        <Route path="/Ia" element={<Ia />} />
+        <Route path="/ia" element={<IA />} />
         <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
         <Route path="/Profissionais" element={<Profissionais />} />
