@@ -1,5 +1,5 @@
 import "./MetodoProfissionais.css";
-import MetodoImagem from "../../assets/dashboard-Krooq.png";
+import MetodoImagem from "../../assets/dashboard-krooq.png";
 
 function MetodoProfissionais() {
   const etapas = [

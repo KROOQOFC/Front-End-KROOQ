@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./SenhaRedefinida.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
-import IconOk from "../../assets/icon_ok.png";
+import IconOk from "../../assets/Icon_ok.png";
 
 function SenhaRedefinida() {
   return (

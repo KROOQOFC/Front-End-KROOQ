@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./NovaSenha.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
-import IconKey from "../../assets/icon_chave.png";
+import IconKey from "../../assets/Icon_chave.png";
 
 function NovaSenha() {
   const navigate = useNavigate();
