@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import Servicos from "./pages/Servicos/Servicos";
 import Login from "./pages/Login/Login";
 import Cadastro from "./pages/Cadastro/Cadastro";
@@ -14,35 +15,40 @@ import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
+import Projetos from "./pages/Projetos/Projetos";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import SobreNos from "./pages/SobreNos/SobreNos"
+import SobreNos from "./pages/SobreNos/SobreNos";
 
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<HomeFront />} />
         <Route path="/servicos" element={<Servicos />} />
-    <Route path="/ia" element={<IA />} />
+        <Route path="/ia" element={<IA />} />
+
         <Route path="/escolha-login" element={<EscolhaLogin />} />
         <Route path="/login/:tipoUsuario" element={<Login />} />
         <Route path="/cadastro/:tipoUsuario" element={<Cadastro />} />
         <Route path="/cadastro" element={<Navigate to="/escolha-login" />} />
+
         <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
-        <Route path="/ia" element={<IA />} />
         <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
-        <Route path="/Profissionais" element={<Profissionais />} />
+
+        <Route path="/profissionais" element={<Profissionais />} />
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
-                <Route path="/projetos" element={<Projetos />} />
-        <Route path="/chat-ia/:id" element={<ChatIA />} />
-        <Route path="*" element={<Navigate to="/" />} />
 
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/chat-ia/:id" element={<ChatIA />} />
+
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
