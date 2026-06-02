@@ -14,10 +14,12 @@ import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomeFront />} />
         <Route path="/servicos" element={<Servicos />} />
