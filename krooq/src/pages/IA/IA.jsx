@@ -12,6 +12,7 @@ import Aspect5 from "../../assets/&AspectRatioBlock(4).png";
 import Cozinha from "../../assets/Cozinha.png";
 import HeroBg from "../../assets/Frame 26.png";
 import CtaBg from "../../assets/Frame 46.png";
+import { Link } from "react-router-dom";
 
 function IA() {
   return (
@@ -31,7 +32,9 @@ function IA() {
        Bem-vindo ao PromptVerse. Transforme ideias em realidade visual e técnica sem esforço. Explore prompts infinitos, gere designs de interiores deslumbrantes e obtenha cálculos precisos de materiais e medidas em tempo real. Automatize seu fluxo de trabalho, do conceito à lista de compras, tudo em um design futurista feito para elevar sua produtividade.
     </p>
 
-    <button className="logobtn">Criar Agora <img src={Vector1} alt="ícone de varinha" /></button>
+    <Link to="/ia/chat" className="logobtn">
+      Criar Agora <img src={Vector1} alt="ícone de varinha" />
+    </Link>
 </section>
 
 <section>
@@ -40,7 +43,9 @@ function IA() {
     <p className="">
         Sua visão criativa com a precisão de um especialista. Nossa IA de design de interiores transforma suas medidas em projetos visuais deslumbrantes, enquanto calcula instantaneamente a lista completa de materiais e custos para sua obra.
     </p>
-    <button className="verdebtn">Gerar Agora<img src={Vector} alt="ícone de varinha"/></button>
+    <Link to="/ia/chat" className="verdebtn">
+      Gerar Agora <img src={Vector} alt="ícone de varinha"/>
+    </Link>
     <br/>
     <img src={NewChat} alt="Escreve o que tem na imagem"/>
 

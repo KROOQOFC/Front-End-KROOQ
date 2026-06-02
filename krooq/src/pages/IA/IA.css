@@ -124,6 +124,34 @@
   color: #fff;
 }
 
+.logobtn,
+.verdebtn {
+  text-decoration: none;
+}
+
+.hero-page .logobtn,
+.hero-page .verdebtn {
+  margin-top: 40px;
+  padding: 16px 42px;
+  border-radius: 40px;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero-page .logobtn:hover {
+  background: #c5b18f;
+  color: #000;
+}
+
+.hero-page .verdebtn:hover {
+  background: #5f7d6a;
+  color: #fff;
+}
+
 .hero-page p {
   max-width:800px;
   color:#aaa;

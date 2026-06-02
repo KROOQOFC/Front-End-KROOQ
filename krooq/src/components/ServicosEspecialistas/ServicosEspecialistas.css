@@ -114,3 +114,102 @@
   line-height: 1.7;
   margin: 18px 0 0;
 }
+
+/* ==========================
+   RESPONSIVO CELULAR
+========================== */
+
+@media (max-width: 600px) {
+  .ServicosEspecialistaContainer {
+    min-height: auto;
+    padding: 24px 20px 40px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas:
+      "imagem texto"
+      "cards  cards";
+    column-gap: 12px;
+    row-gap: 20px;
+    overflow: hidden;
+    align-items: start;
+  }
+
+  .ArquitetaServicos {
+    grid-area: imagem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    object-fit: contain;
+    align-self: start;
+  }
+
+  .ExplicacaoEspecialista {
+    grid-area: texto;
+    width: 80%;
+    margin: 0;
+    transform: none;
+  }
+
+  .PqEspecialista {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+  }
+
+  .TextoArquiteto {
+    font-size: 10.5px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .CardsEspecialistas {
+    grid-area: cards;
+    width: 80%;           /* menor que 100% para dar sensação de centralizado */
+    margin: 0 auto;       /* centraliza horizontalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  .ServicosConfiaveis,
+  .AdaptabilidadeEspecialista {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+
+  .ProfissionaisNivel {
+    width: 100%;
+    min-height: auto;
+    padding: 14px;
+    box-sizing: border-box;
+    grid-template-columns: 20px 1fr 20px;
+    column-gap: 10px;
+  }
+
+  .IconUsuarioEspecialista {
+    width: 16px;
+    height: 16px;
+  }
+
+  .IconSetaEspecialista {
+    width: 11px;
+    height: 11px;
+  }
+
+  .TituloServicosConfiaveis,
+  .TituloAdaptabilidadeEspecialista,
+  .TituloProfissionaisNivel {
+    font-size: 13px;
+  }
+
+  .TextoProfissionaisNivel {
+    grid-column: 1 / 4;
+    font-size: 11px;
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+}

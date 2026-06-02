@@ -3,16 +3,11 @@
   height: 720px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center 5%;
+  background-repeat: no-repeat;
 }
 
-.FundoFornecedor {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 5%;
-}
-
-/* camada escura em cima da imagem */
 .FornecedoresServicos::after {
   content: "";
   position: absolute;
@@ -43,7 +38,7 @@
 }
 
 .CadastrarFornecedor h2 {
-    width: 720px;
+  width: 720px;
   font-size: 72px;
   line-height: 1.05;
   margin: 0 0 22px;
@@ -65,12 +60,11 @@
 .BtFDetalhes,
 .BtFRede {
   height: 45px;
-  padding: 0 34px;
+  padding: 0 30px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 550;
   font-size: 13px;
-  
 }
 
 .BtFDetalhes {
@@ -79,7 +73,7 @@
   color: white;
   border: none;
   transition: all 0.3s ease;
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .BtFRede {
@@ -88,7 +82,12 @@
   color: white;
   border: 1px solid white;
   transition: all 0.3s ease;
-    transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.BtFDetalhes:hover,
+.BtFRede:hover {
+  transform: translateY(-2px);
 }
 
 .LogoFornecedores {
@@ -108,8 +107,102 @@
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-.BtFDetalhes:hover,
-.BtFRede:hover{
 
-transform: translateY(-2px)
+/* ==========================
+   RESPONSIVO CELULAR
+========================== */
+
+@media (max-width: 600px) {
+  .FornecedoresServicos {
+    height: 370px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .FornecedoresServicos::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .CadastrarFornecedor {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 20px 0;
+    box-sizing: border-box;
+    z-index: 2;
+    margin-top: 10%;
+  }
+
+  .tagFornecedor {
+    width: fit-content;
+    font-size: 10px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .CadastrarFornecedor h2 {
+    width: 100% !important;
+    font-size: 22px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .CadastrarFornecedor p {
+    width: 100% !important;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .BotoesFornecedor {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .BtFDetalhes,
+  .BtFRede {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 10px;
+    font-weight: 600;
+    width: auto;
+    transform: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .LogoFornecedores {
+    position: relative;
+    z-index: 2;
+    padding: 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .LogoFornecedores img {
+    max-height: 18px;
+    max-width: 70px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
 }

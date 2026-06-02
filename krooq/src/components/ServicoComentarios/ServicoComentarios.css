@@ -60,3 +60,53 @@
   width: 65px;
   background-color: white;
 }
+/* ==========================
+   RESPONSIVO CELULAR
+========================== */
+
+@media (max-width: 600px) {
+  .ServicoComentariosContainer {
+    min-height: auto;
+    padding: 25px 20px 25px;
+  }
+
+  .ServicoComentariosContainer::before {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 30%;
+    margin-bottom: 35px;
+  }
+
+  .ComentariosCarrossel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ComentariosLista {
+    gap: 20px;
+  }
+
+  .ComentarioItem {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .ComentarioItem > * {
+    width: 100%;
+  }
+
+
+  .BarraComentarios {
+    margin-top: 35px;
+    gap: 10px;
+  }
+
+  .BarraComentarios button {
+    width: 32px;
+    height: 4px;
+  }
+
+  .BarraComentarios button.ativo {
+    width: 48px;
+  }
+}
