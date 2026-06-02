@@ -161,11 +161,7 @@ function deletarEvento() {
                 </div>
 
             </section>
-                <img
-        className="logo-krooq-agenda"
-        src={LogoKrooq}
-        alt="Logo Krooq"
-    />
+
 
 </div>
 

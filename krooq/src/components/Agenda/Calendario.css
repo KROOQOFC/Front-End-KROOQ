@@ -1,9 +1,10 @@
 .container-calendario {
-    width: 500px;
-
+    width: min(500px, 100%);
     background: white;
 
     border-radius: 30px;
+    height: 80vh;
+    max-height: 700px;
 
     padding: 25px;
 
@@ -63,6 +64,7 @@
     grid-template-columns: repeat(7, 1fr);
     min-height: 350px;
     gap: 12px;
+    justify-items: center;
 }
 
 .dia {
@@ -87,8 +89,8 @@
     color: white;
 }
 .espaco-vazio {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
 .conteudo-dia {
     display: flex;
@@ -136,7 +138,7 @@
     .grid-dias {
         gap: 8px;
 
-        min-height: auto;
+        min-height: 350px;
     }
 
 }
