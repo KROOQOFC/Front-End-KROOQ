@@ -31,3 +31,24 @@ left: 294px;
 bottom: 50px;
 
 }
+@media (max-width: 768px) {
+
+  .botao-tranparente-geral {
+    position: relative !important;
+    width: 300px;
+    height: 145px;
+    margin: 20px auto;
+  }
+
+  .btn-transparente-central {
+    position: relative !important;
+  }
+.paragrafo-do-btnt{
+     position: relative;
+     top: -200px;
+}
+.seta-btn-transparente{
+    position: relative;
+    top: -220px;
+}
+}

@@ -21,10 +21,6 @@ function CentralProfissional() {
 
 <NavegationLateral/>
 
-<div className="botão-transparente-geral">
-    <BotaoTransparenteAdd/>
-</div>
-
     <div className="LayoutCentralHeader">
       <CentralHeader/>
     </div>
@@ -106,7 +102,10 @@ function CentralProfissional() {
   desenvolvimento={60}
   homologacao={38}
   porcentagemCentro={65}/></div>
-
+  
+<div className="botão-transparente-geral">
+    <BotaoTransparenteAdd/>
+</div>
 </section>
 
 

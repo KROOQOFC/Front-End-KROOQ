@@ -1,6 +1,10 @@
 import "./NavegationLateral.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+
 import LogoLateral from "../../assets/LogoMenuLateral.png";
+import LogoKrooq from "../../assets/LogoKrooqLateral.png";
+
 import IconePainelGeral from "../../assets/IconePainelGeralMenuLateral.png";
 import IconeAgenda from "../../assets/IconeAgendaMenuLateral.png";
 import IconeMinhasTarefas from "../../assets/IconeMinhasTarefasMenuLateral.png";
@@ -9,79 +13,173 @@ import IconeConsultoria from "../../assets/IconeConsultoriaMenuLateral.png";
 import IconeKrooqIa from "../../assets/IconeKrooqIaMenuLateral.png";
 
 function NavegationLateral() {
-    return (
-        <aside className="nav-menu-lateral">
+  const [menuAberto, setMenuAberto] = useState(false);
 
-            <div className="layout-links-menu-lateral">
+  return (
+    <>
+      {/* MENU DESKTOP */}
+      <aside className="nav-menu-lateral">
+        <div className="layout-links-menu-lateral">
 
-                <img
-                    className="logo-lateral"
-                    src={LogoLateral}
-                    alt="Logo Krooq"/>
+          <img
+            className="logo-lateral"
+            src={LogoLateral}
+            alt="Logo Krooq"
+          />
 
-                <nav>
-                    <ul>
-                        <li>
-                            <NavLink to="/CentralProfissional" className="link-menu">
+          <nav>
+            <ul>
 
-                                <img
-                                    className="icone-painel"
-                                    src={IconePainelGeral}
-                                    alt="Painel Geral"/>
-                                <span className="texto-painel">Painel Geral</span>
-                            </NavLink>
-                        </li>
+              <li>
+                <NavLink to="/CentralProfissional" className="link-menu">
+                  <img
+                    className="icone-painel"
+                    src={IconePainelGeral}
+                    alt="Painel Geral"
+                  />
+                  <span className="texto-painel">
+                    Painel Geral
+                  </span>
+                </NavLink>
+              </li>
 
-                        <li>
-                            <NavLink to="/agenda" className="link-menu">
-                                <img
-                                    src={IconeAgenda}
-                                    alt="Agenda"/>
-                                <span>Agenda</span>
-                            </NavLink>
-                        </li>
+              <li>
+                <NavLink to="/agenda" className="link-menu">
+                  <img src={IconeAgenda} alt="Agenda" />
+                  <span>Agenda</span>
+                </NavLink>
+              </li>
 
-                        <li>
-                            <NavLink to="/tarefas" className="link-menu">
-                                <img
-                                    src={IconeMinhasTarefas}
-                                    alt="Minhas tarefas" />
-                                <span>Minhas Tarefas</span>
-                            </NavLink>
-                        </li>
+              <li>
+                <NavLink to="/tarefas" className="link-menu">
+                  <img
+                    src={IconeMinhasTarefas}
+                    alt="Minhas tarefas"
+                  />
+                  <span>Minhas Tarefas</span>
+                </NavLink>
+              </li>
 
-                        <li>
-                            <NavLink to="/projetos" className="link-menu">
-                                <img
-                                    src={IconeProjetos}
-                                    alt="Projetos" />
-                                <span>Projetos</span>
-                            </NavLink>
-                        </li>
+              <li>
+                <NavLink to="/projetos" className="link-menu">
+                  <img src={IconeProjetos} alt="Projetos" />
+                  <span>Projetos</span>
+                </NavLink>
+              </li>
 
-                        <li>
-                            <NavLink to="/consultoria" className="link-menu">
-                                <img
-                                    src={IconeConsultoria}
-                                    alt="Consultoria"/>
-                                <span>Consultoria</span>
-                            </NavLink>
-                        </li>
+              <li>
+                <NavLink to="/consultoria" className="link-menu">
+                  <img
+                    src={IconeConsultoria}
+                    alt="Consultoria"
+                  />
+                  <span>Consultoria</span>
+                </NavLink>
+              </li>
 
-                        <li>
-                            <NavLink to="/krooqia" className="link-menu">
-                                <img className="imagem-krooq-ia"
-                                    src={IconeKrooqIa}
-                                    alt="KROOQ IA"/>
-                                    
-                                <span className="texto-krooq-ia-painel">KROOQ IA</span>
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-    );
+              <li>
+                <NavLink to="/krooqia" className="link-menu">
+                  <img
+                    className="imagem-krooq-ia"
+                    src={IconeKrooqIa}
+                    alt="KROOQ IA"
+                  />
+                  <span className="texto-krooq-ia-painel">
+                    KROOQ IA
+                  </span>
+                </NavLink>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      {/* MENU MOBILE */}
+     <aside className="menu-lateral-mobile">
+
+  <div
+    className="container-lateral"
+    onClick={() => setMenuAberto(!menuAberto)}
+  >
+    <img
+      src={LogoKrooq}
+      alt="Logo Krooq"
+      className="logo-lateral-mobile"
+    />
+  </div>
+
+  <ul className={menuAberto ? "menu-lateral ativo" : "menu-lateral"}>
+
+    <li>
+      <NavLink to="/CentralProfissional">
+        <img
+          className="icone-mobile-tamanho"
+          src={IconePainelGeral}
+          alt="Painel Geral"
+        />
+        <span>Painel Geral</span>
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/agenda">
+        <img
+          className="icone-mobile"
+          src={IconeAgenda}
+          alt="Agenda"
+        />
+        <span>Agenda</span>
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/tarefas">
+        <img
+          className="icone-mobile"
+          src={IconeMinhasTarefas}
+          alt="Minhas Tarefas"
+        />
+        <span>Minhas Tarefas</span>
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/projetos">
+        <img
+          className="icone-mobile"
+          src={IconeProjetos}
+          alt="Projetos"
+        />
+        <span>Projetos</span>
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/consultoria">
+        <img
+          className="icone-mobile"
+          src={IconeConsultoria}
+          alt="Consultoria"
+        />
+        <span>Consultoria</span>
+      </NavLink>
+    </li>
+
+    <li className="krooqia-alinhar">
+      <NavLink to="/krooqia">
+        <img
+          className="icone-mobile-tamanho-krooqia"
+          src={IconeKrooqIa}
+          alt="KROOQ IA"
+        />
+        <span className="texto-krooqai-responsive">KROOQ IA</span>
+      </NavLink>
+    </li>
+  </ul>
+</aside>
+    </>
+  );
 }
 
 export default NavegationLateral;

@@ -80,3 +80,34 @@
   object-fit: contain;
   
 }
+@media (max-width: 768px){
+  .CardProcesso {
+    width: 165px;
+    height: 130px;
+    padding: 15px;
+    border-radius: 18px;
+  }
+
+  .IconeTopoProcesso {
+    width: 28px;
+    height: 28px;
+  }
+
+  .TituloProcesso {
+    font-size: 16px;
+  }
+
+  .RodapeProcesso p {
+    font-size: 11px;
+  }
+
+  .StatusLaranja {
+    width: 38px;
+    height: 38px;
+  }
+
+  .IconeStatusProcesso {
+    width: 16px;
+    height: 16px;
+  }
+}

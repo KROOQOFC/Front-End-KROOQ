@@ -6,7 +6,7 @@
     margin-left: 19%;
     box-sizing:border-box;
     position: fixed;
-    top: 17px;
+    top: 15px;
 }
 
 .SaudacaoHeader {
@@ -128,4 +128,59 @@
     height:100%;
     border-radius:50%;
     object-fit:cover;
+}
+
+@media (max-width: 768px) {
+
+    .CentralHeaderGeral {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 15px;
+        position: relative;
+        top: -55px;
+        gap: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .SaudacaoHeader {
+        font-size: 16px;
+        margin-right: -16px;
+        max-width: 120px;
+    }
+
+    .AcoesHeader {
+        position: relative;
+        gap: 8px;
+        left: 80px;
+    }
+
+    .BuscaContainer.aberta {
+        width: 95px;
+        padding-left: 10px;
+    }
+
+    .CampoInput input {
+        font-size: 11px;
+        width: 100%;
+    }
+
+    .BuscaBotao,
+    .NotificacaoBotao,
+    .PerfilBotao {
+        width: 32px;
+        height: 32px;
+    }
+
+    .BuscaBotao img,
+    .NotificacaoBotao img {
+        width: 16px;
+        height: 16px;
+    }
+    .BuscaBotao{
+        position: relative;
+     top: -2px;
+    }
 }
