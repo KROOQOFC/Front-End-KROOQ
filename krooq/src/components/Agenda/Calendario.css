@@ -3,16 +3,12 @@
     background: white;
 
     border-radius: 30px;
-    height: 80vh;
-    max-height: 700px;
 
     padding: 25px;
 
     display: flex;
     flex-direction: column;
     gap: 18px;
-    position: relative;
-    z-index: 2;
 }
 
 .topo-calendario {
@@ -62,9 +58,11 @@
 .grid-dias {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    min-height: 350px;
+    height: auto;
+    min-height: auto;
     gap: 12px;
     justify-items: center;
+    
 }
 
 .dia {
