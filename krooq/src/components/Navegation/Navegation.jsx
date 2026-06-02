@@ -54,7 +54,7 @@ function Navegation() {
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/Servicos">SERVIÇOS</Link></li>
           <li><Link to="/Profissionais">PROFISSIONAIS</Link></li>
-          <li><Link to="/Ia">KROOQ IA</Link></li>
+          <li><Link to="/ia">KROOQ IA</Link></li>
 
           <li className="btn-area">
             {usuarioLogado ? (
