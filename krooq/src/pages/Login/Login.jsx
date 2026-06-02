@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { fazerLogin, salvarDadosDoLogin } from "../../services/authService";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import GoogleIcon from "../../assets/google.png";
 import "./Login.css";
 
 function Login() {
   const { tipoUsuario } = useParams();
+  const navigate = useNavigate();
 
   const nomesUsuarios = {
     profissional: "Profissional",
@@ -22,6 +24,7 @@ function Login() {
 
   const [mensagensErro, setMensagensErro] = useState({});
   const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [carregando, setCarregando] = useState(false);
 
   function atualizarCampoDoLogin(evento) {
     const { name, value } = evento.target;
@@ -30,6 +33,15 @@ function Login() {
       ...dadosLogin,
       [name]: value,
     });
+
+    if (mensagensErro[name] || mensagensErro.geral) {
+      setMensagensErro((errosAtuais) => {
+        const novosErros = { ...errosAtuais };
+        delete novosErros[name];
+        delete novosErros.geral;
+        return novosErros;
+      });
+    }
   }
 
   function verificarCamposDoLogin() {
@@ -48,7 +60,7 @@ function Login() {
     return errosEncontrados;
   }
 
-  function entrarNaConta(evento) {
+  async function entrarNaConta(evento) {
     evento.preventDefault();
 
     const erros = verificarCamposDoLogin();
@@ -58,12 +70,22 @@ function Login() {
       return;
     }
 
-    setMensagensErro({});
+    try {
+      setMensagensErro({});
+      setCarregando(true);
 
-    /*
-      Aqui depois você chama a API.
-      Evite console.log com dados sensíveis, principalmente senha.
-    */
+      const resposta = await fazerLogin(dadosLogin.email, dadosLogin.senha);
+
+      salvarDadosDoLogin(resposta);
+
+      navigate("/");
+    } catch (erro) {
+      setMensagensErro({
+        geral: erro.message || "Não foi possível fazer login. Tente novamente.",
+      });
+    } finally {
+      setCarregando(false);
+    }
   }
 
   return (
@@ -73,7 +95,7 @@ function Login() {
 
         <p className="login-welcome">Olá, bem-vindo de volta 👋</p>
 
-        <button type="button" className="google-btn">
+        <button type="button" className="google-btn" disabled={carregando}>
           <img src={GoogleIcon} alt="Google" />
           <span>Entrar com Google</span>
         </button>
@@ -95,6 +117,7 @@ function Login() {
               value={dadosLogin.email}
               onChange={atualizarCampoDoLogin}
               className={mensagensErro.email ? "input-com-erro" : ""}
+              disabled={carregando}
             />
 
             {mensagensErro.email && (
@@ -121,6 +144,7 @@ function Login() {
                 placeholder="Digite sua senha"
                 value={dadosLogin.senha}
                 onChange={atualizarCampoDoLogin}
+                disabled={carregando}
               />
 
               <button
@@ -128,6 +152,7 @@ function Login() {
                 className="senha-eye"
                 onClick={() => setMostrarSenha(!mostrarSenha)}
                 aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}
+                disabled={carregando}
               >
                 {mostrarSenha ? (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -189,14 +214,21 @@ function Login() {
             Esqueceu a senha?
           </Link>
 
-          <button type="submit" className="login-btn">
-            Login
+          {mensagensErro.geral && (
+            <div className="caixa-mensagem-erro">
+              <strong>!</strong>
+              <p>{mensagensErro.geral}</p>
+            </div>
+          )}
+
+          <button type="submit" className="login-btn" disabled={carregando}>
+            {carregando ? "Entrando..." : "Login"}
           </button>
         </form>
 
         <p className="register">
           Ainda não tem uma conta?{" "}
-          <Link to={`/cadastro/${tipoUsuario}`}>Cadastre-se</Link>
+          <Link to={`/cadastro/${tipoUsuario || "cliente"}`}>Cadastre-se</Link>
         </p>
       </div>
     </AuthLayout>

@@ -14,6 +14,7 @@ import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
+import Projetos from "./pages/Projetos/Projetos";
 
 function App() {
   return (
@@ -35,8 +36,10 @@ function App() {
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
+<Route path="/projetos" element={<Projetos />} />
+<Route path="/chat-ia/:id" element={<ChatIA />} />
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/ia/chat" element={<ChatIA />} />
+
       </Routes>
     </BrowserRouter>
   );

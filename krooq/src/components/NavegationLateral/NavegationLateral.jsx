@@ -7,6 +7,7 @@ import IconeMinhasTarefas from "../../assets/IconeMinhasTarefasMenuLateral.png";
 import IconeProjetos from "../../assets/IconeProjetosMenuLateral.png";
 import IconeConsultoria from "../../assets/IconeConsultoriaMenuLateral.png";
 import IconeKrooqIa from "../../assets/IconeKrooqIaMenuLateral.png";
+import { FiLogOut } from "react-icons/fi";
 
 function NavegationLateral() {
     return (
@@ -77,6 +78,12 @@ function NavegationLateral() {
                                 <span className="texto-krooq-ia-painel">KROOQ IA</span>
                             </NavLink>
                         </li>
+                        <li className="item-voltar-home">
+                        <NavLink to="/home" className="link-menu">
+                            <FiLogOut className="icone-sair-menu" />
+                            <span>Voltar para o início</span>
+                        </NavLink>
+                        </li>                
                     </ul>
                 </nav>
             </div>
