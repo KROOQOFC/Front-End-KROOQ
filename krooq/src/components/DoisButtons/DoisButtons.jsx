@@ -7,7 +7,7 @@ function DoisButtons() {
     return (
         <>
        
-            <button type="button" className="btn-sobre-nos" onClick={() => navigate("/Profissionais")}>SOBRE NÓS</button>
+            <button type="button" className="btn-sobre-nos" onClick={() => navigate("/sobre-nos")}>SOBRE NÓS</button>
             
             <button type="button" className="btn-iniciar-projeto" onClick={() => navigate("/CentralProfissional")}>INICIAR UM PROJETO</button>
 

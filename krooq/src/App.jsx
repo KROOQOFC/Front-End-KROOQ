@@ -15,6 +15,7 @@ import CentralProfissional from "./pages/CentralProfissional/CentralProfissional
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import SobreNos from "./pages/SobreNos/SobreNos";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
+        <Route path="/sobre-nos" element={<SobreNos/>} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/ia/chat" element={<ChatIA />} />
       </Routes>

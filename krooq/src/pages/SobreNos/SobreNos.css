@@ -1,0 +1,363 @@
+.conteiner-sobre-nos {
+  width: 100%;
+  min-height: 100vh;
+  background: #8a9d8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 20px ;
+  box-sizing: border-box;
+}
+
+.verde {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 45px;
+}
+
+/* botão topo */
+.btn-e-escrita {
+  background: #f05a3f;
+  color: #fff;
+  padding: 15px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+
+  display: inline-block;
+}
+
+/* título */
+.titulo-krooq {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* card */
+.card-equipe {
+  width: 1133px;
+  max-width: 1200px;
+  height: 550px;
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+/* imagem */
+.imagem-equipe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay */
+.overlay-equipe {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* texto */
+.texto-equipe {
+  position: absolute;
+  top: 45%;
+  left: 70px;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 750px;
+}
+
+/* títulos internos */
+.titulo-equipe {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 90px;
+}
+
+.descricao-equipe {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  font-weight: 300;
+}
+
+/* botão card */
+.btn-krooq {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  background: #f05a3f;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  cursor: pointer;
+  z-index: 2;
+}
+.missao-visao-valores {
+  width: 100%;
+  padding: 100px 20px;
+  background-image: url("../../assets/FundoSobreNos.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-mvv {
+  font-size: 2.2rem;
+  color: #5f7c6a;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.descricao-mvv {
+  max-width: 700px;
+  text-align: center;
+  color: #6d6d6d;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+.cards-mvv {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-mvv {
+  width: 350px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.icone-mvv {
+  width: 42px;
+  height: 42px;
+  background: #f05a3f;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 1.1rem;
+
+  position: absolute;
+  top: -18px;
+  left: 20px;
+}
+
+.card-mvv h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #5f7c6a;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card-mvv p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.ods-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: #c8b593;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-ods {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.descricao-ods {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.cards-ods {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-ods {
+  width: 390px;
+  height: 400px;
+  background: #f1ebdf;
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+}
+
+.topo-ods {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.topo-ods img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.texto-ods {
+  color: #4b4b4b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 380px;
+  margin-bottom: 10px;
+}
+.texto-ods-10{
+ color: #4b4b4b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+  top: -25px;
+  margin-bottom: -9px;
+}
+
+.tags-ods {
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
+.tags-ods-10{
+    font-size: 0.8rem;
+  color: #7a7a7a;
+  position: relative;
+  top: -15px;
+}
+
+.tags-ods-8{
+   font-size: 0.8rem;
+  color: #7a7a7a;
+  position: relative;
+  top: 25px; 
+}
+.tag-verde-sobre-nos{
+color: #5f7c6a;
+font-weight: 800;
+font-size: 17px;
+}
+
+.fotos-da-equipe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.imagem-equipe-final {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+  .conteiner-sobre-nos {
+    padding: 80px 15px;
+    margin-bottom: -100px;
+  }
+
+  .titulo-krooq {
+    font-size: 1.6rem;
+  }
+
+  .card-equipe {
+    width: 100%;
+    height: 400px;
+    border-radius: 30px;
+  }
+  .missao-visao-valores{
+    margin-bottom: -50px;
+  }
+
+  .texto-equipe {
+    left: 20px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+  }
+
+  .titulo-equipe {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .descricao-equipe {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+   .btn-krooq {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+    width: max-content;
+
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .card-mvv,
+  .card-ods {
+    width: 100%;
+    max-width: 350px;
+  }
+  .ods-section{
+    margin-bottom: -10px;
+  }
+
+  .topo-ods img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .titulo-mvv,
+  .titulo-ods {
+    font-size: 1.8rem;
+  }
+
+  .fotos-da-equipe {
+    padding: 40px 15px;
+  }
+
+  .imagem-equipe-final {
+    border-radius: 20px;
+  }
+}

@@ -43,7 +43,7 @@ function Rodape(props) {
           <h3>Links Rápidos</h3>
           <ul>
             <li><Link to="/Home">Home</Link></li>
-            <li><Link to="/">Sobre Nós</Link></li>
+            <li><Link to="/sobre-nos">Sobre Nós</Link></li>
             <li><Link to="/">Contato</Link></li>
             <li><Link to="/">Privacidade</Link></li>
           </ul>
