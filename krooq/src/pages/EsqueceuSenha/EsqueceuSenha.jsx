@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
 import "./EsqueceuSenha.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
-import IconKey from "../../assets/icon_chave.png";
+import IconKey from "../../assets/Icon_chave.png";
 
 function EsqueceuSenha() {
   const navigate = useNavigate();

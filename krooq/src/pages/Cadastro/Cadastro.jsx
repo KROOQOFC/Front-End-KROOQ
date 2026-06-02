@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import AuthLayout from "../../components/AuthLayout/AuthLayout";
+import { fazerCadastro } from "../../services/authService";
 import "./Cadastro.css";
 import Banner from "../../assets/nome_Krooq_verde.png";
 import GoogleIcon from "../../assets/google.png";
 
 function Cadastro() {
   const { tipoUsuario } = useParams();
+  const navigate = useNavigate();
 
   const tiposPermitidos = ["profissional", "cliente", "fornecedor"];
 
@@ -38,6 +40,10 @@ function Cadastro() {
   });
 
   const [mensagensErro, setMensagensErro] = useState({});
+  const [mensagemSucesso, setMensagemSucesso] = useState("");
+  const [carregando, setCarregando] = useState(false);
+  const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState(false);
 
   function pegarSomenteNumeros(valor) {
     return valor.replace(/\D/g, "");
@@ -47,7 +53,10 @@ function Cadastro() {
     const numeros = pegarSomenteNumeros(valor).slice(0, 11);
 
     if (numeros.length <= 3) return numeros;
-    if (numeros.length <= 6) return `${numeros.slice(0, 3)}.${numeros.slice(3)}`;
+
+    if (numeros.length <= 6) {
+      return `${numeros.slice(0, 3)}.${numeros.slice(3)}`;
+    }
 
     if (numeros.length <= 9) {
       return `${numeros.slice(0, 3)}.${numeros.slice(3, 6)}.${numeros.slice(6)}`;
@@ -69,27 +78,36 @@ function Cadastro() {
     numeros = numeros.slice(0, 11);
 
     if (numeros.length === 0) return "+55 ";
-    if (numeros.length <= 2) return `+55 (${numeros}`;
+
+    if (numeros.length <= 2) {
+      return `+55 (${numeros}`;
+    }
 
     if (numeros.length <= 6) {
       return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2)}`;
     }
 
     if (numeros.length <= 10) {
-      return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2, 6)}-${numeros.slice(6)}`;
+      return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(
+        2,
+        6
+      )}-${numeros.slice(6)}`;
     }
 
-    return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(2, 7)}-${numeros.slice(
-      7,
-      11
-    )}`;
+    return `+55 (${numeros.slice(0, 2)}) ${numeros.slice(
+      2,
+      7
+    )}-${numeros.slice(7, 11)}`;
   }
 
   function formatarCNPJ(valor) {
     const numeros = pegarSomenteNumeros(valor).slice(0, 14);
 
     if (numeros.length <= 2) return numeros;
-    if (numeros.length <= 5) return `${numeros.slice(0, 2)}.${numeros.slice(2)}`;
+
+    if (numeros.length <= 5) {
+      return `${numeros.slice(0, 2)}.${numeros.slice(2)}`;
+    }
 
     if (numeros.length <= 8) {
       return `${numeros.slice(0, 2)}.${numeros.slice(2, 5)}.${numeros.slice(5)}`;
@@ -124,6 +142,7 @@ function Cadastro() {
 
   function telefoneEhValido(telefone) {
     const numeros = pegarSomenteNumeros(telefone);
+
     return numeros.length === 12 || numeros.length === 13;
   }
 
@@ -159,12 +178,14 @@ function Cadastro() {
     const { name, value, type, checked } = evento.target;
 
     limparErroDoCampo(name);
+    setMensagemSucesso("");
 
     if (name === "telefone") {
       setDadosCadastro({
         ...dadosCadastro,
         telefone: formatarTelefone(value),
       });
+
       return;
     }
 
@@ -173,6 +194,7 @@ function Cadastro() {
         ...dadosCadastro,
         cpf: formatarCPF(value),
       });
+
       return;
     }
 
@@ -181,6 +203,7 @@ function Cadastro() {
         ...dadosCadastro,
         cnpj: formatarCNPJ(value),
       });
+
       return;
     }
 
@@ -270,7 +293,7 @@ function Cadastro() {
     return errosEncontrados;
   }
 
-  function cadastrarUsuario(evento) {
+  async function cadastrarUsuario(evento) {
     evento.preventDefault();
 
     const erros = verificarCamposDoCadastro();
@@ -281,22 +304,52 @@ function Cadastro() {
     }
 
     setMensagensErro({});
+    setMensagemSucesso("");
 
     const dadosProntosParaEnviar = {
-      tipoUsuario,
-      nome: dadosCadastro.nome,
-      sobrenome: dadosCadastro.sobrenome,
-      email: dadosCadastro.email,
+      tipoUsuario: tipoUsuario,
+      nome: dadosCadastro.nome.trim(),
+      sobrenome: dadosCadastro.sobrenome.trim(),
+      email: dadosCadastro.email.trim(),
       telefone: pegarSomenteNumeros(dadosCadastro.telefone),
-      cpf: pegarSomenteNumeros(dadosCadastro.cpf),
-      cnpj: pegarSomenteNumeros(dadosCadastro.cnpj),
-      areaAtuacao: dadosCadastro.areaAtuacao,
-      registroProfissional: dadosCadastro.registroProfissional,
-      nomeEmpresa: dadosCadastro.nomeEmpresa,
+      cpf:
+        tipoUsuario === "cliente" || tipoUsuario === "profissional"
+          ? pegarSomenteNumeros(dadosCadastro.cpf)
+          : null,
+      cnpj:
+        tipoUsuario === "fornecedor"
+          ? pegarSomenteNumeros(dadosCadastro.cnpj)
+          : null,
+      areaAtuacao:
+        tipoUsuario === "profissional"
+          ? dadosCadastro.areaAtuacao.trim()
+          : null,
+      registroProfissional:
+        tipoUsuario === "profissional"
+          ? dadosCadastro.registroProfissional.trim()
+          : null,
+      nomeEmpresa:
+        tipoUsuario === "fornecedor" ? dadosCadastro.nomeEmpresa.trim() : null,
       senha: dadosCadastro.senha,
     };
 
-    console.log(dadosProntosParaEnviar);
+    try {
+      setCarregando(true);
+
+      await fazerCadastro(dadosProntosParaEnviar);
+
+      setMensagemSucesso("Cadastro realizado com sucesso!");
+
+      setTimeout(() => {
+        navigate(`/login/${tipoUsuario}`);
+      }, 1500);
+    } catch (error) {
+      mostrarErrosPorPoucoTempo({
+        geral: error.message || "Erro ao cadastrar usuário.",
+      });
+    } finally {
+      setCarregando(false);
+    }
   }
 
   return (
@@ -307,12 +360,26 @@ function Cadastro() {
         <h2>Cadastre-se</h2>
 
         <p className="cadastro-subtitle">
-          Bem-vindo! Por favor, insira seus dados.
+          Bem-vindo, {tipoFormatado}! Por favor, insira seus dados.
         </p>
+
+        {mensagensErro.geral && (
+          <div className="caixa-mensagem-erro erro-geral">
+            <span>!</span>
+            <p>{mensagensErro.geral}</p>
+          </div>
+        )}
+
+        {mensagemSucesso && (
+          <div className="caixa-mensagem-sucesso">
+            <p>{mensagemSucesso}</p>
+          </div>
+        )}
 
         <form className="cadastro-form" onSubmit={cadastrarUsuario}>
           <div className="cadastro-campo">
             <label>Nome</label>
+
             <input
               type="text"
               name="nome"
@@ -320,6 +387,7 @@ function Cadastro() {
               value={dadosCadastro.nome}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.nome ? "input-com-erro" : ""}
+              disabled={carregando}
             />
 
             {mensagensErro.nome && (
@@ -332,6 +400,7 @@ function Cadastro() {
 
           <div className="cadastro-campo">
             <label>Sobrenome</label>
+
             <input
               type="text"
               name="sobrenome"
@@ -339,6 +408,7 @@ function Cadastro() {
               value={dadosCadastro.sobrenome}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.sobrenome ? "input-com-erro" : ""}
+              disabled={carregando}
             />
 
             {mensagensErro.sobrenome && (
@@ -352,6 +422,7 @@ function Cadastro() {
           {tipoUsuario === "fornecedor" && (
             <div className="cadastro-campo">
               <label>Nome da empresa</label>
+
               <input
                 type="text"
                 name="nomeEmpresa"
@@ -359,6 +430,7 @@ function Cadastro() {
                 value={dadosCadastro.nomeEmpresa}
                 onChange={atualizarCampoDoFormulario}
                 className={mensagensErro.nomeEmpresa ? "input-com-erro" : ""}
+                disabled={carregando}
               />
 
               {mensagensErro.nomeEmpresa && (
@@ -372,6 +444,7 @@ function Cadastro() {
 
           <div className="cadastro-campo">
             <label>Email</label>
+
             <input
               type="email"
               name="email"
@@ -379,6 +452,7 @@ function Cadastro() {
               value={dadosCadastro.email}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.email ? "input-com-erro" : ""}
+              disabled={carregando}
             />
 
             {mensagensErro.email && (
@@ -391,6 +465,7 @@ function Cadastro() {
 
           <div className="cadastro-campo">
             <label>Telefone</label>
+
             <input
               type="text"
               name="telefone"
@@ -398,6 +473,7 @@ function Cadastro() {
               value={dadosCadastro.telefone}
               onChange={atualizarCampoDoFormulario}
               className={mensagensErro.telefone ? "input-com-erro" : ""}
+              disabled={carregando}
             />
 
             {mensagensErro.telefone && (
@@ -411,6 +487,7 @@ function Cadastro() {
           {(tipoUsuario === "cliente" || tipoUsuario === "profissional") && (
             <div className="cadastro-campo">
               <label>CPF</label>
+
               <input
                 type="text"
                 name="cpf"
@@ -418,6 +495,7 @@ function Cadastro() {
                 value={dadosCadastro.cpf}
                 onChange={atualizarCampoDoFormulario}
                 className={mensagensErro.cpf ? "input-com-erro" : ""}
+                disabled={carregando}
               />
 
               {mensagensErro.cpf && (
@@ -432,6 +510,7 @@ function Cadastro() {
           {tipoUsuario === "fornecedor" && (
             <div className="cadastro-campo">
               <label>CNPJ</label>
+
               <input
                 type="text"
                 name="cnpj"
@@ -439,6 +518,7 @@ function Cadastro() {
                 value={dadosCadastro.cnpj}
                 onChange={atualizarCampoDoFormulario}
                 className={mensagensErro.cnpj ? "input-com-erro" : ""}
+                disabled={carregando}
               />
 
               {mensagensErro.cnpj && (
@@ -454,6 +534,7 @@ function Cadastro() {
             <>
               <div className="cadastro-campo">
                 <label>Área de atuação</label>
+
                 <input
                   type="text"
                   name="areaAtuacao"
@@ -461,6 +542,7 @@ function Cadastro() {
                   value={dadosCadastro.areaAtuacao}
                   onChange={atualizarCampoDoFormulario}
                   className={mensagensErro.areaAtuacao ? "input-com-erro" : ""}
+                  disabled={carregando}
                 />
 
                 {mensagensErro.areaAtuacao && (
@@ -473,6 +555,7 @@ function Cadastro() {
 
               <div className="cadastro-campo">
                 <label>Registro profissional</label>
+
                 <input
                   type="text"
                   name="registroProfissional"
@@ -482,6 +565,7 @@ function Cadastro() {
                   className={
                     mensagensErro.registroProfissional ? "input-com-erro" : ""
                   }
+                  disabled={carregando}
                 />
 
                 {mensagensErro.registroProfissional && (
@@ -496,14 +580,77 @@ function Cadastro() {
 
           <div className="cadastro-campo">
             <label>Senha</label>
-            <input
-              type="password"
-              name="senha"
-              placeholder="Crie sua senha"
-              value={dadosCadastro.senha}
-              onChange={atualizarCampoDoFormulario}
-              className={mensagensErro.senha ? "input-com-erro" : ""}
-            />
+
+            <div
+              className={
+                mensagensErro.senha
+                  ? "senha-wrapper senha-wrapper-erro"
+                  : "senha-wrapper"
+              }
+            >
+              <input
+                type={mostrarSenha ? "text" : "password"}
+                name="senha"
+                placeholder="Crie sua senha"
+                value={dadosCadastro.senha}
+                onChange={atualizarCampoDoFormulario}
+                disabled={carregando}
+              />
+
+              <button
+                type="button"
+                className="senha-eye"
+                onClick={() => setMostrarSenha(!mostrarSenha)}
+                aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}
+                disabled={carregando}
+              >
+                {mostrarSenha ? (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 3L21 21"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M10.58 10.58C10.21 10.95 10 11.45 10 12C10 13.1 10.9 14 12 14C12.55 14 13.05 13.79 13.42 13.42"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M9.88 5.09C10.56 5.03 11.26 5 12 5C16.5 5 20.27 7.61 22 12C21.5 13.27 20.77 14.37 19.88 15.26"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M6.61 6.61C4.61 7.8 3.02 9.66 2 12C3.73 16.39 7.5 19 12 19C13.45 19 14.8 18.73 16.01 18.24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                ) : (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M2 12C3.73 7.61 7.5 5 12 5C16.5 5 20.27 7.61 22 12C20.27 16.39 16.5 19 12 19C7.5 19 3.73 16.39 2 12Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
 
             {mensagensErro.senha ? (
               <div className="caixa-mensagem-erro">
@@ -519,19 +666,84 @@ function Cadastro() {
 
           <div className="cadastro-campo">
             <label>Confirme senha</label>
-            <input
-              type="password"
-              name="confirmarSenha"
-              placeholder="Digite sua senha novamente"
-              value={dadosCadastro.confirmarSenha}
-              onChange={atualizarCampoDoFormulario}
-              onPaste={impedirCopiarEColar}
-              onCopy={impedirCopiarEColar}
-              onCut={impedirCopiarEColar}
-              onDrop={impedirCopiarEColar}
-              autoComplete="new-password"
-              className={mensagensErro.confirmarSenha ? "input-com-erro" : ""}
-            />
+
+            <div
+              className={
+                mensagensErro.confirmarSenha
+                  ? "senha-wrapper senha-wrapper-erro"
+                  : "senha-wrapper"
+              }
+            >
+              <input
+                type={mostrarConfirmarSenha ? "text" : "password"}
+                name="confirmarSenha"
+                placeholder="Digite sua senha novamente"
+                value={dadosCadastro.confirmarSenha}
+                onChange={atualizarCampoDoFormulario}
+                onPaste={impedirCopiarEColar}
+                onCopy={impedirCopiarEColar}
+                onCut={impedirCopiarEColar}
+                onDrop={impedirCopiarEColar}
+                autoComplete="new-password"
+                disabled={carregando}
+              />
+
+              <button
+                type="button"
+                className="senha-eye"
+                onClick={() => setMostrarConfirmarSenha(!mostrarConfirmarSenha)}
+                aria-label={
+                  mostrarConfirmarSenha ? "Ocultar senha" : "Mostrar senha"
+                }
+                disabled={carregando}
+              >
+                {mostrarConfirmarSenha ? (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 3L21 21"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M10.58 10.58C10.21 10.95 10 11.45 10 12C10 13.1 10.9 14 12 14C12.55 14 13.05 13.79 13.42 13.42"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M9.88 5.09C10.56 5.03 11.26 5 12 5C16.5 5 20.27 7.61 22 12C21.5 13.27 20.77 14.37 19.88 15.26"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M6.61 6.61C4.61 7.8 3.02 9.66 2 12C3.73 16.39 7.5 19 12 19C13.45 19 14.8 18.73 16.01 18.24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                ) : (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M2 12C3.73 7.61 7.5 5 12 5C16.5 5 20.27 7.61 22 12C20.27 16.39 16.5 19 12 19C7.5 19 3.73 16.39 2 12Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
 
             {mensagensErro.confirmarSenha ? (
               <div className="caixa-mensagem-erro">
@@ -549,7 +761,9 @@ function Cadastro() {
               name="aceitouTermos"
               checked={dadosCadastro.aceitouTermos}
               onChange={atualizarCampoDoFormulario}
+              disabled={carregando}
             />
+
             <span>Aceitar termos e condições política de privacidade</span>
           </label>
 
@@ -560,11 +774,11 @@ function Cadastro() {
             </div>
           )}
 
-          <button type="submit" className="btn-cadastrar">
-            Cadastrar Agora
+          <button type="submit" className="btn-cadastrar" disabled={carregando}>
+            {carregando ? "Cadastrando..." : "Cadastrar Agora"}
           </button>
 
-          <button type="button" className="btn-google">
+          <button type="button" className="btn-google" disabled={carregando}>
             <img src={GoogleIcon} alt="Google" />
             <span>Entrar com Google</span>
           </button>

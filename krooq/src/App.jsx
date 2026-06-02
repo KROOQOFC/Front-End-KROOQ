@@ -8,14 +8,13 @@ import NovaSenha from "./pages/NovaSenha/NovaSenha";
 import SenhaRedefinida from "./pages/SenhaRedefinida/SenhaRedefinida";
 import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
-// import IA from "./pages/IA/IA"
+import IA from "./pages/IA/IA";
 import Agenda from "./pages/Agenda/Agenda";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import SobreNos from "./pages/SobreNos/SobreNos";
 
 function App() {
   return (
@@ -31,16 +30,15 @@ function App() {
         <Route path="/cadastro" element={<Navigate to="/escolha-login" />} />
         <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
-        {/* <Route path="/Ia" element={<Ia />} /> */}
+        <Route path="/ia" element={<IA />} />
         <Route path="/senha-redefinida" element={<SenhaRedefinida />} />
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
         <Route path="/Profissionais" element={<Profissionais />} />
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
-        <Route path="/sobre-nos" element={<SobreNos/>} />
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/ia/chat" element={<ChatIA />} />
+
       </Routes>
     </BrowserRouter>
   );

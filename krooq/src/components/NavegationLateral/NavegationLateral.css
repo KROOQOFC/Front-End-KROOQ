@@ -239,3 +239,24 @@ top: -15px;
     filter: brightness(0) invert(1);
   }
 }
+
+.layout-links-menu-lateral {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-links-menu-lateral nav {
+  height: 100%;
+}
+
+.layout-links-menu-lateral ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-voltar-home {
+  margin-top: auto;
+  margin-bottom: 24px;
+}

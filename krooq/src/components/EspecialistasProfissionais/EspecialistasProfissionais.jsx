@@ -1,6 +1,6 @@
 import "./EspecialistasProfissionais.css";
 
-import imagemProfissionalObra from "../../assets/obraHomem.png";
+import imagemProfissionalObra from "../../assets/ObraHomem.png";
 import iconeSeguranca from "../../assets/iconeSeguranca.png";
 import iconeCheck from "../../assets/user-check.png";
 import perfil7 from "../../assets/perfil7.png";
