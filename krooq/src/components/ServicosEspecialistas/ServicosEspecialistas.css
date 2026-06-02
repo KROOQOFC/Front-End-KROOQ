@@ -122,18 +122,17 @@
 @media (max-width: 600px) {
   .ServicosEspecialistaContainer {
     min-height: auto;
-    padding: 40px 20px 10px;
+    padding: 24px 20px 40px;
     box-sizing: border-box;
-
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 90px 1fr;
     grid-template-areas:
       "imagem texto"
-      "cards cards";
-
-    column-gap: 16px;
-    row-gap: 22px;
-    align-items: center;
+      "cards  cards";
+    column-gap: 12px;
+    row-gap: 20px;
+    overflow: hidden;
+    align-items: start;
   }
 
   .ArquitetaServicos {
@@ -142,65 +141,63 @@
     max-width: 100%;
     margin: 0;
     object-fit: contain;
-    justify-self: start;
-    margin-top: -230%;
+    align-self: start;
   }
 
   .ExplicacaoEspecialista {
     grid-area: texto;
-    width: 100%;
+    width: 80%;
     margin: 0;
     transform: none;
   }
 
   .PqEspecialista {
-    font-size: 21px;
-    line-height: 1.15;
-    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 8px;
   }
 
   .TextoArquiteto {
-    font-size: 11px;
-    line-height: 1.55;
+    font-size: 10.5px;
+    line-height: 1.5;
     margin: 0;
   }
 
   .CardsEspecialistas {
-  grid-area: cards;
-  width: 150%;
-  margin-right: 50%;
-  justify-self: center;
-  margin-top: 10%;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
+    grid-area: cards;
+    width: 80%;           /* menor que 100% para dar sensação de centralizado */
+    margin: 0 auto;       /* centraliza horizontalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
 
   .ServicosConfiaveis,
-.AdaptabilidadeEspecialista {
-  width: 100%;
-  height: 35px;
-  padding: 0 18px;
-  box-sizing: border-box;
-}
+  .AdaptabilidadeEspecialista {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
 
   .ProfissionaisNivel {
-  width: 100%;
-  min-height: auto;
-  padding: 18px;
-  box-sizing: border-box;
-
-  grid-template-columns: 22px 1fr 22px;
-}
+    width: 100%;
+    min-height: auto;
+    padding: 14px;
+    box-sizing: border-box;
+    grid-template-columns: 20px 1fr 20px;
+    column-gap: 10px;
+  }
 
   .IconUsuarioEspecialista {
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
   }
 
   .IconSetaEspecialista {
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
   }
 
   .TituloServicosConfiaveis,
@@ -213,6 +210,6 @@
     grid-column: 1 / 4;
     font-size: 11px;
     line-height: 1.55;
-    margin-top: 14px;
+    margin-top: 10px;
   }
 }

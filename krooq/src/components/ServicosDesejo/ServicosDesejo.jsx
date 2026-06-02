@@ -35,23 +35,23 @@ function ServicosDesejo() {
       <div className="ImagemDesejos">
         <CardServicosContainer
           texto="Acompanhar"
-          top="120px"
-          right="9%"
+          top="130px"
+          right="5%"
           height="50px"
           width="150px"
         />
 
         <CardServicosContainer
           texto="Planejar"
-          top="200px"
-          right="9%"
+          top="240px"
+          right="2%"
           height="50px"
           width="110px"
         />
 
         <CardServicosContainer
           texto="Conectar"
-          top="470px"
+          top="450px"
           left="550px"
           height="50px"
           width="120px"
@@ -59,7 +59,7 @@ function ServicosDesejo() {
 
         <CardServicosContainer
           texto="KROOQ um ecossistema inteligente que une design, fornecedores e execução para tirar o seu projeto do papel com tecnologia e sofisticação."
-          top="550px"
+          top="510px"
           left="550px"
           height="120px"
           width="380px"

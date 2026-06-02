@@ -4,10 +4,10 @@
   background-color: #d6cbb6;
   position: relative;
   overflow: hidden;
+  clip-path: inset(0);
   box-shadow:
     inset 35px 0 45px rgba(255, 255, 255, 0.18),
     inset -35px 0 45px rgba(255, 255, 255, 0.18);
-  padding-bottom: 200px;
   box-sizing: border-box;
 }
 
@@ -55,9 +55,8 @@
 
 .RedesSociais {
   position: absolute;
-  top: 580px;
+  top: 480px;
   left: 32px;
-  bottom: 65px;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -86,6 +85,7 @@
   width: 660px;
   height: auto;
   z-index: 2;
+  pointer-events: none;
 }
 
 .ImagemDesejos {
@@ -99,10 +99,20 @@
 
 @media (max-width: 600px) {
   .ServicosDesejoContainer {
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
-    padding: 130px 20px 40px;
+    padding: 95px 20px 14px;
     overflow: hidden;
+    clip-path: inset(0);
+  }
+
+  .pessoasCasa {
+    display: block;        /* volta a aparecer */
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 85%;
+    margin: 0 auto 10px;
   }
 
   .servicosDesejo {
@@ -111,40 +121,27 @@
     left: auto;
     z-index: 5;
     max-width: 100%;
+    
   }
 
   .Servicos-Titulo {
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1.05;
-    margin-bottom: 26px;
-  }
-
-  .pessoasCasa {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-
-    width: 90%;
-    max-width: none;
-    margin-left: 20px;
-    margin-bottom: 20px;
-
-    display: block;
+    margin: 0 0 18px 10%;
   }
 
   .servicosDesejo p {
-    font-size: 15px;
-    margin: 0 0 25px;
-    margin-left: 20%;
+    font-size: 13px;
+    margin: 0 0 16px 20%;
   }
 
   .btn-ServicosProjeto {
-    width: 220px;
-    height: 52px;
-    font-size: 12px;
+    width: 200px;
+    height: 45px;
+    font-size: 10px;
     margin-left: 22%;
     transform: none;
+    padding: 0;
   }
 
   .ImagemDesejos {
@@ -156,22 +153,21 @@
     top: auto;
     left: auto;
     bottom: auto;
-
-    margin-top: 35px;
-    margin-left: 35%;
+    margin-top: 14px;
+    margin-left: 37%;
     display: flex;
     flex-direction: row;
-    gap: 22px;
+    gap: 20px;
     z-index: 6;
   }
 
   .linkedinServicos,
   .instagramServicos {
-    height: 24px;
+    height: 20px;
   }
 
   .githubServicos {
-    height: 18px;
-    margin-top: 3px;
+    height: 16px;
+    margin-top: 2px;
   }
 }
