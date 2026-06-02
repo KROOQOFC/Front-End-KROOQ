@@ -1,7 +1,7 @@
 import "./SobreNos.css";
 import EquipeKrooq from "../../assets/EquipeKrooq.png";
 import Navegation from "../../components/Navegation/Navegation";
-import FundoSobreNos from "../../assets/FundoSobreNos.png";
+import Carrossel from '../../components/Carrossel/Carrossel'
 import IconeMissaoSobreNos from "../../assets/IconeMissaoSobreNos.png";
 import IconeVisaoSobreNos from "../../assets/IconeVisaoSobreNos.png";
 import IconeValoresSobreNos from "../../assets/IconeValoresSobreNos.png";
@@ -9,6 +9,7 @@ import Ods8SobreNos from "../../assets/Ods8SobreNos.png";
 import Ods9SobreNos from "../../assets/Ods9SobreNos.png";
 import Ods10SobreNos from "../../assets/Ods10SobreNos.png";
 import FotoEquipeFinalSobreNos from "../../assets/FotoEquipeFinalSobreNos.png"
+import Rodape from "../../components/Rodape/Rodape";
 
 function SobreNos() {
   return (
@@ -162,6 +163,8 @@ Diversidade & Crescimento: Espaço para todos os perfis evoluírem e crescerem j
 <section className="fotos-da-equipe">
    <img src={FotoEquipeFinalSobreNos} alt=""  className="imagem-equipe-final"/> 
 </section>
+<Carrossel />
+<Rodape />
 </>
   );
 }
