@@ -172,5 +172,20 @@
     .logo-krooq-agenda {
         width: 120px;
     }
+    .container-calendario {
+        height: auto;
+        min-height: auto;
+    }
+    .container-agenda {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .painel-eventos {
+        height: auto;
+        max-height: none;
+        padding: 0;
+    }
+
 
 }
