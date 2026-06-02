@@ -1,5 +1,25 @@
 import API_URL from "./api";
 
+async function tratarResposta(response, mensagemPadrao) {
+  let data = null;
+
+  try {
+    const texto = await response.text();
+
+    if (texto) {
+      data = JSON.parse(texto);
+    }
+  } catch {
+    data = null;
+  }
+
+  if (!response.ok || data?.sucesso === false) {
+    throw new Error(data?.mensagem || mensagemPadrao);
+  }
+
+  return data;
+}
+
 export async function fazerLogin(email, senha) {
   const response = await fetch(`${API_URL}/Auth/login`, {
     method: "POST",
@@ -12,13 +32,7 @@ export async function fazerLogin(email, senha) {
     }),
   });
 
-  const data = await response.json();
-
-  if (!response.ok || data.sucesso === false) {
-    throw new Error(data.mensagem || "Erro ao fazer login.");
-  }
-
-  return data;
+  return tratarResposta(response, "Erro ao fazer login.");
 }
 
 export async function fazerCadastro(dadosCadastro) {
@@ -30,13 +44,7 @@ export async function fazerCadastro(dadosCadastro) {
     body: JSON.stringify(dadosCadastro),
   });
 
-  const data = await response.json();
-
-  if (!response.ok || data.sucesso === false) {
-    throw new Error(data.mensagem || "Erro ao cadastrar usuário.");
-  }
-
-  return data;
+  return tratarResposta(response, "Erro ao cadastrar usuário.");
 }
 
 export function salvarDadosDoLogin(data) {
