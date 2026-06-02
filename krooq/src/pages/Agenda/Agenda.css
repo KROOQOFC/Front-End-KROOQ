@@ -101,8 +101,8 @@
 .logo-krooq-agenda {
     position: absolute;
 
-    right: 40px;
-    bottom: 30px;
+    right: 50px;
+    bottom: 50px;
 
     width: 180px;
 
@@ -114,4 +114,70 @@
     inset: 0;
 
     z-index: 1;
+}
+.lado-direito {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.logo-krooq-agenda {
+    width: 180px;
+
+    align-self: flex-end;
+}
+@media (max-width: 1024px) {
+
+    .container-agenda {
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        padding-top: 50px;
+
+        gap: 25px;
+    }
+
+    .logo-krooq-agenda {
+        position: static;
+
+        width: 150px;
+
+        margin-top: 20px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .container-agenda {
+        padding: 20px;
+    }
+
+    .painel-eventos {
+        width: 100%;
+
+        max-width: 500px;
+
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .topo-eventos h2 {
+        font-size: 28px;
+    }
+
+    .botao-adicionar {
+        width: 45px;
+        height: 45px;
+
+        font-size: 26px;
+    }
+
+    .logo-krooq-agenda {
+        width: 120px;
+    }
+
 }

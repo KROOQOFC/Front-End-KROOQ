@@ -112,6 +112,7 @@ function deletarEvento() {
             setDataSelecionada={setDataSelecionada}
             eventos={eventos}
             />
+            <div className="lado-direito">
 
             <section className="painel-eventos">
 
@@ -160,6 +161,13 @@ function deletarEvento() {
                 </div>
 
             </section>
+                <img
+        className="logo-krooq-agenda"
+        src={LogoKrooq}
+        alt="Logo Krooq"
+    />
+
+</div>
 
             <EventModal
                 abrir={abrirModal}
