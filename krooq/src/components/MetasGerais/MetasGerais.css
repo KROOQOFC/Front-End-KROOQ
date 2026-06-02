@@ -112,3 +112,25 @@
   color: #8b8b8b;
   transition: 0.25s ease;
 }
+
+@media (max-width: 768px){
+.ContainerMetas{
+  padding: 10px 25px;
+   height: 250px;
+}
+
+.BotaoCheck {
+  flex-shrink: 0;
+  position: relative;
+  left: -75px;
+}
+
+ .ItemMeta p {
+  position: relative;
+  left: -95px;
+ }
+.ProgressoMetas{
+  height: 35px;
+}
+ 
+}

@@ -4,7 +4,7 @@
     width: 100%;
     min-height: 100vh;
 
-    padding: 40px;
+    padding: 2vh;
 
     display: flex;
 
@@ -22,7 +22,8 @@
     position: relative;
     z-index: 2;
     width: 420px;
-    height: 720px;
+    height: 80vh;
+    max-height: 700px;
     border-radius: 30px;
 
     padding: 30px;
@@ -66,6 +67,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-y: auto;
 }
 .botao-voltar {
     position: absolute;
@@ -98,20 +100,92 @@
 
     background: rgba(255, 255, 255, 0.35);
 }
-.logo-krooq-agenda {
-    position: absolute;
 
-    right: 40px;
-    bottom: 30px;
-
-    width: 180px;
-
-    opacity: 0.9;
-}
 .overlay-voltar {
     position: absolute;
 
     inset: 0;
 
     z-index: 1;
+}
+.lado-direito {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.logo-krooq-agenda {
+    width: 180px;
+
+    align-self: flex-end;
+}
+@media (max-width: 1024px) {
+
+    .container-agenda {
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        padding-top: 50px;
+
+        gap: 25px;
+    }
+
+    .logo-krooq-agenda {
+        position: static;
+
+        width: 150px;
+
+        margin-top: 20px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .container-agenda {
+        padding: 20px;
+    }
+
+    .painel-eventos {
+        width: 100%;
+
+        max-width: 500px;
+          height: 80vh;
+          max-height: 720px;
+
+        padding: 20px;
+    }
+
+    .topo-eventos h2 {
+        font-size: 28px;
+    }
+
+    .botao-adicionar {
+        width: 45px;
+        height: 45px;
+
+        font-size: 26px;
+    }
+
+    .logo-krooq-agenda {
+        width: 120px;
+    }
+    .container-calendario {
+        height: auto;
+        min-height: auto;
+    }
+    .container-agenda {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .painel-eventos {
+        height: auto;
+        max-height: none;
+        padding: 0;
+    }
+
+
 }

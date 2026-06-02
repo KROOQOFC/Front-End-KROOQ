@@ -57,7 +57,7 @@ function ServicoComentarios() {
 
   const larguraCardComGap = larguraCard + gap;
 
-  const larguraVisivel = 1190;
+  const larguraVisivel = 1090;
 
   const deslocamento =
     comentarioAtivo === 0

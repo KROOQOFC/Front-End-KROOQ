@@ -1,6 +1,5 @@
 .container-calendario {
-    width: 500px;
-
+    width: min(500px, 100%);
     background: white;
 
     border-radius: 30px;
@@ -9,9 +8,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    position: relative;
-    z-index: 2;
+    gap: 18px;
 }
 
 .topo-calendario {
@@ -60,10 +57,12 @@
 
 .grid-dias {
     display: grid;
-
     grid-template-columns: repeat(7, 1fr);
-
+    height: auto;
+    min-height: auto;
     gap: 12px;
+    justify-items: center;
+    
 }
 
 .dia {
@@ -84,11 +83,12 @@
 .selecionado {
     background: #8FB996;
 
+
     color: white;
 }
 .espaco-vazio {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
 .conteudo-dia {
     display: flex;
@@ -109,4 +109,34 @@
     border-radius: 50%;
 
     background: #8FB996;
+}
+@media (max-width: 500px) {
+
+    .container-calendario {
+        width: 100%;
+
+        padding: 15px;
+    }
+
+    .topo-calendario h2 {
+        font-size: 22px;
+    }
+
+    .dia {
+        width: 35px;
+        height: 35px;
+
+        font-size: 16px;
+    }
+
+    .dias-semana {
+        font-size: 14px;
+    }
+
+    .grid-dias {
+        gap: 8px;
+
+        min-height: 350px;
+    }
+
 }

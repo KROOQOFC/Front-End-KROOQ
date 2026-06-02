@@ -112,6 +112,7 @@ function deletarEvento() {
             setDataSelecionada={setDataSelecionada}
             eventos={eventos}
             />
+            <div className="lado-direito">
 
             <section className="painel-eventos">
 
@@ -160,6 +161,9 @@ function deletarEvento() {
                 </div>
 
             </section>
+
+
+</div>
 
             <EventModal
                 abrir={abrirModal}

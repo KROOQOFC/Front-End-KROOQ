@@ -92,6 +92,8 @@ margin-top: 20px;
   transition: 0.3s;
 }
 
+
+
 /* houver */
 
 .link-menu:hover {
@@ -118,6 +120,124 @@ margin-top: 20px;
 
 .link-menu.active img {
   filter: brightness(0) invert(1);
+}
+.menu-lateral-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .nav-menu-lateral {
+    display: none;
+  }
+
+  .menu-lateral-mobile {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 9999;
+  }
+
+  .container-lateral {
+    background: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .logo-lateral-mobile {
+    width: 60px;
+    height: 60px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .menu-lateral {
+    display: none;
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px;
+    width: 220px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu-lateral.ativo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu-lateral li {
+    width: 100%;
+  }
+
+  .menu-lateral a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    padding: 10px 12px;
+
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+  }
+
+  .icone-mobile {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+  .icone-mobile-tamanho{
+     width: 40px;
+    height: 30px;
+    position: relative;
+    left: -10px;
+
+  }
+  .icone-mobile-tamanho-krooqia{
+ width: 40px;
+    height: 40px;
+    position: relative;
+    left: -10px;
+    
+  }
+  .krooqia-alinhar{
+position: relative;
+top: -15px;
+
+  }
+.texto-krooqai-responsive{
+  position: relative;
+  right: 19px;
+}
+
+
+  .menu-lateral a:hover {
+    background-color: #7F9785;
+    color: white;
+  }
+
+  .menu-lateral a:hover img {
+    filter: brightness(0) invert(1);
+  }
+
+  .menu-lateral a.active {
+    background-color: #54715E;
+    color: white;
+  }
+
+  .menu-lateral a.active img {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .layout-links-menu-lateral {

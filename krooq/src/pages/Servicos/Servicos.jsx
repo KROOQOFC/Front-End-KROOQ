@@ -8,17 +8,17 @@ import ServicoComentarios from "../../components/ServicoComentarios/ServicoComen
 import Rodape from "../../components/Rodape/Rodape";
 
 function Servicos() {
-    return(
-        <>
-      <Navegation/> 
+  return (
+    <div className="PaginaServicos">
+      <Navegation/>
       <ServicosDesejo/>
       <ServicosProjetos/>
       <ServicosEspecialista/>
       <ServicosFornecedor/>
       <ServicoComentarios/>
       <Rodape/>
-       </>
-    )
+    </div>
+  )
 }
 
 export default Servicos

@@ -10,39 +10,39 @@
 
 .AreaPanoramaGeral {
   position: fixed;
-  top: 65px;
+  top: 59px;
   left: 240px;
   z-index: 2;
 }
 .AreaEvolucaoSemana {
   position: fixed;
-  top: 65px;
-  left: 605px;
+  top: 59px;
+  left: 596.5px;
   z-index: 2;
 }
 
 .AreaMetaMensal {
   position: fixed;
-  top: 65px;
-  left: 1065px;
+  top: 59px;
+  left: 1050px;
   z-index: 5;
 }
 .AreaMetasGerais {
   position: fixed;
-  top: 360px;
-  left: 240px;
+  top: 335px;
+  left: 242px;
   z-index: 5;
 }
 
 .botão-transparente-geral {
     position: relative;
     bottom: 260px;
-    left: 1075px;
+    left: 1040px;
 }
 
 .componentes-projetos-andamento {
     display: flex;
-    gap: 42.5px;
+    gap: 30px;
     position: fixed;
     bottom: 0;
     left: 240px;
@@ -57,18 +57,105 @@
 }
 .AreaProcessos {
   position: fixed;
-  top: 400px;
+  top: 373px;
   left: 572px;
   display: flex;
-  gap:45px;
+  gap: 20px;
 }
 
 .paragrafo-processos-central{
     color: #fff;
   position: relative;
   position: fixed;
-  top: 364px;
+  top: 340px;
   left: 573px;
 }
 
+@media (max-width: 768px) {
 
+  .conteiner-central-profissional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 10px 30px;
+    overflow-y: auto;
+  }
+
+  .AreaPanoramaGeral,
+  .AreaEvolucaoSemana,
+  .AreaMetaMensal,
+  .AreaMetasGerais,
+  .AreaProcessos,
+  .componentes-projetos-andamento,
+  .paragrafo-processos-central,
+  .botão-transparente-geral {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  /* 1 - Evolução da Semana */
+  .AreaEvolucaoSemana {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 2 - Panorama Geral */
+  .AreaPanoramaGeral {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 3 - Metas Gerais */
+  .AreaMetasGerais {
+    order: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 4 - Meta Mensal */
+  .AreaMetaMensal {
+    order: 4;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 5 - Projetos em Andamento */
+  .componentes-projetos-andamento {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Título Processos */
+  .paragrafo-processos-central {
+    order: 6;
+    text-align: center;
+    color: white;
+  }
+
+  /* 6 - Processos */
+  .AreaProcessos {
+    order: 7;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+ .botão-transparente-geral {
+    order: 8;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+}
