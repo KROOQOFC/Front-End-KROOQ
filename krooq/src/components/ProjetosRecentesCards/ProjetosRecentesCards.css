@@ -70,3 +70,8 @@
     margin: 10px;
     margin-top: -10px;
 }
+@media (max-width: 768px){
+    .conteiner-projetos-andamento{
+        width: 410px;
+    }
+}

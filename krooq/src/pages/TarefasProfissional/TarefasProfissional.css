@@ -10,14 +10,14 @@
 .AreaNavBarMensagens {
   position: absolute;
   top: 20px;
-  left: 305px;
+  left: 250px;
   z-index: 2;
 }
 
 .AreaTarefasResumo {
   position: absolute;
   top: 90px;
-  left: 305px;
+  left: 250px;
   z-index: 2;
 }
 
@@ -25,7 +25,7 @@
   position: absolute;
   top: 220px;
   left: 246px;
-  right: 30px;
+
   bottom: 20px;
   z-index: 2;
 
@@ -62,3 +62,41 @@
 .AreaCardsTarefas::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+
+@media (max-width: 768px) {
+
+  .ContainerTarefasProfissional {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .AreaNavBarMensagens {
+    transform: translateX(-50%);
+    top: 15px;
+  }
+
+  .AreaTarefasResumo {
+    position: static;
+    width: calc(100% - 30px);
+    margin: 90px auto 20px;
+    padding: 0;
+  }
+ .AreaCardsTarefas {
+    position: static;
+
+    width: 100%;
+    padding: 20px 10px 30px;
+
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+
+    justify-items: center;
+
+    overflow: visible;
+  }
+}
+
+

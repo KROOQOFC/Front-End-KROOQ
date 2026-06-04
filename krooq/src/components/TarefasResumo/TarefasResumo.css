@@ -1,5 +1,5 @@
 .ContainerResumoTarefas {
-  width: 1000px;
+  width: 1090px;
   height: 115px;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 10px;
@@ -91,4 +91,72 @@
 
 .BotaoRemoverTarefa {
   background-color: #54715E;
+}
+
+
+@media (max-width: 768px) {
+  .ContainerResumoTarefas {
+    width: 95%;
+    height: auto;
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .TopoResumoTarefas {
+    margin-bottom: 15px;
+  }
+
+  .TopoResumoTarefas h2 {
+    font-size: 20px;
+  }
+
+  .TopoResumoTarefas p {
+    font-size: 12px;
+  }
+
+  .ConteudoResumoTarefas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .IndicadoresTarefas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+  }
+
+  .BlocoIndicador {
+    justify-content: center;
+  }
+
+  .TextoIndicador {
+    width: auto;
+    text-align: center;
+  }
+
+  .TextoIndicador strong {
+    font-size: 22px;
+  }
+
+  .TextoIndicador span {
+    font-size: 12px;
+  }
+
+  .SeparadorIndicador {
+    display: none;
+  }
+
+  .BotoesTarefas {
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .BotoesTarefas button {
+    flex: 1;
+    height: 40px;
+    font-size: 12px;
+  }
 }

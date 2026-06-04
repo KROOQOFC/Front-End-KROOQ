@@ -116,21 +116,30 @@
 @media (max-width: 768px){
 .ContainerMetas{
   padding: 10px 25px;
+  width: 400px;
    height: 250px;
+}
+.TituloMetas {
+  position: relative;
+  right: -15px;
 }
 
 .BotaoCheck {
   flex-shrink: 0;
   position: relative;
-  left: -75px;
+  left: -110px;
 }
 
  .ItemMeta p {
   position: relative;
-  left: -95px;
+  left: -120px;
+  bottom: -5px;
  }
 .ProgressoMetas{
   height: 35px;
 }
- 
+ .AcoesTopoMetas{
+position: relative;
+left: -28px;
+ }
 }

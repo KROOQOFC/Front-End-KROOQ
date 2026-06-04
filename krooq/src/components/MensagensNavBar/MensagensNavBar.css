@@ -1,5 +1,5 @@
 .ContainerMensagensNavBar {
-  width: 1000px;
+  width: 1090px;
   height: 62px;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 6px;
@@ -106,4 +106,60 @@
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .ContainerMensagensNavBar {
+    width: 80%;
+    height: 60px;
+    padding: 0 15px;
+    border-radius: 10px;
+    display: flex;
+  position: absolute;
+  left: 254px;
+  }
+
+  .TituloMensagens {
+    font-size: 20px;
+  }
+
+  .AcoesMensagens {
+    gap: 12px;
+  }
+
+  .LinhaSeparadora {
+    display: none;
+  }
+
+  .EmailUsuario {
+    display: none;
+  }
+
+  .NomeUsuario {
+    display: none;
+  }
+
+  .PerfilUsuario {
+    gap: 0;
+  }
+
+  .FotoPerfil,
+  .PerfilPadrao {
+    width: 36px;
+    height: 36px;
+  }
+
+  .PerfilPadrao {
+    font-size: 22px;
+  }
+
+  .IconeMensagens {
+    font-size: 20px;
+  }
+
+  .BadgeIcone {
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+  }
 }

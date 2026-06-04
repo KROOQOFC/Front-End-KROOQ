@@ -1,0 +1,36 @@
+.card-mvv {
+  width: 350px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.icone-mvv {
+  width: 50px;
+  height: 50px;
+  background: #f05a3f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.card-mvv h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #5f7c6a;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card-mvv p {
+  color: #797979;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  text-align: center;
+}

@@ -91,6 +91,9 @@ margin-top: 20px;
 
   transition: 0.3s;
 }
+.icone-sair-menu{
+  color: #000;
+}
 
 
 
@@ -124,6 +127,7 @@ margin-top: 20px;
 .menu-lateral-mobile {
   display: none;
 }
+
 
 @media (max-width: 768px) {
 
