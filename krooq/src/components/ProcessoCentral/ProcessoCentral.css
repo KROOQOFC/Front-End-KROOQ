@@ -82,8 +82,7 @@
 }
 @media (max-width: 768px){
   .CardProcesso {
-    width: 200px;
-    height: 150px;
+    width: 100%;
     padding: 15px;
     border-radius: 18px;
   }

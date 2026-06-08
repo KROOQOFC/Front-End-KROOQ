@@ -125,15 +125,15 @@ Diversidade & Crescimento: Espaço para todos os perfis evoluírem e crescerem j
   <CardODS
     imagem={Ods9SobreNos}
     alt="ODS 9"
-    descricao="principalmente ao ODS 9, ao trazer mais inovação e acelerar a digitalização dos processos de gestão em canteiros de obra."
+    descricao=" com o ODS 9, ao trazer mais inovação e acelerar a digitalização dos processos de gestão em ambientes voltados para construção."
     tituloTag="Indústria, Inovação e Infraestrutura"
   />
 
   <CardODS
     imagem={Ods10SobreNos}
     alt="ODS 10"
-    descricao="principalmente ao ODS 10, ao ampliar as oportunidades para prestadores de serviço e valorizando a competência técnica."
-    tituloTag="Indústria, Inovação e Infraestrutura"
+    descricao=" com o ODS 10, ao ampliar as oportunidades para prestadores de serviço e valorizando a competência técnica."
+    tituloTag="Redução das Desigualdades"
     classeTexto="texto-ods-10"
     classeTag="tags-ods-10"
   />

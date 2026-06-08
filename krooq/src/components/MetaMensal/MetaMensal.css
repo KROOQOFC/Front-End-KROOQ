@@ -170,11 +170,7 @@
 
 @media (max-width: 768px){
 .ContainerMetaMensal {
-width: 400px;
-}
-.CompartilharMetas{
-  position: relative;
-  left: 20px;
+width: 100%;
 }
 
 }

@@ -74,6 +74,7 @@
 
   .AreaNavBarMensagens {
     transform: translateX(-50%);
+    
     top: 15px;
   }
 
@@ -85,13 +86,12 @@
   }
  .AreaCardsTarefas {
     position: static;
-
     width: 100%;
-    padding: 20px 10px 30px;
+    padding: 0px 10px 30px;
 
     display: grid;
    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
+    gap: 10px;
 
     justify-items: center;
 

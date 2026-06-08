@@ -35,7 +35,7 @@ bottom: 50px;
 
   .botao-tranparente-geral {
     position: relative !important;
-    width: 400px;
+  
     height: 145px;
     margin: 20px auto;
   }
@@ -46,11 +46,11 @@ bottom: 50px;
 .paragrafo-do-btnt{
      position: relative;
      top: -200px;
-     left: 260px;
+     left: 190px;
 }
 .seta-btn-transparente{
     position: relative;
     top: -220px;
-    left: 385px;
+    left: 315px;
 }
 }

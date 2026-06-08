@@ -8,7 +8,7 @@ import BlocoTarefas from "../../components/BlocoTarefas/BlocoTarefas";
 function TarefasProfissional() {
   return (
     <section className="ContainerTarefasProfissional">
-      <NavegationLateral />
+      <NavegationLateral/>
 
       <MensagensNavBar
         className="AreaNavBarMensagens"
@@ -119,14 +119,6 @@ function TarefasProfissional() {
           prazo="5 Meses"
           cor="#474BCA"
         />
-
-        
-
-
-
-
-
-
 
       </div>
     </section>

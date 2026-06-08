@@ -16,7 +16,7 @@ function CardODS({
 
       <p className={`texto-ods ${classeTexto}`}>
         <strong className="tag-verde-sobre-nos">
-          Nós alinhamos
+          Nós nos alinhamos
         </strong>{" "}
         {descricao}
       </p>

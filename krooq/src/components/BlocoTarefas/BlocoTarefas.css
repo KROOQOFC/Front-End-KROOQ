@@ -135,9 +135,10 @@
 
 @media (max-width: 768px) {
   .ContainerBlocoTarefas {
-    width: 200px;
-    height: 185px;
-    padding: 12px;
+    
+    width: 98%;
+    height: auto;
+    padding: 10px;
   }
 
   .DataCardTarefa {

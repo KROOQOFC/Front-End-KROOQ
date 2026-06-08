@@ -1,0 +1,38 @@
+.ContainerConsultoriaProfissionais {
+  min-height: 100vh;
+  background-color: #54715E;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaNavBarMensagens {
+  width: 100%;
+}
+
+.AreaNavConsultoria {
+  position: absolute;
+  top: 90px;
+  left: 250px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+.ContainerConsultoriaProfissionais {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .AreaNavBarMensagens {
+    transform: translateX(-50%);
+    top: 15px;
+  }
+
+  .AreaNavConsultoria {
+    position: static;
+    width: calc(100% - 30px);
+    margin: 90px auto 20px;
+    padding: 0;
+  }
+}

@@ -142,7 +142,7 @@
 
 @media (max-width: 768px){
 .ContainerEvolucaoSemana {
-  width: 400px;
+  width: 100%;
 }
 
 }

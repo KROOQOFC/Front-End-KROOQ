@@ -1,0 +1,67 @@
+.ConsultoriaCard {
+  width: 1090px;
+  height: 115px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.ConsultoriaConteudo {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.ConsultoriaConteudo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.BotaoAdicionarCliente {
+  width: fit-content;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f05a3c;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.BotaoAdicionarCliente:hover {
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .ConsultoriaCard {
+    height: 70%;
+    width: 100%;
+  }
+
+  .ConsultoriaConteudo {
+    padding: 18px;
+    gap: 8px;
+  }
+
+  .ConsultoriaConteudo h2 {
+    font-size: 18px;
+  }
+
+  .BotaoAdicionarCliente {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+}

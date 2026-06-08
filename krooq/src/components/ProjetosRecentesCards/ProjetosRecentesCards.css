@@ -72,6 +72,6 @@
 }
 @media (max-width: 768px){
     .conteiner-projetos-andamento{
-        width: 410px;
+        width: 100%;
     }
 }
