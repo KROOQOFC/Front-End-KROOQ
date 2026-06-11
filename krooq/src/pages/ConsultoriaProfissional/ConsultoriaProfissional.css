@@ -1,6 +1,6 @@
 .ContainerConsultoriaProfissionais {
   min-height: 100vh;
-  background-color: #54715E;
+  background-color: #54715e;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -31,11 +31,9 @@
   top: 215px;
   left: 285px;
   right: 25px;
-
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
   z-index: 2;
 }
 
@@ -43,11 +41,9 @@
   position: absolute;
   top: 140px;
   left: 265px;
-
   display: flex;
   align-items: flex-start;
   gap: 15px;
-
   z-index: 2;
 }
 
@@ -57,40 +53,60 @@
   gap: 10px;
 }
 
-
 @media (max-width: 768px) {
   .ContainerConsultoriaProfissionais {
     min-height: 100vh;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 6px;
+    box-sizing: border-box;
   }
 
   .AreaNavBarMensagens {
     position: static;
-    width: calc(100% - 30px);
-    margin: 15px auto;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .AreaNavConsultoriaNovosClientes {
     position: static;
-    width: calc(100% - 30px);
-    margin: 20px auto;
+    width: 80%;
+    margin: 0 0 8px;
+    margin-left: 20%;
   }
 
-  .AreaCardsClientes,
+  .AreaCardsClientes {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .AreaChatClientes {
     position: static;
-    width: calc(100% - 30px);
-    margin: 20px auto;
+    width: 100%;
+    display: block;
   }
 
-  .AreaChatClientes {
+  .AreaListaConversasClientes {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
   }
 
   .AreaPainelChatProfissional {
-    margin-top: 0;
+    display: none;
+    width: 100%;
+  }
+
+  .ChatAbertoMobile .AreaListaConversasClientes {
+    display: none;
+  }
+
+  .ChatAbertoMobile .AreaPainelChatProfissional {
+    display: block;
   }
 }

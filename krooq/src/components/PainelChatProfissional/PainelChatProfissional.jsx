@@ -1,17 +1,26 @@
 import "./PainelChatProfissional.css";
-import { FaPhoneAlt, FaEllipsisV, FaSmile, FaPaperclip, FaPaperPlane } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEllipsisV,
+  FaSmile,
+  FaPaperclip,
+  FaPaperPlane,
+  FaArrowLeft,
+} from "react-icons/fa";
 
-function PainelChatProfissional({ cliente }) {
+function PainelChatProfissional({ cliente, onVoltar }) {
   if (!cliente) {
     return (
       <div className="PainelChatProfissional PainelChatVazio">
         <div className="ConteudoChatVazio">
-          <p>Selecione um chat para iniciar<br />uma conversa.</p>
+          <p>
+            Selecione um chat para iniciar
+            <br />
+            uma conversa.
+          </p>
           <div className="IconeEnvelope">✉️</div>
           <span>Nada está selecionado</span>
         </div>
-
-        
       </div>
     );
   }
@@ -20,9 +29,16 @@ function PainelChatProfissional({ cliente }) {
     <div className="PainelChatProfissional">
       <div className="TopoChatCliente">
         <div className="InfoTopoChat">
+          <button className="BotaoVoltarChat" onClick={onVoltar}>
+            <FaArrowLeft />
+          </button>
+
           <img src={cliente.foto} alt={cliente.nome} />
-          <h3>{cliente.nome}</h3>
-          <span>{cliente.tipo || "cliente"}</span>
+
+          <div>
+            <h3>{cliente.nome}</h3>
+            <span>{cliente.tipo || "cliente"}</span>
+          </div>
         </div>
 
         <div className="AcoesTopoChat">
@@ -45,12 +61,18 @@ function PainelChatProfissional({ cliente }) {
         </div>
 
         <div className="MensagemRecebida maior">
-          <p>Que bom! Como estão as coisas por lá? Fiquei curioso com a parte dos revestimentos da cozinha.</p>
+          <p>
+            Que bom! Como estão as coisas por lá? Fiquei curioso com a parte dos
+            revestimentos da cozinha.
+          </p>
           <span>14:23</span>
         </div>
 
         <div className="MensagemEnviada maior">
-          <p>A paginação do piso já começou! Os azulejos da parede também estão sendo assentados.</p>
+          <p>
+            A paginação do piso já começou! Os azulejos da parede também estão
+            sendo assentados.
+          </p>
           <span>14:25</span>
         </div>
 
@@ -60,7 +82,10 @@ function PainelChatProfissional({ cliente }) {
         </div>
 
         <div className="MensagemEnviada maior">
-          <p>Sim, o engenheiro acompanhou a finalização do reforço hoje cedo. Ficou 100% liberado e seguro para continuarmos.</p>
+          <p>
+            Sim, o engenheiro acompanhou a finalização do reforço hoje cedo.
+            Ficou 100% liberado e seguro para continuarmos.
+          </p>
           <span>15:00</span>
         </div>
 

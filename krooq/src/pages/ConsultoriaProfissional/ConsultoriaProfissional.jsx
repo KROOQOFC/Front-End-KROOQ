@@ -122,7 +122,13 @@ function ConsultoriaProfissional() {
           ))}
         </div>
       ) : (
-        <div className="AreaChatClientes">
+        <div
+          className={
+            clienteSelecionado
+              ? "AreaChatClientes ChatAbertoMobile"
+              : "AreaChatClientes"
+          }
+        >
           <div className="AreaListaConversasClientes">
             <PesquisaConversasClientes
               valorBusca={busca}
@@ -130,16 +136,19 @@ function ConsultoriaProfissional() {
             />
 
             <NavContatoClientes
-  clientes={clientesFiltrados}
-  clienteSelecionado={clienteSelecionado}
-  onSelecionarCliente={(cliente) => {
-    setClienteSelecionado(cliente);
-  }}
-/>
+              clientes={clientesFiltrados}
+              clienteSelecionado={clienteSelecionado}
+              onSelecionarCliente={(cliente) => {
+                setClienteSelecionado(cliente);
+              }}
+            />
           </div>
 
           <div className="AreaPainelChatProfissional">
-            <PainelChatProfissional cliente={clienteSelecionado} />
+            <PainelChatProfissional
+              cliente={clienteSelecionado}
+              onVoltar={() => setClienteSelecionado(null)}
+            />
           </div>
         </div>
       )}
