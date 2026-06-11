@@ -1,0 +1,33 @@
+.PesquisaConversasClientes {
+  width: 290px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.IconePesquisaConversasClientes {
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.PesquisaConversasClientes input {
+  width: 100%;
+  height: 25px;
+  background: transparent;
+
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  outline: none;
+  padding: 0 12px;
+  color: white;
+  font-size: 10px;
+}
+
+.PesquisaConversasClientes input::placeholder {
+  color: #616060;
+}

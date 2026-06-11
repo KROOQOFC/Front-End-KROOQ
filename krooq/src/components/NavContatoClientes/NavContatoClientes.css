@@ -1,0 +1,129 @@
+.NavContatoClientes {
+  width: 290px;
+  height: 420px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 22px 26px;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.TopoNavContatoClientes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.TopoNavContatoClientes h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.IconeAdicionarMensagem {
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.ListaConversasClientes {
+  height: calc(100% - 45px);
+  overflow-y: auto;
+  padding-right: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ListaConversasClientes::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ListaConversasClientes::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.ItemConversaCliente {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: all 0.2s ease;
+}
+
+.ItemConversaCliente:hover {
+  background-color: #8fad97;
+}
+
+.ItemConversaCliente:hover .LinhaNomeCliente h3,
+.ItemConversaCliente:hover .LinhaNomeCliente span,
+.ItemConversaCliente:hover .TextoConversaCliente p {
+  color: #ffffff;
+}
+
+.ItemConversaSelecionado {
+  background-color: #67886f;
+}
+
+.ItemConversaSelecionado .LinhaNomeCliente h3,
+.ItemConversaSelecionado .LinhaNomeCliente span,
+.ItemConversaSelecionado .TextoConversaCliente p {
+  color: #ffffff !important;
+}
+
+.ItemConversaCliente img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.TextoConversaCliente {
+  min-width: 0;
+}
+
+.LinhaNomeCliente {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.LinhaNomeCliente h3 {
+  margin: 0;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.LinhaNomeCliente span {
+  color: #000000;
+  font-size: 10px;
+  transition: color 0.2s ease;
+}
+
+.TextoConversaCliente p {
+  margin: 1px 0 0;
+  color: #000000;
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+
+  transition: color 0.2s ease;
+}

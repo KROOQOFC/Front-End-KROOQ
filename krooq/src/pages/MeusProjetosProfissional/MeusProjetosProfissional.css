@@ -1,0 +1,60 @@
+.ContainerProjetosProfissional {
+  height: 100vh;
+  background-color: #54715e;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaNavBarMensagens {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  right: 20px;
+  z-index: 3;
+}
+
+.AreaProgressoProjetos {
+  position: absolute;
+  top: 90px;
+  left: 250px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.AreaEmProgresso {
+  position: absolute;
+  top: 205px;
+  left: 295px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.AreaListaProjetos {
+  position: absolute;
+  top: 205px;
+  left: 571px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.AreaEvolucaoSemanaProjetos {
+  position: fixed;
+  top: 36%;
+  left: 62%;
+  z-index: 2;
+}
+
+.componentes-projetos-andamento {
+  display: flex;
+  gap: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 240px;
+  width: 100%;
+  z-index: 2;
+}

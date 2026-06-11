@@ -1,0 +1,99 @@
+.ContainerQuantidadeProjetos {
+  width: 100%;
+  max-width: 1090px;
+  height: 105px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr auto;
+  align-items: center;
+  gap: 40px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.QuantidadeProjetoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.TituloQuantidadeProjetos {
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-top: -7px;
+  color: #ffffff;
+}
+
+.ProjetoBotoes {
+  display: flex;
+  gap: 10px;
+}
+
+.ProjetoBotoes button {
+  border: none;
+  border-radius: 18px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.BotaoEnvios {
+  background: #ef5238;
+}
+
+.BotaoAdicionar {
+  background: #6e8c70;
+}
+
+.ProjetoProgressoArea {
+  width: 100%;
+}
+
+.BarraProgressoProjetos {
+  width: 100%;
+  height: 17px;
+  position: relative;
+  margin-top: -2px;
+  border-radius: 20px;
+}
+
+.BarraProgressoProjetos::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.BarraProgressoLaranja {
+  height: 100%;
+  background: #ef5238;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transition: width 0.3s ease;
+}
+
+.DiasRestantes {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: -5px;
+  white-space: nowrap;
+}

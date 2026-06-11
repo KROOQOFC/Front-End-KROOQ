@@ -45,10 +45,11 @@
 .BotaoAdicionarCliente:hover {
   opacity: 0.9;
 }
+
 @media (max-width: 768px) {
   .ConsultoriaCard {
-    height: 70%;
     width: 100%;
+    height: 90px;
   }
 
   .ConsultoriaConteudo {

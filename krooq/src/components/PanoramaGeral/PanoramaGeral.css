@@ -6,7 +6,6 @@
   padding: 15px 30px;
   box-sizing: border-box;
   color: #ffffff;
-
 }
 
 .SuperiorPanorama {
@@ -57,22 +56,22 @@
 .LinhaDivisoria {
   width: 1px;
   height: 24px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff;
   margin: 0 25px;
 }
 
 .BarraProgresso {
-  width: 280px;
+  width: 300px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
+  border-radius: 50px;
   margin-left: 5px;
   margin-top: 20px;
   overflow: hidden;
 }
 
 .BarraPreenchida {
-  height: 100%;
+  height: 10px;
   background-color: #e8eee9;
   border-radius: 10px;
 }

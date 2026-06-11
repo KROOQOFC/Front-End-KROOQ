@@ -15,8 +15,9 @@ import ConsultoriaProfissional from "./pages/ConsultoriaProfissional/Consultoria
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
+import MeusProjetosProfissional from "./pages/MeusProjetosProfissional/MeusProjetosProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
-import Projetos from "./pages/Projetos/Projetos";
+//import Projetos from "./pages/Projetos/Projetos";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SobreNos from "./pages/SobreNos/SobreNos";
 
@@ -48,7 +49,7 @@ function App() {
         
         <Route path="/sobre-nos" element={<SobreNos />} />
 
-        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/projetos" element={<MeusProjetosProfissional />} />
         <Route path="/chat-ia/:id" element={<ChatIA />} />
 
         <Route path="*" element={<Navigate to="/" />} />
