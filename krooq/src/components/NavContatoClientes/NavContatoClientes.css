@@ -113,7 +113,7 @@
 @media (max-width: 768px) {
   .NavContatoClientes {
     width: 100%;
-    height: auto;
+    height: 570px;
     min-height: auto;
     padding: 18px;
     border-radius: 8px;
