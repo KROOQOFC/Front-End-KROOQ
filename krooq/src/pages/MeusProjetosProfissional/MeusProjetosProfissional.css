@@ -58,3 +58,53 @@
   width: 100%;
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .ContainerProjetosProfissional {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .AreaNavBarMensagensProjetos {
+    position: absolute;
+    top: 1.3%;
+    left: 20%;
+    right: auto;
+    margin-left: 0;
+    width: 80%;
+  }
+
+  .AreaNavBarMensagensProjetos .ContainerMensagensNavBar {
+    width: 95%;
+    height: 60px;
+  }
+
+  .AreaProgressoProjetos {
+    position: static;
+    width: calc(100% - 30px);
+    margin: 90px auto 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .AreaEmProgresso,
+  .AreaListaProjetos,
+  .AreaEvolucaoSemanaProjetos,
+  .componentes-projetos-andamento {
+    position: static;
+    width: calc(100% - 30px);
+    margin: 20px auto 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .componentes-projetos-andamento {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

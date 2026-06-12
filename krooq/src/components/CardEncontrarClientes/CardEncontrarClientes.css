@@ -89,3 +89,57 @@
   color: #000000;
   flex-shrink: 0;
 }
+@media (max-width: 768px) {
+  .CardCliente {
+    width: 100%;
+    min-height: 145px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .TopoCardCliente {
+    gap: 8px;
+  }
+
+  .AreaFotoCliente {
+    width: 48px;
+    height: 48px;
+  }
+
+  .AreaFotoCliente img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .StatusCliente {
+    width: 11px;
+    height: 11px;
+    bottom: 2px;
+  }
+
+  .InfoClienteTopo h3 {
+    font-size: 10px;
+  }
+
+  .InfoClienteTopo span {
+    font-size: 8px;
+  }
+
+  .InfoClienteTopo p {
+    font-size: 8px;
+  }
+
+  .DadosCliente {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .DadosCliente p {
+    font-size: 8px;
+    gap: 6px;
+  }
+
+  .DadosCliente svg {
+    font-size: 10px;
+  }
+}

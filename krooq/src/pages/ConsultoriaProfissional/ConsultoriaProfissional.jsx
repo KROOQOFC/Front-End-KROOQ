@@ -93,12 +93,13 @@ function ConsultoriaProfissional() {
       {mostrarClientes && (
         <div className="AreaNavBarMensagens">
           <MensagensNavBar
-            nomeUsuario="Sofia"
-            emailUsuario="sofia@email"
-            notificacoes={16}
-            mensagens={28}
-            fotoUsuario=""
-          />
+  nomeUsuario="Sofia"
+  emailUsuario="sofia@email"
+  notificacoes={16}
+  mensagens={28}
+  fotoUsuario=""
+  className="MensagensNavBarConsultoria"
+/>
         </div>
       )}
 

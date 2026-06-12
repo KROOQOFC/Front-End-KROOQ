@@ -13,7 +13,7 @@ function MeusProjetosProfissional() {
     <section className="ContainerProjetosProfissional">
       <NavegationLateral />
 
-      <div className="AreaNavBarMensagens">
+      <div className="AreaNavBarMensagens AreaNavBarMensagensProjetos">
         <MensagensNavBar
           nomeUsuario="Sofia"
           emailUsuario="sofia@email"

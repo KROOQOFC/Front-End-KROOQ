@@ -50,7 +50,7 @@
 
 @media (max-width: 768px) {
   .ConsultoriaCard {
-    width: 100%;
+    width: 80%;
     height: 60px;
     border-radius: 8px;
     margin-top: 10px;

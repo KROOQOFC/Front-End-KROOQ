@@ -112,29 +112,24 @@
   .ContainerMensagensNavBar {
     width: 75%;
     height: 60px;
-    padding: 0 15px;
-    border-radius: 10px;
-    display: flex;
-  position: absolute;
-  left: 60%;
+    padding: 0 12px;
+    border-radius: 8px;
+    position: static;
   }
 
   .TituloMensagens {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .AcoesMensagens {
-    gap: 12px;
+    gap: 10px;
   }
 
   .LinhaSeparadora {
     display: none;
   }
 
-  .EmailUsuario {
-    display: none;
-  }
-
+  .EmailUsuario,
   .NomeUsuario {
     display: none;
   }
@@ -145,21 +140,21 @@
 
   .FotoPerfil,
   .PerfilPadrao {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   .PerfilPadrao {
-    font-size: 22px;
-  }
-
-  .IconeMensagens {
     font-size: 20px;
   }
 
+  .IconeMensagens {
+    font-size: 18px;
+  }
+
   .BadgeIcone {
-    width: 14px;
-    height: 14px;
-    font-size: 8px;
+    width: 13px;
+    height: 13px;
+    font-size: 7px;
   }
 }

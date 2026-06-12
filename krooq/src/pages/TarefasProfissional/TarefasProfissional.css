@@ -73,9 +73,8 @@
   }
 
   .AreaNavBarMensagens {
-    transform: translateX(-50%);
-    
-    top: 15px;
+    margin-left: -38%;
+    top: 10px;
   }
 
   .AreaTarefasResumo {
