@@ -14,13 +14,16 @@ function ProjetosRecentesCards({
 
         <h2>{tituloProjetos}</h2>
 
-       <div
+<div
   className="circulo-progresso"
   style={{
-    background: `conic-gradient(#ff6947 ${porcentagem * 3.6}deg, #ffffff 0deg)`
+    background: `conic-gradient(
+      #ff6947 ${(porcentagem || 0) * 3.6}deg,
+      #ffffff 0deg
+    )`
   }}
 >
-  <span>{porcentagem}%</span>
+  <span>{porcentagem || 0}%</span>
 </div>
 
       </div>
