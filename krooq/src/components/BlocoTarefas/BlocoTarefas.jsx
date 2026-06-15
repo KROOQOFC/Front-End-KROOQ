@@ -2,8 +2,8 @@ import "./BlocoTarefas.css";
 import { FiPlus, FiEdit2 } from "react-icons/fi";
 
 function BlocoTarefas({
-  dataInicio = "22 de Jan, 2026",
-  dataFim = "30 de Mai, 2026",
+  dataInicio = "22 jan 2026",
+  dataFim = "30 mai 2026",
   titulo = "Briefing e Estudo Preliminar",
   subtitulo = "Necessidades do Cliente",
   progresso = 70,
@@ -12,9 +12,19 @@ function BlocoTarefas({
   pessoas = [],
   onEditar,
   onAdicionarPessoa,
+  onSelecionar,
+  selecionado = false,
 }) {
   return (
-    <article className="ContainerBlocoTarefas">
+    <article
+      className={`ContainerBlocoTarefas ${
+        selecionado ? "BlocoTarefaSelecionado" : ""
+      }`}
+      onClick={(event) => {
+        event.stopPropagation();
+        onSelecionar();
+      }}
+    >
       <p className="DataCardTarefa">
         {dataInicio} – {dataFim}
       </p>
@@ -54,22 +64,36 @@ function BlocoTarefas({
 
           <button
             className="BotaoAdicionarPessoa"
-            onClick={onAdicionarPessoa}
+            onClick={(event) => {
+              event.stopPropagation();
+
+              if (onAdicionarPessoa) {
+                onAdicionarPessoa();
+              }
+            }}
             style={{ backgroundColor: cor }}
+            title="Atualizar progresso"
           >
             <FiPlus />
           </button>
         </div>
 
-        <div
-          className="PrazoCardTarefa"
-          style={{ backgroundColor: cor }}
-        >
+        <div className="PrazoCardTarefa" style={{ backgroundColor: cor }}>
           {prazo}
         </div>
       </div>
 
-      <button className="BotaoEditarCard" onClick={onEditar}>
+      <button
+        className="BotaoEditarCard"
+        onClick={(event) => {
+          event.stopPropagation();
+
+          if (onEditar) {
+            onEditar();
+          }
+        }}
+        title="Editar data final"
+      >
         <FiEdit2 />
       </button>
     </article>

@@ -25,7 +25,6 @@
   position: absolute;
   top: 220px;
   left: 246px;
-
   bottom: 20px;
   z-index: 2;
 
@@ -63,8 +62,89 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 768px) {
+/* Modal */
 
+.FundoModalTarefa {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ModalTarefa {
+  width: 430px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ModalTarefa h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #54715e;
+  text-align: center;
+}
+
+.ModalTarefa label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.ModalTarefa input {
+  height: 38px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 0 12px;
+  outline: none;
+  font-size: 13px;
+}
+
+.ModalTarefa input:focus {
+  border-color: #54715e;
+}
+
+.ModalTarefa input[type="color"] {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.BotoesModalTarefa {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.BotoesModalTarefa button {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.BotoesModalTarefa button:first-child {
+  background-color: #777777;
+}
+
+.BotoesModalTarefa button:last-child {
+  background-color: #f05a3c;
+}
+
+@media (max-width: 768px) {
   .ContainerTarefasProfissional {
     min-height: 100vh;
     height: auto;
@@ -83,19 +163,28 @@
     margin: 105px auto 20px;
     padding: 0;
   }
- .AreaCardsTarefas {
+
+  .AreaCardsTarefas {
     position: static;
     width: 100%;
     padding: 0px 10px 30px;
 
     display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 10px;
 
     justify-items: center;
 
     overflow: visible;
   }
+
+  .ModalTarefa {
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
 
-
+.ModalPequenoTarefa {
+  width: 360px;
+}

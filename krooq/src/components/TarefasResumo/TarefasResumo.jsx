@@ -29,7 +29,9 @@ function TarefasResumo({
                 <span>{item.texto}</span>
               </div>
 
-              {index !== itens.length - 1 && <div className="SeparadorIndicador"></div>}
+              {index !== itens.length - 1 && (
+                <div className="SeparadorIndicador"></div>
+              )}
             </div>
           ))}
         </div>
