@@ -1,0 +1,82 @@
+.OverlayCriarProjeto {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.ContainerCriarProjeto {
+  width: 700px;
+  background: #4f6958;
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+.TopoCriarProjeto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.TopoCriarProjeto h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.BotaoFecharProjeto {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.FormularioCriarProjeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.FormularioCriarProjeto input,
+.FormularioCriarProjeto textarea {
+  border: none;
+  background: rgba(255, 255, 255, 0.896);
+  color: rgb(0, 0, 0);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.FormularioCriarProjeto textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.LinhaMedidasProjeto {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.LinhaDatasProjeto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.BotaoSalvarProjeto {
+  margin-top: 10px;
+  border: none;
+  height: 48px;
+  border-radius: 14px;
+  background: #ef5238;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
