@@ -100,16 +100,16 @@
     width: auto;
   }
 
-  /* 1 - Evolução da Semana */
+  /* 2 - Evolução da Semana */
   .AreaEvolucaoSemana {
-    order: 1;
+    order: 2;
     display: flex;
     justify-content: center;
   }
 
-  /* 2 - Panorama Geral */
+  /* 1 - Panorama Geral */
   .AreaPanoramaGeral {
-    order: 2;
+    order: 1;
     display: flex;
     justify-content: center;
   }
