@@ -1,67 +1,120 @@
 import "./CentralProfissional.css";
 
+import { useEffect, useState } from "react";
+
 import NavegationLateral from "../../components/NavegationLateral/NavegationLateral";
-import CentralHeader from "../../components/CentralHeader/CentralHeader"
+import CentralHeader from "../../components/CentralHeader/CentralHeader";
 import ProjetosRecentesCards from "../../components/ProjetosRecentesCards/ProjetosRecentesCards";
 import BotaoTransparenteAdd from "../../components/BotaoTransparenteAdd/BotaoTransparenteAdd";
+
 import SimboloProcesso from "../../assets/SimboloProcesso.png";
 import SimboloProcessoBranco from "../../assets/SimboloProcessoBranco.png";
 import ProcessoIconeComunidade from "../../assets/ProcessoIconeComunidade.png";
 import SimboloIconeExecutivo from "../../assets/SimboloIconeExecutivo.png";
+
 import MetasGerais from "../../components/MetasGerais/MetasGerais";
 import ProcessoCentral from "../../components/ProcessoCentral/ProcessoCentral";
 import MetaMensal from "../../components/MetaMensal/MetaMensal";
 import PanoramaGeral from "../../components/PanoramaGeral/PanoramaGeral";
 import EvolucaoSemana from "../../components/EvolucaoSemana/EvolucaoSemana";
 
+import { buscarDashboard } from "../../services/dashboardService";
+import { buscarMetas } from "../../services/metaService";
+import { listarProjetos } from "../../services/projetoService";
 
 function CentralProfissional() {
-    return (  
-<section className="conteiner-central-profissional">
+  const [dashboard, setDashboard] = useState(null);
+  const [metas, setMetas] = useState([]);
+  const [projetos, setProjetos] = useState([]);
 
-<NavegationLateral/>
+useEffect(() => {
+  async function carregarDados() {
+    try {
+      const usuario = JSON.parse(
+        localStorage.getItem("usuario")
+      );
 
-    <div className="LayoutCentralHeader">
-      <CentralHeader/>
-    </div>
+      const dashboardData = await buscarDashboard(
+        usuario.id
+      );
 
-    <div className="AreaPanoramaGeral">
-    <PanoramaGeral 
-  tarefasConcluidas={43}
-  projetosPausados={2}
-  percentualProjetos={32}
-  progressoBarra={68}/>
-  </div>
+      setDashboard(dashboardData);
 
-<div className="AreaEvolucaoSemana">
-<EvolucaoSemana
-   dadosProjeto={[45, 70, 35, 75, 42, 63, 82, 55, 28, 43, 25, 95, 45]}
-  dadosVisita={[45, 60, 82, 70, 58, 48, 65, 95, 72, 56, 45]}
-/></div>
+      const metasData = await buscarMetas(
+        usuario.id
+      );
 
+      setMetas(metasData);
 
-    <div className="AreaMetasGerais">
-        <MetasGerais
-           titulo="Metas Gerais"
-           metas={[
-            { texto: "Especificação de Materiais", concluida: false },
-            { texto: "Detalhamento de Projeto", concluida: false },
-            { texto: "Modelagem 3D / Render", concluida: false },
-            { texto: "Entregas Prioritárias", concluida: false },
-           ]}
+      const projetosData = await listarProjetos();
+
+      console.log(projetosData);
+
+      setProjetos(projetosData);
+
+    } catch (erro) {
+      console.error("Erro ao carregar dados.");
+    }
+  }
+
+  carregarDados();
+}, []);
+
+  return (
+    <section className="conteiner-central-profissional">
+      <NavegationLateral />
+
+      <div className="LayoutCentralHeader">
+<CentralHeader
+  nomeUsuario={dashboard?.nomeUsuario}
+/>
+      </div>
+
+      <div className="AreaPanoramaGeral">
+        <PanoramaGeral
+          tarefasConcluidas={
+            dashboard?.tarefasConcluidas || 0
+          }
+          projetosPausados={
+            dashboard?.projetosAtivos || 0
+          }
+          percentualProjetos={
+            dashboard?.progressoMedioProjetos || 0
+          }
+          progressoBarra={
+            dashboard?.progressoMedioProjetos || 0
+          }
+
         />
-    </div>
+      </div>
 
-    <p className="paragrafo-processos-central">Em processo  (2)</p>
-   <div className="AreaProcessos">
+      <div className="AreaEvolucaoSemana">
+        <EvolucaoSemana />
+      </div>
+
+      <div className="AreaMetasGerais">
+        <MetasGerais
+          titulo="Metas Gerais"
+          metas={metas.map(meta => ({
+            texto: meta.texto,
+            concluida: meta.concluida
+          }))}
+        />
+      </div>
+
+      <p className="paragrafo-processos-central">
+        Em processo (2)
+      </p>
+
+      <div className="AreaProcessos">
         <ProcessoCentral
           iconeTopo={ProcessoIconeComunidade}
           titulo="Reunião com Engenheiro Civil"
           responsavel="José Santos"
           iconeStatus={SimboloProcessoBranco}
           destaqueStatus={true}
-          onMenu={() => console.log("Abrir menu")}
-        /> 
+          onMenu={() => {}}
+        />
 
         <ProcessoCentral
           iconeTopo={SimboloIconeExecutivo}
@@ -69,47 +122,57 @@ function CentralProfissional() {
           responsavel="Marília Teresa"
           iconeStatus={SimboloProcesso}
           destaqueStatus={false}
-          onMenu={() => console.log("Abrir menu")}
+          onMenu={() => {}}
         />
-        
-    </div>
-      
+      </div>
 
 <div className="componentes-projetos-andamento">
-<ProjetosRecentesCards
- tituloProjetos="Em Andamento"
-  subtituloProjetos="● Anteprojeto Residencial"
-  paragrafosProjetos="Ajustes de layout finalizados. Aguardando feedback do cliente sobre revestimentos."
-  porcentagem={95}/>
 
-  <ProjetosRecentesCards  className="card-completo"
-  tituloProjetos="Edifício Sustentável"
-   paragrafosProjetos="● COMPLETO"
-  porcentagem={100}
-/>
+  {projetos.length > 0 ? (
+    projetos.slice(0, 3).map((projeto) => (
+      <ProjetosRecentesCards
+        key={projeto.id}
+        tituloProjetos={projeto.nome}
+        subtituloProjetos={`● ${projeto.tipoAmbiente}`}
+        paragrafosProjetos={projeto.descricao}
+        porcentagem={projeto.progresso || 0}
+        className={
+          projeto.status === "Concluído"
+            ? "card-completo"
+            : ""
+        }
+      />
+    ))
+  ) : (
+    <ProjetosRecentesCards
+      tituloProjetos="Nenhum projeto"
+      subtituloProjetos="● Sem projetos cadastrados"
+      paragrafosProjetos="Crie seu primeiro projeto."
+      porcentagem={0}
+    />
+  )}
 
-<ProjetosRecentesCards className="card-completo"
-  tituloProjetos="Reforma Residência"
-  paragrafosProjetos="● COMPLETO"
-  porcentagem={100}
-/>
 </div>
 
-<div className="AreaMetaMensal">
-<MetaMensal  
-  porcentagemPerformance={30}
-  execucao={72}
-  desenvolvimento={60}
-  homologacao={38}
-  porcentagemCentro={65}/></div>
-  
-<div className="botão-transparente-geral">
-    <BotaoTransparenteAdd/>
-</div>
-</section>
+      <div className="AreaMetaMensal">
+        <MetaMensal
+          porcentagemPerformance={
+            dashboard?.progressoMedioProjetos || 0
+          }
+          execucao={72}
+          desenvolvimento={60}
+          homologacao={38}
+          porcentagemCentro={
+            dashboard?.progressoMedioProjetos || 0
+          }
+        />
+      </div>
 
-
-    );
+      <div className="botão-transparente-geral">
+        <BotaoTransparenteAdd />
+      </div>
+    </section>
+  );
 }
 
 export default CentralProfissional;
