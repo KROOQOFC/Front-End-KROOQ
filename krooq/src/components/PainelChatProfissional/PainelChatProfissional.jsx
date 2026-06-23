@@ -1,4 +1,5 @@
 import "./PainelChatProfissional.css";
+import { useState } from "react";
 import {
   FaPhoneAlt,
   FaEllipsisV,
@@ -8,7 +9,86 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 
-function PainelChatProfissional({ cliente, onVoltar }) {
+function PainelChatProfissional({
+  cliente,
+  mensagens = [],
+  onEnviarMensagem,
+  onVoltar,
+}) {
+  const [novaMensagem, setNovaMensagem] = useState("");
+
+  function enviarMensagem() {
+    if (!cliente || novaMensagem.trim() === "") return;
+
+    onEnviarMensagem(cliente, novaMensagem);
+
+    setNovaMensagem("");
+  }
+
+  function enviarComEnter(evento) {
+    if (evento.key === "Enter") {
+      enviarMensagem();
+    }
+  }
+
+  function formatarDataChat(dataMensagem) {
+    if (!dataMensagem) return "";
+
+    const hoje = new Date();
+    const data = new Date(`${dataMensagem}T00:00:00`);
+
+    const hojeFormatado = hoje.toISOString().split("T")[0];
+
+    const ontem = new Date();
+    ontem.setDate(hoje.getDate() - 1);
+    const ontemFormatado = ontem.toISOString().split("T")[0];
+
+    if (dataMensagem === hojeFormatado) {
+      return "Hoje";
+    }
+
+    if (dataMensagem === ontemFormatado) {
+      return "Ontem";
+    }
+
+    return data.toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
+  function renderizarMensagensComData() {
+    let ultimaDataRenderizada = null;
+
+    return mensagens.map((mensagem) => {
+      const mostrarData = mensagem.data !== ultimaDataRenderizada;
+
+      if (mostrarData) {
+        ultimaDataRenderizada = mensagem.data;
+      }
+
+      return (
+        <div key={mensagem.id}>
+          {mostrarData && (
+            <div className="DataChat">{formatarDataChat(mensagem.data)}</div>
+          )}
+
+          <div
+            className={
+              mensagem.tipo === "enviada"
+                ? "MensagemEnviada maior"
+                : "MensagemRecebida maior"
+            }
+          >
+            <p>{mensagem.texto}</p>
+            <span>{mensagem.horario}</span>
+          </div>
+        </div>
+      );
+    });
+  }
+
   if (!cliente) {
     return (
       <div className="PainelChatProfissional PainelChatVazio">
@@ -47,61 +127,22 @@ function PainelChatProfissional({ cliente, onVoltar }) {
         </div>
       </div>
 
-      <div className="DataChat">Fev 20, 2026</div>
-
-      <div className="MensagensChat">
-        <div className="MensagemRecebida">
-          <p>Oi! Tudo bem?</p>
-          <span>14:00</span>
-        </div>
-
-        <div className="MensagemEnviada">
-          <p>Olá! Tudo ótimo por aqui. Sim, acabamos de sair do canteiro.</p>
-          <span>14:00</span>
-        </div>
-
-        <div className="MensagemRecebida maior">
-          <p>
-            Que bom! Como estão as coisas por lá? Fiquei curioso com a parte dos
-            revestimentos da cozinha.
-          </p>
-          <span>14:23</span>
-        </div>
-
-        <div className="MensagemEnviada maior">
-          <p>
-            A paginação do piso já começou! Os azulejos da parede também estão
-            sendo assentados.
-          </p>
-          <span>14:25</span>
-        </div>
-
-        <div className="MensagemRecebida">
-          <p>Ah, excelente!</p>
-          <span>14:35</span>
-        </div>
-
-        <div className="MensagemEnviada maior">
-          <p>
-            Sim, o engenheiro acompanhou a finalização do reforço hoje cedo.
-            Ficou 100% liberado e seguro para continuarmos.
-          </p>
-          <span>15:00</span>
-        </div>
-
-        <div className="MensagemRecebida maior">
-          <p>Perfeito, fico muito mais tranquilo.</p>
-          <span>15:10</span>
-        </div>
-      </div>
+      <div className="MensagensChat">{renderizarMensagensComData()}</div>
 
       <div className="InputChatCliente">
-        <input type="text" placeholder="Digite uma mensagem..." />
+        <input
+          type="text"
+          placeholder="Digite uma mensagem..."
+          value={novaMensagem}
+          onChange={(evento) => setNovaMensagem(evento.target.value)}
+          onKeyDown={enviarComEnter}
+        />
 
         <div className="AcoesInputChat">
           <FaSmile />
           <FaPaperclip />
-          <button>
+
+          <button onClick={enviarMensagem}>
             <FaPaperPlane />
           </button>
         </div>

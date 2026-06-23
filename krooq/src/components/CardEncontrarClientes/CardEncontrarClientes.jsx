@@ -9,9 +9,10 @@ function CardEncontrarClientes({
   email,
   cidade,
   status,
+  onClick,
 }) {
   return (
-    <div className="CardCliente">
+    <div className="CardCliente" onClick={onClick}>
       <div className="TopoCardCliente">
         <div className="AreaFotoCliente">
           <img src={foto} alt={nome} />

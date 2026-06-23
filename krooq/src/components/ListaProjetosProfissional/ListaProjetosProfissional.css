@@ -18,15 +18,23 @@
 
 .TopoListaProjetos h3 {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+.BotaoEditarListaProjetos {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .IconeEditarLista {
   color: white;
   font-size: 13px;
-  cursor: pointer;
 }
 
 .ListaProjetosIniciar {
@@ -47,10 +55,9 @@
 }
 
 .ListaProjetosIniciar::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
-
 
 .ProjetoInfoiniciar {
   display: flex;
@@ -73,51 +80,39 @@
 
 .TituloProjetoIniciar h4 {
   margin: 0;
-
   color: white;
-
   font-size: 13px;
   font-weight: 600;
 }
 
 .ProjetoInfoiniciar p {
   margin: 0;
-
   color: white;
-
   font-size: 11px;
   line-height: 1.4;
 }
 
 .BarraProjetoIniciar {
   width: 100%;
-
   height: 6px;
-
-  background-color: rgba(255,255,255,0.4);
-
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-
   overflow: hidden;
 }
 
 .BarraProjetoIniciarPreenchida {
   height: 100%;
-
   border-radius: 999px;
 }
 
 .PrazoInicioProjeto {
   text-align: right;
-
   color: white;
-
   font-size: 9px;
 }
 
-@media (max-width: 768px){
-.CardListaProjetos {
-  width: 100%;
-}
-
+@media (max-width: 768px) {
+  .CardListaProjetos {
+    width: 100%;
+  }
 }

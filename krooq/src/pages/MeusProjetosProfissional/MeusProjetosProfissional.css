@@ -33,20 +33,21 @@
   justify-content: center;
   z-index: 2;
 }
+
 .AreaListaProjetos {
   position: absolute;
   top: 205px;
   left: 571px;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .AreaEvolucaoSemanaProjetos {
   position: fixed;
   top: 36%;
   left: 62%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .componentes-projetos-andamento {
@@ -56,8 +57,9 @@
   bottom: 0;
   left: 240px;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
+
 @media (max-width: 768px) {
   .ContainerProjetosProfissional {
     min-height: 100vh;
@@ -97,7 +99,6 @@
     width: calc(100% - 30px);
     margin: 20px auto 0;
     padding: 0;
-
     display: flex;
     justify-content: center;
   }

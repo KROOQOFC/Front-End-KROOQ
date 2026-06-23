@@ -18,9 +18,18 @@
 
 .TopoEmProgresso h3 {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+.BotaoEditarEmProgresso {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .IconeEditar {
@@ -47,10 +56,9 @@
 }
 
 .ListaProjetos::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
-
 
 .ProjetoInfo {
   display: flex;
@@ -73,51 +81,39 @@
 
 .TituloProjeto h4 {
   margin: 0;
-
   color: white;
-
   font-size: 13px;
   font-weight: 600;
 }
 
 .ProjetoInfo p {
   margin: 0;
-
   color: white;
-
   font-size: 11px;
   line-height: 1.4;
 }
 
 .BarraProjeto {
   width: 100%;
-
   height: 6px;
-
-  background-color: rgba(255,255,255,0.4);
-
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-
   overflow: hidden;
 }
 
 .BarraProjetoPreenchida {
   height: 100%;
-
   border-radius: 999px;
 }
 
 .PrazoProjeto {
   text-align: right;
-
   color: white;
-
   font-size: 9px;
 }
 
-@media (max-width: 768px){
-.CardEmProgresso {
-  width: 100%;
-}
-
+@media (max-width: 768px) {
+  .CardEmProgresso {
+    width: 100%;
+  }
 }
