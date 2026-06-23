@@ -7,13 +7,12 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 }
 
 .TopoListaProjetos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 18px;
+  padding-right: 28px;
 }
 
 .TopoListaProjetos h3 {
@@ -21,15 +20,22 @@
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .BotaoEditarListaProjetos {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .IconeEditarLista {
@@ -114,5 +120,9 @@
 @media (max-width: 768px) {
   .CardListaProjetos {
     width: 100%;
+  }
+
+  .TopoListaProjetos h3 {
+    font-size: 15px;
   }
 }
