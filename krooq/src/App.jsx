@@ -20,6 +20,7 @@ import ChatIA from "./pages/ChatIA/ChatIA";
 //import Projetos from "./pages/Projetos/Projetos";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SobreNos from "./pages/SobreNos/SobreNos";
+import NovoProjeto from"./pages/NovoProjeto/NovoProjeto"
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/consultoria" element={<ConsultoriaProfissional />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
-        
+        <Route path="/NovoProjeto" element={<NovoProjeto />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
 
         <Route path="/projetos" element={<MeusProjetosProfissional />} />

@@ -7,20 +7,35 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 }
 
 .TopoEmProgresso {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 18px;
+  padding-right: 28px;
 }
 
 .TopoEmProgresso h3 {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
+}
+
+.BotaoEditarEmProgresso {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .IconeEditar {
@@ -47,10 +62,9 @@
 }
 
 .ListaProjetos::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
-
 
 .ProjetoInfo {
   display: flex;
@@ -73,51 +87,43 @@
 
 .TituloProjeto h4 {
   margin: 0;
-
   color: white;
-
   font-size: 13px;
   font-weight: 600;
 }
 
 .ProjetoInfo p {
   margin: 0;
-
   color: white;
-
   font-size: 11px;
   line-height: 1.4;
 }
 
 .BarraProjeto {
   width: 100%;
-
   height: 6px;
-
-  background-color: rgba(255,255,255,0.4);
-
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-
   overflow: hidden;
 }
 
 .BarraProjetoPreenchida {
   height: 100%;
-
   border-radius: 999px;
 }
 
 .PrazoProjeto {
   text-align: right;
-
   color: white;
-
   font-size: 9px;
 }
 
-@media (max-width: 768px){
-.CardEmProgresso {
-  width: 100%;
-}
+@media (max-width: 768px) {
+  .CardEmProgresso {
+    width: 100%;
+  }
 
+  .TopoEmProgresso h3 {
+    font-size: 15px;
+  }
 }

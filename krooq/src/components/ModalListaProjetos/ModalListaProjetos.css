@@ -1,0 +1,216 @@
+.OverlayModalListaProjetos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.ModalTodosProjetos {
+  position: relative;
+  z-index: 10000;
+  width: 1180px;
+  max-width: 94vw;
+  max-height: 88vh;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-sizing: border-box;
+  color: #000000;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.TopoModalTodosProjetos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.TopoModalTodosProjetos span {
+  color: #54715e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.TopoModalTodosProjetos h2 {
+  margin: 4px 0 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.TopoModalTodosProjetos button {
+  border: none;
+  background-color: #f05a3c;
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ConteudoModalTodosProjetos {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.CardProjetoModalLista {
+  background-color: #f4f4f4;
+  border-radius: 14px;
+  padding: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.CardProjetoModalLista:hover {
+  transform: translateY(-3px);
+  background-color: #eeeeee;
+}
+
+.CabecalhoProjetoModalLista {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.BolinhaProjetoModalLista {
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.CabecalhoProjetoModalLista h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.CabecalhoProjetoModalLista p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: #54715e;
+  font-weight: 600;
+}
+
+.InfoProjetoModalLista {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.InfoProjetoModalLista div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.InfoProjetoModalLista svg {
+  font-size: 13px;
+  color: #54715e;
+}
+
+.InfoProjetoModalLista span {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.DescricaoProjetoModalLista {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333333;
+}
+
+.RodapeProjetoModalLista {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.PrazoProjetoModalLista {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #54715e;
+}
+
+.BotaoIniciarProjetoModal {
+  border: none;
+  background-color: #e35336;
+  color: #ffffff;
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.BotaoIniciarProjetoModal:hover {
+  background-color: #cf4529;
+  transform: translateY(-1px);
+}
+
+.BotaoIniciarProjetoModal svg {
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .OverlayModalListaProjetos {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+  }
+
+  .ModalTodosProjetos {
+    width: 100%;
+    max-width: 100%;
+    max-height: 82vh;
+    overflow-y: auto;
+    z-index: 100000;
+  }
+
+  .ConteudoModalTodosProjetos {
+    grid-template-columns: 1fr;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .RodapeProjetoModalLista {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .BotaoIniciarProjetoModal {
+    width: 100%;
+    justify-content: center;
+  }
+}

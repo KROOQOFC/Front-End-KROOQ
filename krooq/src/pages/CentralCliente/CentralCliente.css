@@ -1,0 +1,111 @@
+
+.conteiner-central-cliente {
+  min-height: 100vh;
+  background-color: #54715E;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaPanoramaGeral {
+  position: fixed;
+  top: 59px;
+  left: 240px;
+  z-index: 2;
+}
+.AreaEvolucaoSemana {
+  position: fixed;
+  top: 59px;
+  left: 596.5px;
+  z-index: 2;
+}
+
+.AreaMetaMensal {
+  position: fixed;
+  top: 59px;
+  left: 1050px;
+  z-index: 5;
+}
+
+.AreaProcessosCliente {
+  position: fixed;
+  top: 373px;
+  left: 572px;
+  display: flex;
+  gap: 20px;
+}
+
+.paragrafo-processos-centralCliente{
+    color: #fff;
+  position: relative;
+  position: fixed;
+  top: 340px;
+  left: 573px;
+}
+
+@media (max-width: 768px) {
+
+  .conteiner-central-cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 10px 30px;
+    overflow-y: auto;
+
+  }
+
+  .AreaPanoramaGeral,
+  .AreaEvolucaoSemana,
+  .AreaMetaMensal,
+  .AreaProcessosCliente,
+  .paragrafo-processos-centralCliente {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  /* 2 - Evolução da Semana */
+  .AreaEvolucaoSemana {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 1 - Panorama Geral */
+  .AreaPanoramaGeral {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  /* 4 - Meta Mensal */
+  .AreaMetaMensal {
+    order: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Título Processos */
+  .paragrafo-processos-centralCliente {
+    order: 4;
+    text-align: center;
+    color: white;
+  }
+
+  /* 6 - Processos */
+  .AreaProcessosCliente {
+    order: 5;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+}

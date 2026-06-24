@@ -24,7 +24,7 @@ function ProgressoProjetos({
             onClick={aoAdicionarProjeto}
           >
             <FaPlus />
-            Adicionar
+            Encontrar
           </button>
         </div>
       </div>
