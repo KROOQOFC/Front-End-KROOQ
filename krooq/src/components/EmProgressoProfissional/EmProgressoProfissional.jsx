@@ -62,3 +62,55 @@ function EmProgressoProfissional({ projetos = [] }) {
 }
 
 export default EmProgressoProfissional;
+/*
+
+import "./EmProgressoProfissional.css";
+import { FaPen } from "react-icons/fa";
+
+function EmProgressoProfissional({ projetos = [] }) {
+  return (
+    <div className="CardEmProgresso">
+      <div className="TopoEmProgresso">
+        <h3>Em progresso ({projetos.length})</h3>
+        <FaPen className="IconeEditar" />
+      </div>
+
+      <div className="ListaProjetos">
+        {projetos.map((projeto) => (
+          <div className="ProjetoInfo" key={projeto.id}>
+            <div className="TituloProjeto">
+              <span
+                className="BolinhaProjeto"
+                style={{
+                  backgroundColor: "#F4A52B",
+                }}
+              />
+
+              <h4>{projeto.nome}</h4>
+            </div>
+
+            <p>{projeto.descricao}</p>
+
+            <div className="BarraProjeto">
+              <div
+                className="BarraProjetoPreenchida"
+                style={{
+                  width: `${projeto.progresso}%`,
+                  backgroundColor: "#F4A52B",
+                }}
+              />
+            </div>
+
+            <span className="PrazoProjeto">
+              {new Date(projeto.dataEntrega).toLocaleDateString("pt-BR")}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default EmProgressoProfissional;
+
+*/

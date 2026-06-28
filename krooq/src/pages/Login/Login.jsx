@@ -74,11 +74,19 @@ function Login() {
       setMensagensErro({});
       setCarregando(true);
 
-      const resposta = await fazerLogin(dadosLogin.email, dadosLogin.senha);
+    const resposta = await fazerLogin(dadosLogin.email, dadosLogin.senha);
 
-      salvarDadosDoLogin(resposta);
+    salvarDadosDoLogin(resposta);
 
+    const tipo = resposta.usuario?.tipoUsuario?.toLowerCase();
+
+    if (tipo === "profissional") {
+      navigate("/CentralProfissional");
+    } else if (tipo === "cliente") {
+      navigate("/CentralCliente");
+    } else {
       navigate("/");
+    }
     } catch (erro) {
       setMensagensErro({
         geral: erro.message || "Não foi possível fazer login. Tente novamente.",

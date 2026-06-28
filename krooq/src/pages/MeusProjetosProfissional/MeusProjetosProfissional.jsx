@@ -1,3 +1,4 @@
+/*
 import "./MeusProjetosProfissional.css";
 
 import { useState } from "react";
@@ -239,6 +240,7 @@ function MeusProjetosProfissional() {
       await criarProjeto({
         nome: formularioProjeto.nome,
         descricao: formularioProjeto.descricao,
+          cliente: "Cliente Padrão",
         tipoAmbiente: formularioProjeto.tipoAmbiente,
         largura: Number(formularioProjeto.largura),
         comprimento: Number(formularioProjeto.comprimento),
@@ -247,6 +249,7 @@ function MeusProjetosProfissional() {
         dataInicio: formularioProjeto.dataInicio,
         dataEntrega: formularioProjeto.dataEntrega,
       });
+      console.log("ENVIANDO:", formularioProjeto);
 
       setModalProjeto(false);
 
@@ -261,8 +264,11 @@ function MeusProjetosProfissional() {
         dataEntrega: "",
       });
 
-      alert("Projeto criado com sucesso!");
+      setTimeout(() => {
+  setModalProjeto(false);
+}, 2000);
     } catch (erro) {
+      console.error("ERRO COMPLETO:", erro);
       alert(erro.message);
     }
   }
@@ -326,6 +332,156 @@ function MeusProjetosProfissional() {
           className="card-completo"
           tituloProjetos="Reforma Residência"
           paragrafosProjetos="● COMPLETO"
+          porcentagem={100}
+        />
+      </div>
+
+      <ModalCriarProjeto
+        aberto={modalProjeto}
+        aoFechar={() => setModalProjeto(false)}
+        formulario={formularioProjeto}
+        setFormulario={setFormularioProjeto}
+        aoSalvar={salvarProjeto}
+      />
+    </section>
+  );
+}
+
+export default MeusProjetosProfissional;
+*/
+
+import "./MeusProjetosProfissional.css";
+
+import { useEffect, useState } from "react";
+
+import NavegationLateral from "../../components/NavegationLateral/NavegationLateral";
+import MensagensNavBar from "../../components/MensagensNavBar/MensagensNavBar";
+import ProjetosRecentesCards from "../../components/ProjetosRecentesCards/ProjetosRecentesCards";
+import EvolucaoSemana from "../../components/EvolucaoSemana/EvolucaoSemana";
+import EmProgressoProfissional from "../../components/EmProgressoProfissional/EmProgressoProfissional";
+import ListaProjetosProfissional from "../../components/ListaProjetosProfissional/ListaProjetosProfissional";
+import ProgressoProjetos from "../../components/ProgressoProjetos/ProgressoProjetos";
+import ModalCriarProjeto from "../../components/ModalCriarProjeto/ModalCriarProjeto";
+
+import {
+  criarProjeto,
+  listarProjetos,
+} from "../../services/projetoService";
+
+function MeusProjetosProfissional() {
+  const [modalProjeto, setModalProjeto] = useState(false);
+
+  const [projetos, setProjetos] = useState([]);
+
+  const [formularioProjeto, setFormularioProjeto] = useState({
+    nome: "",
+    descricao: "",
+    tipoAmbiente: "",
+    largura: "",
+    comprimento: "",
+    altura: "",
+    dataInicio: "",
+    dataEntrega: "",
+  });
+
+  async function carregarProjetos() {
+    try {
+      const dados = await listarProjetos();
+      setProjetos(dados);
+    } catch (erro) {
+      console.error("Erro ao carregar projetos:", erro);
+    }
+  }
+
+  useEffect(() => {
+    carregarProjetos();
+  }, []);
+
+  async function salvarProjeto() {
+    try {
+      await criarProjeto({
+        nome: formularioProjeto.nome,
+        descricao: formularioProjeto.descricao,
+        cliente: "Cliente Padrão",
+        tipoAmbiente: formularioProjeto.tipoAmbiente,
+        largura: Number(formularioProjeto.largura),
+        comprimento: Number(formularioProjeto.comprimento),
+        altura: Number(formularioProjeto.altura),
+        progresso: 0,
+        dataInicio: formularioProjeto.dataInicio,
+        dataEntrega: formularioProjeto.dataEntrega,
+      });
+
+      setFormularioProjeto({
+        nome: "",
+        descricao: "",
+        tipoAmbiente: "",
+        largura: "",
+        comprimento: "",
+        altura: "",
+        dataInicio: "",
+        dataEntrega: "",
+      });
+
+      setModalProjeto(false);
+
+      await carregarProjetos();
+    } catch (erro) {
+      console.error(erro);
+      alert(erro.message);
+    }
+  }
+
+  const projetosEmProgresso = projetos.filter(
+    (p) => p.progresso > 0 && p.progresso < 100
+  );
+
+  const projetosParaIniciar = projetos.filter(
+    (p) => p.progresso === 0
+  );
+
+  return (
+    <section className="ContainerProjetosProfissional">
+      <NavegationLateral />
+
+      <div className="AreaNavBarMensagens AreaNavBarMensagensProjetos">
+        <MensagensNavBar
+          nomeUsuario="Sofia"
+          emailUsuario="sofia@email"
+          notificacoes={16}
+          mensagens={28}
+          fotoUsuario=""
+        />
+      </div>
+
+      <div className="AreaProgressoProjetos">
+        <ProgressoProjetos
+          progresso={65}
+          TempoRestantes="7 Dias Restantes"
+          quantidadeProjetos={projetos.length}
+          aoAdicionarProjeto={() => setModalProjeto(true)}
+        />
+      </div>
+
+      <div className="AreaEmProgresso">
+        <EmProgressoProfissional projetos={projetosEmProgresso} />
+      </div>
+
+      <div className="AreaListaProjetos">
+        <ListaProjetosProfissional projetos={projetosParaIniciar} />
+      </div>
+
+      <div className="AreaEvolucaoSemanaProjetos">
+        <EvolucaoSemana
+          dadosProjeto={[45, 70, 35, 75, 42, 63, 82]}
+          dadosVisita={[45, 60, 82, 70, 58, 48, 65]}
+        />
+      </div>
+
+      <div className="componentes-projetos-andamento">
+        <ProjetosRecentesCards
+          tituloProjetos="Projetos Criados"
+          paragrafosProjetos={`${projetos.length} projeto(s) cadastrado(s)`}
           porcentagem={100}
         />
       </div>

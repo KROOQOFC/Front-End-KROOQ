@@ -22,6 +22,7 @@ import ChatIA from "./pages/ChatIA/ChatIA";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SobreNos from "./pages/SobreNos/SobreNos";
 import NovoProjeto from"./pages/NovoProjeto/NovoProjeto"
+import CentralCliente from "./pages/CentralCliente/CentralCliente";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/verificacao-email" element={<VerificacaoEmail />} />
 
         <Route path="/profissionais" element={<Profissionais />} />
+        <Route path="/CentralCliente" element={<CentralCliente />} />
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/AgendaCliente" element={<AgendaCliente />} />
