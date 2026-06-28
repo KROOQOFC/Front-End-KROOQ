@@ -11,6 +11,7 @@ import VerificacaoEmail from "./pages/VerificacaoEmail/VerificacaoEmail";
 import HomeFront from "./pages/HomeFront/HomeFront";
 import IA from "./pages/IA/IA";
 import Agenda from "./pages/Agenda/Agenda";
+import AgendaCliente from "./pages/AgendaCliente/AgendaCliente";
 import ConsultoriaProfissional from "./pages/ConsultoriaProfissional/ConsultoriaProfissional";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/profissionais" element={<Profissionais />} />
         <Route path="/CentralProfissional" element={<CentralProfissional />} />
         <Route path="/agenda" element={<Agenda />} />
+        <Route path="/AgendaCliente" element={<AgendaCliente />} />
         <Route path="/consultoria" element={<ConsultoriaProfissional />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
         <Route path="/NovoProjeto" element={<NovoProjeto />} />

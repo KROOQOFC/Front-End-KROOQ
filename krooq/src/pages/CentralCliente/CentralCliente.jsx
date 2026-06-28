@@ -2,10 +2,8 @@ import "./CentralCliente.css";
 
 import { useEffect, useState } from "react";
 
-import NavegationLateral from "../../components/NavegationLateral/NavegationLateral";
+import NavegationLateralCliente from "../../components/NavegationLateralCliente/NavegationLateralCliente";
 import CentralHeader from "../../components/CentralHeader/CentralHeader";
-
-
 
 import SimboloProcesso from "../../assets/SimboloProcesso.png";
 import SimboloProcessoBranco from "../../assets/SimboloProcessoBranco.png";
@@ -48,7 +46,7 @@ useEffect(() => {
 
   return (
     <section className="conteiner-central-cliente">
-      <NavegationLateral />
+      <NavegationLateralCliente />
 
       <div className="LayoutCentralHeader">
 <CentralHeader
