@@ -7,7 +7,6 @@ import LogoKrooq from "../../assets/LogoKrooqLateral.png";
 
 import IconePainelGeral from "../../assets/IconePainelGeralMenuLateral.png";
 import IconeAgenda from "../../assets/IconeAgendaMenuLateral.png";
-import IconeMinhasTarefas from "../../assets/IconeMinhasTarefasMenuLateral.png";
 import IconeProjetos from "../../assets/IconeProjetosMenuLateral.png";
 import IconeConsultoria from "../../assets/IconeConsultoriaMenuLateral.png";
 import IconeKrooqIa from "../../assets/IconeKrooqIaMenuLateral.png";
@@ -18,14 +17,9 @@ function NavegationLateralCliente() {
 
   return (
     <>
-      {/* MENU DESKTOP */}
       <aside className="nav-menu-lateral">
         <div className="layout-links-menu-lateral">
-          <img
-            className="logo-lateral"
-            src={LogoLateral}
-            alt="Logo Krooq"
-          />
+          <img className="logo-lateral" src={LogoLateral} alt="Logo Krooq" />
 
           <nav>
             <ul>
@@ -72,7 +66,6 @@ function NavegationLateralCliente() {
                 </NavLink>
               </li>
 
-              {/* ÍCONE DE SAIR - DESKTOP */}
               <li className="item-voltar-home">
                 <NavLink to="/home" className="linkMenuCliente">
                   <FiLogOut className="icone-sair-menu" />
@@ -84,7 +77,6 @@ function NavegationLateralCliente() {
         </div>
       </aside>
 
-      {/* MENU MOBILE */}
       <aside className="menu-lateral-mobile">
         <div
           className="container-lateral"
@@ -117,26 +109,22 @@ function NavegationLateralCliente() {
           </li>
 
           <li>
-            <NavLink to="/tarefas" onClick={() => setMenuAberto(false)}>
-              <img
-                className="icone-mobile"
-                src={IconeMinhasTarefas}
-                alt="Minhas Tarefas"
-              />
-              <span>Minhas Tarefas</span>
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/projetos" onClick={() => setMenuAberto(false)}>
+            <NavLink to="/projetosCliente" onClick={() => setMenuAberto(false)}>
               <img className="icone-mobile" src={IconeProjetos} alt="Projetos" />
               <span>Projetos</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/consultoria" onClick={() => setMenuAberto(false)}>
-              <img className="icone-mobile" src={IconeConsultoria} alt="Consultoria" />
+            <NavLink
+              to="/consultoriaCliente"
+              onClick={() => setMenuAberto(false)}
+            >
+              <img
+                className="icone-mobile"
+                src={IconeConsultoria}
+                alt="Consultoria"
+              />
               <span>Consultoria</span>
             </NavLink>
           </li>
@@ -152,7 +140,6 @@ function NavegationLateralCliente() {
             </NavLink>
           </li>
 
-          {/* ÍCONE DE SAIR - MOBILE */}
           <li className="item-voltar-home">
             <NavLink to="/home" onClick={() => setMenuAberto(false)}>
               <FiLogOut className="icone-mobile" />
