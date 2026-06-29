@@ -30,8 +30,8 @@
 
 .AreaProcessosCliente {
   position: fixed;
-  top: 373px;
-  left: 572px;
+  top: 400px;
+  left: 672px;
   display: flex;
   gap: 20px;
 }
@@ -40,8 +40,8 @@
     color: #fff;
   position: relative;
   position: fixed;
-  top: 340px;
-  left: 573px;
+  top: 360px;
+  left: 673px;
 }
 
 @media (max-width: 768px) {
