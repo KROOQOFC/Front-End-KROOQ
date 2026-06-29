@@ -12,7 +12,7 @@ function PlanosProfissionais() {
     {
       id: 2,
       nome: "Plano Mensal",
-      preco: "R$0",
+      preco: "R$45,90",
       descricao:
         "Ideal para profissionais e escritórios que precisam de suporte contínuo da nossa IA e acesso à rede de fornecedores.",
       destaque: true,
@@ -20,7 +20,7 @@ function PlanosProfissionais() {
     {
       id: 3,
       nome: "Plano Anual",
-      preco: "R$0",
+      preco: "R$250,00",
       descricao: "Projeto completo com render 3D e cálculo de materiais.",
       destaque: false,
     },
