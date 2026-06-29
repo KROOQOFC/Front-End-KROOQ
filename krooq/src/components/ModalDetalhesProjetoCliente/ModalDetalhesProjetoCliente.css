@@ -60,7 +60,7 @@
   height: 34px;
   border: none;
   border-radius: 50%;
-  background-color: #54715e;
+  background-color: #E35336;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -297,7 +297,7 @@
 }
 
 .BotaoEditarDetalhesProjetoCliente {
-  background-color: #1d1d1d;
+  background-color: #E35336;
   color: #fff;
   display: flex;
   align-items: center;
