@@ -1,0 +1,152 @@
+.CardProfissional {
+  width: 240px;
+  min-height: 150px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.CardProfissional:hover {
+  transform: translateY(-4px);
+}
+
+.TopoCardProfissional {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.AreaFotoProfissional {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+}
+
+.AreaFotoProfissional img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.StatusProfissional {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.StatusProfissionalAtivo {
+  background-color: #00a84f;
+}
+
+.StatusProfissionalInativo {
+  background-color: #d60000;
+}
+
+.InfoProfissionalTopo h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.InfoProfissionalTopo span {
+  display: block;
+  font-size: 10px;
+  color: #000000;
+  margin-top: 2px;
+}
+
+.InfoProfissionalTopo p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.DadosProfissional {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.DadosProfissional p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.DadosProfissional svg {
+  font-size: 13px;
+  color: #000000;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .CardProfissional {
+    width: 100%;
+    min-height: 145px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .TopoCardProfissional {
+    gap: 8px;
+  }
+
+  .AreaFotoProfissional {
+    width: 48px;
+    height: 48px;
+  }
+
+  .AreaFotoProfissional img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .StatusProfissional {
+    width: 11px;
+    height: 11px;
+    bottom: 2px;
+  }
+
+  .InfoProfissionalTopo h3 {
+    font-size: 10px;
+  }
+
+  .InfoProfissionalTopo span {
+    font-size: 8px;
+  }
+
+  .InfoProfissionalTopo p {
+    font-size: 8px;
+  }
+
+  .DadosProfissional {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .DadosProfissional p {
+    font-size: 8px;
+    gap: 6px;
+  }
+
+  .DadosProfissional svg {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,310 @@
+.ContainerCardDetalhesProfissional {
+  width: 92vw;
+  max-width: 1120px;
+  height: 88vh;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-sizing: border-box;
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 28px;
+  overflow: hidden;
+}
+
+.LadoInfoProfissional {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+.BotaoVoltarDetalhesProfissional {
+  border: none;
+  background-color: transparent;
+  color: #54715e;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.EtiquetaDetalhesProfissional {
+  display: inline-block;
+  background-color: #e35336;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.LadoInfoProfissional h2 {
+  margin: 0 0 16px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.MiniCardProfissionalDetalhes {
+  width: fit-content;
+  min-width: 230px;
+  background-color: #f4f4f4;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.MiniCardProfissionalDetalhes img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.MiniCardProfissionalDetalhes h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #000000;
+}
+
+.MiniCardProfissionalDetalhes span {
+  font-size: 11px;
+  color: #000000;
+}
+
+.InfoDetalhesProfissionalGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ItemDetalhesProfissional {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ItemDetalhesProfissional svg {
+  font-size: 18px;
+  color: #54715e;
+  flex-shrink: 0;
+}
+
+.ItemDetalhesProfissional span {
+  display: block;
+  font-size: 10px;
+  color: #555555;
+  margin-bottom: 4px;
+}
+
+.ItemDetalhesProfissional strong {
+  font-size: 12px;
+  color: #000000;
+}
+
+.AreaDescricaoDetalhesProfissional {
+  margin-top: 22px;
+  background-color: #f7f7f7;
+  border-radius: 14px;
+  padding: 18px;
+  height: 220px;
+  max-height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.AreaDescricaoDetalhesProfissional h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.AreaDescricaoDetalhesProfissional p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333333;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.BotoesDetalhesProfissional {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.BotoesDetalhesProfissional button {
+  border: none;
+  border-radius: 22px;
+  padding: 11px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.BotaoRecusarProfissional {
+  background-color: #d60000;
+  color: #ffffff;
+}
+
+.BotaoAceitarProfissional {
+  background-color: #54715e;
+  color: #ffffff;
+}
+
+.LadoImagemProfissional {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CarrosselImagemProfissional {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.CarrosselImagemProfissional img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.SetaCarrosselProfissional {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.SetaEsquerdaProfissional {
+  left: 14px;
+}
+
+.SetaDireitaProfissional {
+  right: 14px;
+}
+
+.IndicadoresCarrosselProfissional {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.IndicadorProfissional {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.IndicadorProfissionalAtivo {
+  background-color: #ffffff;
+}
+
+.PlaceholderImagemProfissional {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background-color: #f4f4f4;
+  border: 2px dashed #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #54715e;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.PlaceholderImagemProfissional svg {
+  font-size: 42px;
+}
+
+.PlaceholderImagemProfissional p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .ContainerCardDetalhesProfissional {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    padding: 18px;
+    border-radius: 12px;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+
+  .LadoInfoProfissional {
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .LadoInfoProfissional h2 {
+    font-size: 22px;
+  }
+
+  .MiniCardProfissionalDetalhes {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .AreaDescricaoDetalhesProfissional {
+    height: 240px;
+    max-height: 240px;
+  }
+
+  .LadoImagemProfissional {
+    height: 280px;
+    order: -1;
+  }
+
+  .BotoesDetalhesProfissional {
+    flex-direction: column;
+  }
+
+  .BotoesDetalhesProfissional button {
+    width: 100%;
+  }
+}

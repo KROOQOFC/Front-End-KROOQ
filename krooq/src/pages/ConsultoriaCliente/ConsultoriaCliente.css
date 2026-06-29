@@ -1,0 +1,188 @@
+.ContainerConsultoriaCliente {
+  min-height: 100vh;
+  background-color: #54715e;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.AreaNavBarMensagens {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  right: 20px;
+  z-index: 3;
+}
+
+.AreaNavConsultoriaProfissionais {
+  position: absolute;
+  top: 90px;
+  left: 250px;
+  z-index: 2;
+}
+
+.AreaNavConsultoriaModoChat {
+  top: 15px;
+}
+
+.AreaCardsProfissionais {
+  position: absolute;
+  top: 215px;
+  left: 285px;
+  right: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 2;
+}
+
+.OverlayDetalhesProfissional {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 210px;
+  box-sizing: border-box;
+}
+
+.AreaChatProfissionais {
+  position: absolute;
+  top: 140px;
+  left: 265px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  z-index: 2;
+}
+
+.AreaListaConversasProfissionais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .ContainerConsultoriaCliente {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  .AreaNavBarMensagens {
+    width: 70%;
+    margin-left: -38%;
+    top: 10px;
+  }
+
+  .AreaNavBarMensagens .MensagensNavBarConsultoria {
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    border-radius: 8px;
+    position: static;
+  }
+
+  .AreaNavBarMensagens .TituloMensagens {
+    font-size: 15px;
+  }
+
+  .AreaNavBarMensagens .AcoesMensagens {
+    gap: 7px;
+  }
+
+  .AreaNavBarMensagens .IconeMensagens {
+    font-size: 15px;
+  }
+
+  .AreaNavBarMensagens .BadgeIcone {
+    width: 11px;
+    height: 11px;
+    font-size: 6px;
+  }
+
+  .AreaNavBarMensagens .LinhaSeparadora,
+  .AreaNavBarMensagens .NomeUsuario,
+  .AreaNavBarMensagens .EmailUsuario {
+    display: none;
+  }
+
+  .AreaNavBarMensagens .PerfilPadrao,
+  .AreaNavBarMensagens .FotoPerfil {
+    width: 28px;
+    height: 28px;
+  }
+
+  .AreaNavBarMensagens .PerfilPadrao {
+    font-size: 17px;
+  }
+
+  .AreaNavConsultoriaProfissionais {
+    position: static;
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 20%;
+    margin-bottom: 12px;
+  }
+
+  .AreaNavConsultoriaModoChat {
+    margin-top: 0;
+    margin-left: 20%;
+    width: 100%;
+  }
+
+  .AreaCardsProfissionais {
+    position: static;
+    width: 100%;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+    display: grid;
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 4px 20px;
+    box-sizing: border-box;
+  }
+
+  .OverlayDetalhesProfissional {
+    padding-left: 0;
+    padding: 20px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .AreaChatProfissionais {
+    position: static;
+    width: 100%;
+    display: block;
+  }
+
+  .AreaListaConversasProfissionais {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .AreaPainelChatCliente {
+    display: none;
+    width: 100%;
+  }
+
+  .ChatAbertoMobile .AreaListaConversasProfissionais {
+    display: none;
+  }
+
+  .ChatAbertoMobile .AreaPainelChatCliente {
+    display: block;
+  }
+}
