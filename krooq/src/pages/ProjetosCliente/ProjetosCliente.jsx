@@ -41,7 +41,7 @@ function ProjetosCliente() {
       descricao: "Projeto finalizado com acompanhamento completo",
       progresso: "100%",
       prazo: "Finalizado",
-      cor: "#54715e",
+      cor: "#3d5f47",
       status: "Finalizado",
     },
     {
@@ -49,7 +49,7 @@ function ProjetosCliente() {
       descricao: "Construção e organização do espaço externo",
       progresso: "100%",
       prazo: "Finalizado",
-      cor: "#54715e",
+      cor: "#3d5f47",
       status: "Finalizado",
     },
   ];
