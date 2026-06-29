@@ -48,7 +48,7 @@ function NavegationLateralCliente() {
               </li>
 
               <li>
-                <NavLink to="/projetos" className="linkMenuCliente">
+                <NavLink to="/projetosCliente" className="linkMenuCliente">
                   <img src={IconeProjetos} alt="Projetos" />
                   <span>Projetos</span>
                 </NavLink>
