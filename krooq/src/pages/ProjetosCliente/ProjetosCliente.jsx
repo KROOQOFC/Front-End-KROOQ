@@ -60,14 +60,21 @@ function ProjetosCliente() {
           titulo: "Renderização da fachada iniciada",
           descricao:
             "Foram ajustados os volumes principais da fachada e aplicada a primeira proposta de materiais externos.",
-          fotos: [],
+          fotos: [
+            "Fachada frontal",
+            "Detalhe lateral",
+            "Entrada principal",
+            "Volume superior",
+            "Textura externa",
+            "Iluminação externa",
+          ],
         },
         {
           data: "26/06/2026",
           titulo: "Modelagem 3D concluída",
           descricao:
             "A estrutura principal da fachada foi finalizada com base nas referências enviadas pelo cliente.",
-          fotos: [],
+          fotos: ["Modelo 3D", "Vista lateral", "Vista superior", "Comparativo"],
         },
       ],
     },
@@ -98,7 +105,7 @@ function ProjetosCliente() {
           titulo: "Layout dos ambientes atualizado",
           descricao:
             "Foi criada uma nova proposta de distribuição dos móveis da sala e dos quartos.",
-          fotos: [],
+          fotos: ["Sala", "Cozinha", "Quarto", "Banheiro", "Área de serviço"],
         },
       ],
     },
@@ -131,7 +138,7 @@ function ProjetosCliente() {
           titulo: "Projeto finalizado",
           descricao:
             "Área gourmet entregue com organização final dos espaços e acabamentos aprovados.",
-          fotos: [],
+          fotos: ["Resultado final", "Churrasqueira", "Bancada", "Iluminação"],
         },
       ],
     },
@@ -174,6 +181,11 @@ function ProjetosCliente() {
     }
 
     setModalDetalhesAberto(true);
+  }
+
+  function abrirEdicaoPeloDetalhes() {
+    setModalDetalhesAberto(false);
+    setModalEditarAberto(true);
   }
 
   function salvarEdicaoProjeto(projetoEditado) {
@@ -311,6 +323,7 @@ function ProjetosCliente() {
         projeto={projetoSelecionado}
         aoFechar={() => setModalDetalhesAberto(false)}
         aoFinalizar={finalizarProjeto}
+        aoEditarProjeto={abrirEdicaoPeloDetalhes}
       />
     </div>
   );

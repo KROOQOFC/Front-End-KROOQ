@@ -9,6 +9,7 @@ import {
   FaCalendarAlt,
   FaCamera,
   FaFlagCheckered,
+  FaPen,
 } from "react-icons/fa";
 
 function ModalDetalhesProjetoCliente({
@@ -16,6 +17,7 @@ function ModalDetalhesProjetoCliente({
   projeto,
   aoFechar,
   aoFinalizar,
+  aoEditarProjeto,
 }) {
   if (!aberto || !projeto) return null;
 
@@ -64,8 +66,8 @@ function ModalDetalhesProjetoCliente({
 
           <div className="CardResumoDetalhesProjetoCliente">
             <FaCalendarAlt />
-            <span>Prazo</span>
-            <strong>{projeto.prazo}</strong>
+            <span>Data final</span>
+            <strong>{projeto.dataFim || projeto.prazo}</strong>
           </div>
 
           <div className="CardResumoDetalhesProjetoCliente">
@@ -149,12 +151,20 @@ function ModalDetalhesProjetoCliente({
                     <p>{atualizacao.descricao}</p>
 
                     <div className="FotosAtualizacaoDetalhesProjetoCliente">
-                      <div className="FotoFakeDetalhesProjetoCliente">
-                        Foto da obra
-                      </div>
-                      <div className="FotoFakeDetalhesProjetoCliente">
-                        Antes / Depois
-                      </div>
+                      {(atualizacao.fotos || []).length === 0 ? (
+                        <div className="FotoFakeDetalhesProjetoCliente">
+                          Sem fotos nesta atualização
+                        </div>
+                      ) : (
+                        atualizacao.fotos.map((foto, fotoIndex) => (
+                          <div
+                            className="FotoFakeDetalhesProjetoCliente"
+                            key={fotoIndex}
+                          >
+                            {foto}
+                          </div>
+                        ))
+                      )}
                     </div>
                   </div>
                 ))
@@ -173,13 +183,23 @@ function ModalDetalhesProjetoCliente({
           </button>
 
           {projeto.status === "Em andamento" && (
-            <button
-              type="button"
-              className="BotaoFinalizarDetalhesProjetoCliente"
-              onClick={() => aoFinalizar(projeto)}
-            >
-              <FaFlagCheckered /> Finalizar projeto
-            </button>
+            <>
+              <button
+                type="button"
+                className="BotaoEditarDetalhesProjetoCliente"
+                onClick={aoEditarProjeto}
+              >
+                <FaPen /> Editar prazo/orçamento
+              </button>
+
+              <button
+                type="button"
+                className="BotaoFinalizarDetalhesProjetoCliente"
+                onClick={() => aoFinalizar(projeto)}
+              >
+                <FaFlagCheckered /> Finalizar projeto
+              </button>
+            </>
           )}
         </div>
       </div>
