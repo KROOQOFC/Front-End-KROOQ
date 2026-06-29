@@ -1,0 +1,295 @@
+.OverlayModalDetalhesProjetoCliente {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.ModalDetalhesProjetoCliente {
+  width: 980px;
+  max-width: 100%;
+  max-height: 90vh;
+  background-color: #f8f8f8;
+  border-radius: 18px;
+  padding: 28px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.TopoModalDetalhesProjetoCliente {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.TopoModalDetalhesProjetoCliente p {
+  margin: 0 0 5px;
+  color: #54715e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.TopoModalDetalhesProjetoCliente h2 {
+  margin: 0;
+  color: #1d1d1d;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.BotaoFecharModalDetalhesProjetoCliente {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: #54715e;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ResumoDetalhesProjetoCliente {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.CardResumoDetalhesProjetoCliente {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 105px;
+}
+
+.CardResumoDetalhesProjetoCliente svg {
+  color: #54715e;
+  font-size: 20px;
+}
+
+.CardResumoDetalhesProjetoCliente span {
+  color: #777;
+  font-size: 12px;
+}
+
+.CardResumoDetalhesProjetoCliente strong {
+  color: #1d1d1d;
+  font-size: 13px;
+}
+
+.BlocoProgressoDetalhesProjetoCliente {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 22px;
+}
+
+.BlocoProgressoDetalhesProjetoCliente > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.BlocoProgressoDetalhesProjetoCliente span {
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.BlocoProgressoDetalhesProjetoCliente strong {
+  color: #1d1d1d;
+  font-size: 15px;
+}
+
+.BarraDetalhesProjetoCliente {
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.BarraDetalhesProjetoClientePreenchida {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.ConteudoModalDetalhesProjetoCliente {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 22px;
+}
+
+.SecaoDetalhesProjetoCliente {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.SecaoDetalhesProjetoCliente h3 {
+  margin: 0 0 16px;
+  color: #1d1d1d;
+  font-size: 17px;
+}
+
+.ListaTarefasDetalhesProjetoCliente,
+.ListaAtualizacoesDetalhesProjetoCliente {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ItemTarefaDetalhesProjetoCliente {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.IconeTarefaDetalhesProjetoCliente {
+  font-size: 18px;
+}
+
+.ItemTarefaDetalhesProjetoCliente strong {
+  display: block;
+  color: #1d1d1d;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.ItemTarefaDetalhesProjetoCliente span {
+  color: #777;
+  font-size: 11px;
+}
+
+.CardAtualizacaoDetalhesProjetoCliente {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.TopoAtualizacaoDetalhesProjetoCliente {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.TopoAtualizacaoDetalhesProjetoCliente span {
+  color: #777;
+  font-size: 11px;
+}
+
+.TopoAtualizacaoDetalhesProjetoCliente h4 {
+  margin: 3px 0 0;
+  color: #1d1d1d;
+  font-size: 14px;
+}
+
+.TopoAtualizacaoDetalhesProjetoCliente svg {
+  color: #54715e;
+}
+
+.CardAtualizacaoDetalhesProjetoCliente p {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.FotosAtualizacaoDetalhesProjetoCliente {
+  display: flex;
+  gap: 10px;
+}
+
+.FotoFakeDetalhesProjetoCliente {
+  width: 120px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: rgba(84, 113, 94, 0.15);
+  border: 1px dashed rgba(84, 113, 94, 0.5);
+  color: #54715e;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TextoVazioDetalhesProjetoCliente {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.RodapeModalDetalhesProjetoCliente {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.BotaoFecharDetalhesProjetoCliente,
+.BotaoFinalizarDetalhesProjetoCliente {
+  border: none;
+  border-radius: 22px;
+  padding: 12px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.BotaoFecharDetalhesProjetoCliente {
+  background-color: #e4e4e4;
+  color: #333;
+}
+
+.BotaoFinalizarDetalhesProjetoCliente {
+  background-color: #54715e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .OverlayModalDetalhesProjetoCliente {
+    padding: 14px;
+  }
+
+  .ModalDetalhesProjetoCliente {
+    padding: 22px;
+  }
+
+  .ResumoDetalhesProjetoCliente,
+  .ConteudoModalDetalhesProjetoCliente {
+    grid-template-columns: 1fr;
+  }
+
+  .RodapeModalDetalhesProjetoCliente {
+    flex-direction: column;
+  }
+
+  .BotaoFecharDetalhesProjetoCliente,
+  .BotaoFinalizarDetalhesProjetoCliente {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -6,10 +6,12 @@ import MensagensNavBar from "../../components/MensagensNavBar/MensagensNavBar";
 import CardProjetoCliente from "../../components/CardProjetoCliente/CardProjetoCliente";
 import ModalCriarProjetoCliente from "../../components/ModalCriarProjetoCliente/ModalCriarProjetoCliente";
 import ModalEditarProjetoCliente from "../../components/ModalEditarProjetoCliente/ModalEditarProjetoCliente";
+import ModalDetalhesProjetoCliente from "../../components/ModalDetalhesProjetoCliente/ModalDetalhesProjetoCliente";
 
 function ProjetosCliente() {
   const [modalCriarAberto, setModalCriarAberto] = useState(false);
   const [modalEditarAberto, setModalEditarAberto] = useState(false);
+  const [modalDetalhesAberto, setModalDetalhesAberto] = useState(false);
   const [projetoSelecionado, setProjetoSelecionado] = useState(null);
 
   const [projetosEmEspera, setProjetosEmEspera] = useState([
@@ -40,11 +42,34 @@ function ProjetosCliente() {
       dataFim: "2026-08-15",
       orcamento: "R$ 15.000",
       profissionalDesejado: "Arquiteto",
+      profissionalResponsavel: "Carlos Henrique",
       descricao: "Maquete 3D e renderização da fachada externa",
       progresso: "85%",
       prazo: "Entrega em 3 dias",
       cor: "#0b2a57",
       status: "Em andamento",
+      tarefas: [
+        { nome: "Levantamento de medidas", status: "Concluída" },
+        { nome: "Modelagem 3D da fachada", status: "Concluída" },
+        { nome: "Renderização final", status: "Em andamento" },
+        { nome: "Entrega dos arquivos", status: "Pendente" },
+      ],
+      atualizacoes: [
+        {
+          data: "28/06/2026",
+          titulo: "Renderização da fachada iniciada",
+          descricao:
+            "Foram ajustados os volumes principais da fachada e aplicada a primeira proposta de materiais externos.",
+          fotos: [],
+        },
+        {
+          data: "26/06/2026",
+          titulo: "Modelagem 3D concluída",
+          descricao:
+            "A estrutura principal da fachada foi finalizada com base nas referências enviadas pelo cliente.",
+          fotos: [],
+        },
+      ],
     },
     {
       id: 3,
@@ -55,11 +80,27 @@ function ProjetosCliente() {
       dataFim: "2026-08-30",
       orcamento: "R$ 12.000",
       profissionalDesejado: "Designer",
+      profissionalResponsavel: "Mariana Lopes",
       descricao: "Apartamento 402 – Detalhamento executivo",
       progresso: "68%",
       prazo: "Entrega em 5 dias",
       cor: "#ff9f1c",
       status: "Em andamento",
+      tarefas: [
+        { nome: "Briefing com cliente", status: "Concluída" },
+        { nome: "Paleta de cores", status: "Concluída" },
+        { nome: "Layout dos ambientes", status: "Em andamento" },
+        { nome: "Detalhamento executivo", status: "Pendente" },
+      ],
+      atualizacoes: [
+        {
+          data: "27/06/2026",
+          titulo: "Layout dos ambientes atualizado",
+          descricao:
+            "Foi criada uma nova proposta de distribuição dos móveis da sala e dos quartos.",
+          fotos: [],
+        },
+      ],
     },
   ]);
 
@@ -73,11 +114,26 @@ function ProjetosCliente() {
       dataFim: "2026-05-20",
       orcamento: "R$ 22.000",
       profissionalDesejado: "Arquiteto",
+      profissionalResponsavel: "Ana Ribeiro",
       descricao: "Construção e organização do espaço externo",
       progresso: "100%",
       prazo: "Finalizado",
       cor: "#3d5f47",
       status: "Finalizado",
+      tarefas: [
+        { nome: "Projeto inicial", status: "Concluída" },
+        { nome: "Aprovação do cliente", status: "Concluída" },
+        { nome: "Execução da proposta", status: "Concluída" },
+      ],
+      atualizacoes: [
+        {
+          data: "20/05/2026",
+          titulo: "Projeto finalizado",
+          descricao:
+            "Área gourmet entregue com organização final dos espaços e acabamentos aprovados.",
+          fotos: [],
+        },
+      ],
     },
   ]);
 
@@ -97,6 +153,8 @@ function ProjetosCliente() {
       prazo: "Aguardando profissional",
       cor: novoProjeto.cor || "#d8a63f",
       status: "Em espera",
+      tarefas: [],
+      atualizacoes: [],
     };
 
     setProjetosEmEspera((projetosAtuais) => [
@@ -107,11 +165,15 @@ function ProjetosCliente() {
     setModalCriarAberto(false);
   }
 
-  function abrirEditarProjeto(projeto) {
-    if (projeto.status === "Finalizado") return;
-
+  function abrirProjeto(projeto) {
     setProjetoSelecionado(projeto);
-    setModalEditarAberto(true);
+
+    if (projeto.status === "Em espera") {
+      setModalEditarAberto(true);
+      return;
+    }
+
+    setModalDetalhesAberto(true);
   }
 
   function salvarEdicaoProjeto(projetoEditado) {
@@ -159,6 +221,7 @@ function ProjetosCliente() {
     setProjetosFinalizados((projetos) => [projetoFormatado, ...projetos]);
 
     setModalEditarAberto(false);
+    setModalDetalhesAberto(false);
     setProjetoSelecionado(null);
   }
 
@@ -193,7 +256,7 @@ function ProjetosCliente() {
               <CardProjetoCliente
                 projeto={projeto}
                 key={projeto.id}
-                onClick={() => abrirEditarProjeto(projeto)}
+                onClick={() => abrirProjeto(projeto)}
               />
             ))}
           </div>
@@ -207,7 +270,7 @@ function ProjetosCliente() {
               <CardProjetoCliente
                 projeto={projeto}
                 key={projeto.id}
-                onClick={() => abrirEditarProjeto(projeto)}
+                onClick={() => abrirProjeto(projeto)}
               />
             ))}
           </div>
@@ -218,7 +281,11 @@ function ProjetosCliente() {
 
           <div className="GridProjetosCliente">
             {projetosFinalizados.map((projeto) => (
-              <CardProjetoCliente projeto={projeto} key={projeto.id} />
+              <CardProjetoCliente
+                projeto={projeto}
+                key={projeto.id}
+                onClick={() => abrirProjeto(projeto)}
+              />
             ))}
           </div>
         </section>
@@ -236,6 +303,13 @@ function ProjetosCliente() {
         aoFechar={() => setModalEditarAberto(false)}
         aoSalvar={salvarEdicaoProjeto}
         aoRemover={removerProjetoEmEspera}
+        aoFinalizar={finalizarProjeto}
+      />
+
+      <ModalDetalhesProjetoCliente
+        aberto={modalDetalhesAberto}
+        projeto={projetoSelecionado}
+        aoFechar={() => setModalDetalhesAberto(false)}
         aoFinalizar={finalizarProjeto}
       />
     </div>
