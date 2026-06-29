@@ -201,7 +201,7 @@ function ConsultoriaCliente() {
 
   return (
     <div className="ContainerConsultoriaCliente">
-      <NavegationLateral />
+      <NavegationLateralCliente />
 
       {mostrarProfissionais && (
         <div className="AreaNavBarMensagens">
