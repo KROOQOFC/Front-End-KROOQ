@@ -2,7 +2,7 @@
   min-height: 100vh;
   background-color: #54715e;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .AreaMensagensProjetosCliente {
@@ -14,11 +14,28 @@
 }
 
 .ConteudoProjetosCliente {
-  position: relative;
+  position: fixed;
+  top: 115px;
+  left: 250px;
+  right: 30px;
+  bottom: 25px;
   z-index: 2;
-  margin-left: 250px;
-  padding: 115px 40px 40px 0;
   box-sizing: border-box;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.ConteudoProjetosCliente::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ConteudoProjetosCliente::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ConteudoProjetosCliente::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
 }
 
 .TopoProjetosCliente {
@@ -50,7 +67,7 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 0;
 }
 
 .BotaoCriarProjetoCliente:hover {
@@ -75,14 +92,19 @@
 }
 
 @media (max-width: 768px) {
+  .ContainerProjetosCliente {
+    overflow-y: auto;
+  }
+
   .AreaMensagensProjetosCliente {
     position: static;
     padding: 20px;
   }
 
   .ConteudoProjetosCliente {
-    margin-left: 0;
+    position: static;
     padding: 20px;
+    overflow: visible;
   }
 
   .TopoProjetosCliente {
