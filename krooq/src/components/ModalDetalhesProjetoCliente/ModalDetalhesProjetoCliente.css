@@ -60,7 +60,7 @@
   height: 34px;
   border: none;
   border-radius: 50%;
-  background-color: #E35336;
+  background-color: #e35336;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -280,7 +280,6 @@
   margin-top: 22px;
 }
 
-.BotaoFecharDetalhesProjetoCliente,
 .BotaoEditarDetalhesProjetoCliente,
 .BotaoFinalizarDetalhesProjetoCliente {
   border: none;
@@ -291,13 +290,8 @@
   cursor: pointer;
 }
 
-.BotaoFecharDetalhesProjetoCliente {
-  background-color: #e4e4e4;
-  color: #333;
-}
-
 .BotaoEditarDetalhesProjetoCliente {
-  background-color: #E35336;
+  background-color: #e35336;
   color: #fff;
   display: flex;
   align-items: center;
@@ -330,7 +324,6 @@
     flex-direction: column;
   }
 
-  .BotaoFecharDetalhesProjetoCliente,
   .BotaoEditarDetalhesProjetoCliente,
   .BotaoFinalizarDetalhesProjetoCliente {
     width: 100%;

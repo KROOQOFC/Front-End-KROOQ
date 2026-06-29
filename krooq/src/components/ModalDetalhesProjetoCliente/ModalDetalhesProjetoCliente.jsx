@@ -174,14 +174,6 @@ function ModalDetalhesProjetoCliente({
         </div>
 
         <div className="RodapeModalDetalhesProjetoCliente">
-          <button
-            type="button"
-            className="BotaoFecharDetalhesProjetoCliente"
-            onClick={aoFechar}
-          >
-            Fechar
-          </button>
-
           {projeto.status === "Em andamento" && (
             <>
               <button
