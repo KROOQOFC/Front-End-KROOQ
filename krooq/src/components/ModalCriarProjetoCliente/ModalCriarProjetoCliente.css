@@ -43,7 +43,7 @@
 
 .TopoModalCriarProjetoCliente p {
   margin: 0 0 4px;
-  color: #E35336;
+  color: #e35336;
   font-size: 13px;
   font-weight: 600;
 }
@@ -111,6 +111,41 @@
 .GrupoCampoProjetoCliente input:focus,
 .GrupoCampoProjetoCliente textarea:focus {
   border-color: #54715e;
+}
+
+.CampoCorProjetoCliente {
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(84, 113, 94, 0.35);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.CampoCorProjetoCliente input {
+  width: 34px;
+  height: 34px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.CampoCorProjetoCliente span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.CampoCorProjetoCliente p {
+  margin: 0;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .UploadFotosProjetoCliente {

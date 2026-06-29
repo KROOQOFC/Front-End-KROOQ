@@ -13,6 +13,7 @@ function ModalCriarProjetoCliente({ aberto, aoFechar, aoCriarProjeto }) {
     profissionalDesejado: "",
     descricao: "",
     fotos: [],
+    cor: "#d8a63f",
   });
 
   if (!aberto) return null;
@@ -37,6 +38,7 @@ function ModalCriarProjetoCliente({ aberto, aoFechar, aoCriarProjeto }) {
       profissionalDesejado: "",
       descricao: "",
       fotos: [],
+      cor: "#d8a63f",
     });
   }
 
@@ -126,6 +128,21 @@ function ModalCriarProjetoCliente({ aberto, aoFechar, aoCriarProjeto }) {
                 atualizarCampo("profissionalDesejado", e.target.value)
               }
             />
+          </div>
+
+          <div className="GrupoCampoProjetoCliente">
+            <label>Cor do projeto</label>
+
+            <div className="CampoCorProjetoCliente">
+              <input
+                type="color"
+                value={dadosProjeto.cor}
+                onChange={(e) => atualizarCampo("cor", e.target.value)}
+              />
+
+              <span style={{ backgroundColor: dadosProjeto.cor }}></span>
+              <p>{dadosProjeto.cor}</p>
+            </div>
           </div>
 
           <div className="GrupoCampoProjetoCliente CampoGrandeProjetoCliente">

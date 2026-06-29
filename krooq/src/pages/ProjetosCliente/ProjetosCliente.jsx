@@ -95,7 +95,7 @@ function ProjetosCliente() {
       fotos: novoProjeto.fotos,
       progresso: "0%",
       prazo: "Aguardando profissional",
-      cor: "#d8a63f",
+      cor: novoProjeto.cor || "#d8a63f",
       status: "Em espera",
     };
 
@@ -150,17 +150,13 @@ function ProjetosCliente() {
       status: "Finalizado",
       progresso: "100%",
       prazo: "Finalizado",
-      cor: "#3d5f47",
     };
 
     setProjetosEmAndamento((projetos) =>
       projetos.filter((projeto) => projeto.id !== projetoFinalizado.id)
     );
 
-    setProjetosFinalizados((projetos) => [
-      projetoFormatado,
-      ...projetos,
-    ]);
+    setProjetosFinalizados((projetos) => [projetoFormatado, ...projetos]);
 
     setModalEditarAberto(false);
     setProjetoSelecionado(null);

@@ -49,8 +49,8 @@ function ModalEditarProjetoCliente({
 
         <div className="AvisoEditarProjetoCliente">
           {projetoEmEspera
-            ? "Este projeto ainda está em espera. Você pode editar todas as informações ou remover a solicitação."
-            : "Este projeto já foi iniciado. Agora você pode alterar apenas datas, orçamento e finalizar o projeto."}
+            ? "Este projeto ainda está em espera. Você pode editar todas as informações, remover a solicitação e personalizar a cor do card."
+            : "Este projeto já foi iniciado. Agora você pode alterar datas, orçamento, cor e finalizar o projeto."}
         </div>
 
         <form className="FormularioEditarProjetoCliente">
@@ -121,6 +121,23 @@ function ModalEditarProjetoCliente({
                 atualizarCampo("profissionalDesejado", e.target.value)
               }
             />
+          </div>
+
+          <div className="GrupoCampoEditarProjetoCliente">
+            <label>Cor do projeto</label>
+
+            <div className="CampoCorEditarProjetoCliente">
+              <input
+                type="color"
+                value={dadosProjeto.cor || "#d8a63f"}
+                onChange={(e) => atualizarCampo("cor", e.target.value)}
+              />
+
+              <span
+                style={{ backgroundColor: dadosProjeto.cor || "#d8a63f" }}
+              ></span>
+              <p>{dadosProjeto.cor || "#d8a63f"}</p>
+            </div>
           </div>
 
           <div className="GrupoCampoEditarProjetoCliente CampoGrandeEditarProjetoCliente">
