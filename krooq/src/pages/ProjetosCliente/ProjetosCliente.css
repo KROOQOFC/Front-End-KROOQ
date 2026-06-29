@@ -16,7 +16,7 @@
 .ConteudoProjetosCliente {
   position: relative;
   z-index: 2;
-  padding: 150px 40px 40px 250px;
+  padding: 95px 40px 40px 250px;
   box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .SubtituloProjetosCliente {
