@@ -1,12 +1,13 @@
 import "./ProjetosCliente.css";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import NavegationLateralCliente from "../../components/NavegationLateralCliente/NavegationLateralCliente";
 import MensagensNavBar from "../../components/MensagensNavBar/MensagensNavBar";
 import CardProjetoCliente from "../../components/CardProjetoCliente/CardProjetoCliente";
+import ModalCriarProjetoCliente from "../../components/ModalCriarProjetoCliente/ModalCriarProjetoCliente";
 
 function ProjetosCliente() {
-  const navigate = useNavigate();
+  const [modalCriarAberto, setModalCriarAberto] = useState(false);
 
   const projetosEmAndamento = [
     {
@@ -71,7 +72,7 @@ function ProjetosCliente() {
 
           <button
             className="BotaoCriarProjetoCliente"
-            onClick={() => navigate("/criar-projeto")}
+            onClick={() => setModalCriarAberto(true)}
           >
             + Criar projeto
           </button>
@@ -97,6 +98,11 @@ function ProjetosCliente() {
           </div>
         </section>
       </main>
+
+      <ModalCriarProjetoCliente
+        aberto={modalCriarAberto}
+        aoFechar={() => setModalCriarAberto(false)}
+      />
     </div>
   );
 }

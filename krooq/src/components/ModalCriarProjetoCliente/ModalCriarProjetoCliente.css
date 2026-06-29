@@ -1,0 +1,210 @@
+.OverlayModalCriarProjetoCliente {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.ModalCriarProjetoCliente {
+  width: 850px;
+  max-width: 100%;
+  max-height: 90vh;
+  background-color: #f8f8f8;
+  border-radius: 18px;
+  padding: 28px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.ModalCriarProjetoCliente::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ModalCriarProjetoCliente::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ModalCriarProjetoCliente::-webkit-scrollbar-thumb {
+  background: rgba(84, 113, 94, 0.5);
+  border-radius: 20px;
+}
+
+.TopoModalCriarProjetoCliente {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.TopoModalCriarProjetoCliente p {
+  margin: 0 0 4px;
+  color: #54715e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.TopoModalCriarProjetoCliente h2 {
+  margin: 0;
+  color: #1d1d1d;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.BotaoFecharModalCriarProjetoCliente {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: #54715e;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FormularioCriarProjetoCliente {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.GrupoCampoProjetoCliente {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.CampoGrandeProjetoCliente {
+  grid-column: span 2;
+}
+
+.GrupoCampoProjetoCliente label {
+  color: #2c2c2c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.GrupoCampoProjetoCliente input,
+.GrupoCampoProjetoCliente textarea {
+  width: 100%;
+  border: 1px solid rgba(84, 113, 94, 0.35);
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 13px;
+  color: #1d1d1d;
+  background-color: #fff;
+}
+
+.GrupoCampoProjetoCliente textarea {
+  height: 115px;
+  resize: none;
+}
+
+.GrupoCampoProjetoCliente input:focus,
+.GrupoCampoProjetoCliente textarea:focus {
+  border-color: #54715e;
+}
+
+.UploadFotosProjetoCliente {
+  min-height: 120px;
+  border: 2px dashed rgba(84, 113, 94, 0.45);
+  border-radius: 12px;
+  background-color: rgba(84, 113, 94, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  text-align: center;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.UploadFotosProjetoCliente svg {
+  color: #54715e;
+  font-size: 24px;
+}
+
+.UploadFotosProjetoCliente span {
+  color: #1d1d1d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.UploadFotosProjetoCliente small {
+  color: #666;
+  font-size: 11px;
+}
+
+.UploadFotosProjetoCliente input {
+  display: none;
+}
+
+.BotoesModalCriarProjetoCliente {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.BotaoCancelarCriarProjetoCliente,
+.BotaoEnviarCriarProjetoCliente {
+  border: none;
+  border-radius: 22px;
+  padding: 12px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.BotaoCancelarCriarProjetoCliente {
+  background-color: #e4e4e4;
+  color: #333;
+}
+
+.BotaoEnviarCriarProjetoCliente {
+  background-color: #54715e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .OverlayModalCriarProjetoCliente {
+    padding: 14px;
+  }
+
+  .ModalCriarProjetoCliente {
+    padding: 22px;
+  }
+
+  .FormularioCriarProjetoCliente {
+    grid-template-columns: 1fr;
+  }
+
+  .CampoGrandeProjetoCliente,
+  .BotoesModalCriarProjetoCliente {
+    grid-column: span 1;
+  }
+
+  .BotoesModalCriarProjetoCliente {
+    flex-direction: column;
+  }
+
+  .BotaoCancelarCriarProjetoCliente,
+  .BotaoEnviarCriarProjetoCliente {
+    width: 100%;
+    justify-content: center;
+  }
+}
