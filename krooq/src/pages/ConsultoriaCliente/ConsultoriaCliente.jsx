@@ -1,7 +1,7 @@
 import "./ConsultoriaCliente.css";
 import { useState } from "react";
 
-import NavegationLateral from "../../components/NavegationLateral/NavegationLateral";
+import NavegationLateralCliente from "../../components/NavegationLateralCliente/NavegationLateralCliente";
 import MensagensNavBar from "../../components/MensagensNavBar/MensagensNavBar";
 import NavConsultoriaNovosProfissionais from "../../components/NavConsultoriaNovosProfissionais/NavConsultoriaNovosProfissionais";
 import CardEncontrarProfissionais from "../../components/CardEncontrarProfissionais/CardEncontrarProfissionais";

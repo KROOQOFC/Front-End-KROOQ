@@ -13,6 +13,7 @@ import IA from "./pages/IA/IA";
 import Agenda from "./pages/Agenda/Agenda";
 import AgendaCliente from "./pages/AgendaCliente/AgendaCliente";
 import ConsultoriaProfissional from "./pages/ConsultoriaProfissional/ConsultoriaProfissional";
+import ConsultoriaCliente from "./pages/ConsultoriaCliente/ConsultoriaCliente";
 import Profissionais from "./pages/Profissionais/Profissionais";
 import CentralProfissional from "./pages/CentralProfissional/CentralProfissional";
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
@@ -50,6 +51,7 @@ function App() {
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/AgendaCliente" element={<AgendaCliente />} />
         <Route path="/consultoria" element={<ConsultoriaProfissional />} />
+        <Route path="/consultoriaCliente" element={<ConsultoriaCliente />} />
         <Route path="/tarefas" element={<TarefasProfissional />} />
         <Route path="/NovoProjeto" element={<NovoProjeto />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
