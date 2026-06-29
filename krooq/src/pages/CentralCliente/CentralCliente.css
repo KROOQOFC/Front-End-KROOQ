@@ -40,8 +40,8 @@
     color: #fff;
   position: relative;
   position: fixed;
-  top: 360px;
-  left: 673px;
+  top: 380px;
+  left: 905px;
 }
 
 @media (max-width: 768px) {
