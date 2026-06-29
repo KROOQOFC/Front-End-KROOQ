@@ -81,11 +81,9 @@
   border-radius: 50%;
   background-color: #f05a3c;
   color: #ffffff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 26px;
 }
 
@@ -102,7 +100,7 @@
 }
 
 .EmailUsuario {
-  margin: 2px 0 0 0;
+  margin: 2px 0 0;
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
@@ -110,19 +108,20 @@
 
 @media (max-width: 768px) {
   .ContainerMensagensNavBar {
-    width: 75%;
+    width: 100%;
     height: 60px;
     padding: 0 12px;
     border-radius: 8px;
-    position: static;
+    box-sizing: border-box;
   }
 
   .TituloMensagens {
     font-size: 18px;
+    white-space: nowrap;
   }
 
   .AcoesMensagens {
-    gap: 10px;
+    gap: 8px;
   }
 
   .LinhaSeparadora {
@@ -149,7 +148,7 @@
   }
 
   .IconeMensagens {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .BadgeIcone {

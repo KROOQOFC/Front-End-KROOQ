@@ -67,7 +67,6 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 0;
 }
 
 .BotaoCriarProjetoCliente:hover {
@@ -98,7 +97,9 @@
 
   .AreaMensagensProjetosCliente {
     position: static;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 20px 0 90px;
+    box-sizing: border-box;
   }
 
   .ConteudoProjetosCliente {
