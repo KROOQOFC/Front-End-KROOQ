@@ -2,7 +2,7 @@ import "./EspecialistasProfissionais.css";
 
 import imagemProfissionalObra from "../../assets/ObraHomem.png";
 import iconeSeguranca from "../../assets/iconeSeguranca.png";
-import iconeCheck from "../../assets/user-check.png";
+import iconeCheck from "../../assets/user-check.webp";
 import perfil7 from "../../assets/perfil7.webp";
 import perfil6 from "../../assets/perfil6.png";
 import perfil5 from "../../assets/perfil5.png";

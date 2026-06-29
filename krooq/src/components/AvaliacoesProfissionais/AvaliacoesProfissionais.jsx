@@ -1,7 +1,7 @@
 import "./AvaliacoesProfissionais.css";
 
 import VideoBox from "../../assets/VideoBox.png";
-import AspasComentario from "../../assets/AspasComentario.png";
+import AspasComentario from "../../assets/AspasComentario.webp";
 import IconBox from "../../assets/IconBox.png";
 
 import perfil1 from "../../assets/perfil1.png";
