@@ -9,7 +9,7 @@ import ModalCriarProjetoCliente from "../../components/ModalCriarProjetoCliente/
 function ProjetosCliente() {
   const [modalCriarAberto, setModalCriarAberto] = useState(false);
 
-  const projetosEmAndamento = [
+  const [projetosEmAndamento, setProjetosEmAndamento] = useState([
     {
       titulo: "Projeto Residencial",
       descricao: "Maquete 3D e renderização da fachada externa",
@@ -34,7 +34,7 @@ function ProjetosCliente() {
       cor: "#e95f45",
       status: "Em andamento",
     },
-  ];
+  ]);
 
   const projetosFinalizados = [
     {
@@ -54,6 +54,24 @@ function ProjetosCliente() {
       status: "Finalizado",
     },
   ];
+
+  function adicionarProjeto(novoProjeto) {
+    const projetoFormatado = {
+      titulo: novoProjeto.titulo || "Novo projeto",
+      descricao: novoProjeto.descricao || "Projeto cadastrado pelo cliente",
+      progresso: "0%",
+      prazo: "Aguardando profissional",
+      cor: "#54715e",
+      status: "Em andamento",
+    };
+
+    setProjetosEmAndamento((projetosAtuais) => [
+      projetoFormatado,
+      ...projetosAtuais,
+    ]);
+
+    setModalCriarAberto(false);
+  }
 
   return (
     <div className="ContainerProjetosCliente">
@@ -102,6 +120,7 @@ function ProjetosCliente() {
       <ModalCriarProjetoCliente
         aberto={modalCriarAberto}
         aoFechar={() => setModalCriarAberto(false)}
+        aoCriarProjeto={adicionarProjeto}
       />
     </div>
   );
