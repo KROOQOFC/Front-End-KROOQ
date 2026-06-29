@@ -23,13 +23,20 @@
   justify-self: center;
 }
 
-.ExplicacaoEspecialista {
+.ColunaEspecialistas {
   width: 100%;
   max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  transform: translateY(-70px);
+}
+
+.ExplicacaoEspecialista {
+  width: 100%;
   color: white;
   margin: 0;
   transform: none;
-  align-self: end;
 }
 
 .PqEspecialista {
@@ -42,20 +49,16 @@
 .TextoArquiteto {
   font-size: 14px;
   line-height: 1.8;
-  margin: 0 0 28px;
+  margin: 0;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .CardsEspecialistas {
   width: 100%;
-  max-width: 620px;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  grid-column: 2;
-  justify-self: start;
-  align-self: start;
 }
 
 .ServicosConfiaveis,
@@ -143,6 +146,11 @@
     width: 100%;
     max-width: 100%;
     margin: 0;
+  }
+
+  .ColunaEspecialistas {
+    display: contents;
+    transform: none;
   }
 
   .ExplicacaoEspecialista {
