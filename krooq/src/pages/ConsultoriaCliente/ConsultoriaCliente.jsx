@@ -31,7 +31,7 @@ function ConsultoriaCliente() {
         "Profissional especializado em reformas residenciais, planejamento de ambientes e acompanhamento de obras.",
       idade: "34 anos",
       experiencia: "8 anos de experiência",
-      formacao: "Engenharia Civil",
+      formacao: "Engenheiro",
       avaliacao: "4.8",
       projetosRealizados: "32 projetos realizados",
       telefone: "(00) 00000-0000",
@@ -45,7 +45,7 @@ function ConsultoriaCliente() {
       foto: Foto2,
       nome: "Marcos Oliveira",
       tipo: "Profissional",
-      areaAtuacao: "Construção e acabamento",
+      areaAtuacao: "Arquiteto",
       descricao:
         "Profissional com experiência em construção, acabamento, pintura, revestimentos e pequenas reformas.",
       idade: "41 anos",
@@ -64,7 +64,7 @@ function ConsultoriaCliente() {
       foto: Foto3,
       nome: "Fernanda Lima",
       tipo: "Profissional",
-      areaAtuacao: "Design de interiores",
+      areaAtuacao: "Design",
       descricao:
         "Especialista em interiores, organização de ambientes, escolha de móveis, iluminação e decoração residencial.",
       idade: "29 anos",
