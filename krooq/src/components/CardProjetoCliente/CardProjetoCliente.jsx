@@ -1,8 +1,8 @@
 import "./CardProjetoCliente.css";
 
-function CardProjetoCliente({ projeto }) {
+function CardProjetoCliente({ projeto, onClick }) {
   return (
-    <div className="CardProjetoCliente">
+    <div className="CardProjetoCliente" onClick={onClick}>
       <div className="TopoCardProjetoCliente">
         <span
           className="BolinhaCardProjetoCliente"
