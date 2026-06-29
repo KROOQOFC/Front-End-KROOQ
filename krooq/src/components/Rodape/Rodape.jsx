@@ -1,8 +1,8 @@
 import "./Rodape.css";
-import logoNome from "../../assets/logoNome.png";
-import redeinsta from "../../assets/instagram.png";
-import redelinkedin from "../../assets/linkedin.png";
-import redegit from "../../assets/git.png";
+import logoNome from "../../assets/logoNome.webp";
+import redeinsta from "../../assets/instagram.webp";
+import redelinkedin from "../../assets/linkedin.webp";
+import redegit from "../../assets/git.webp";
 import { Link, useNavigate } from "react-router-dom";
 
 function Rodape(props) {

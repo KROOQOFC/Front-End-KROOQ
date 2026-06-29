@@ -1,11 +1,11 @@
 import "./ServicosFornecedor.css"
-import Fornecedor1 from "../../assets/Fornecedor1.png"
-import Fornecedor2 from "../../assets/Fornecedor2.png"
-import Fornecedor3 from "../../assets/Fornecedor3.png"
-import Fornecedor4 from "../../assets/Fornecedor4.png"
-import Fornecedor5 from "../../assets/Fornecedor5.png"
-import Fornecedor6 from "../../assets/Fornecedor6.png"
-import BotaKrooq from "../../assets/BotaKrooq.png"
+import Fornecedor1 from "../../assets/Fornecedor1.webp"
+import Fornecedor2 from "../../assets/Fornecedor2.webp"
+import Fornecedor3 from "../../assets/Fornecedor3.webp"
+import Fornecedor4 from "../../assets/Fornecedor4.webp"
+import Fornecedor5 from "../../assets/Fornecedor5.webp"
+import Fornecedor6 from "../../assets/Fornecedor6.webp"
+import BotaKrooq from "../../assets/BotaKrooq.webp"
 
 function ServicosFornecedor() {
   return (

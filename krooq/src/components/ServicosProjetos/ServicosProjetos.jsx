@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./ServicosProjetos.css";
 
-import ReformaCozinha from "../../assets/ReformaCozinha.png";
-import CroquiPc from "../../assets/CroquiPc.png";
-import DesignSala from "../../assets/DesignSala.png";
+import ReformaCozinha from "../../assets/ReformaCozinha.webp";
+import CroquiPc from "../../assets/CroquiPc.webp";
+import DesignSala from "../../assets/DesignSala.webp";
 
 function ServicosProjetos() {
   const [imagemAtiva, setImagemAtiva] = useState(0);

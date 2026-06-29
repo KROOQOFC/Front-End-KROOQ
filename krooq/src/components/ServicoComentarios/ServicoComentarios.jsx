@@ -1,12 +1,10 @@
 import { useState } from "react";
 import "./ServicoComentarios.css";
-
 import Comentarios from "../Comentarios/Comentarios";
-
-import ClienteStela from "../../assets/ClienteStela.png";
-import ClienteSheila from "../../assets/ClienteSheila.png";
-import ClienteMarcos from "../../assets/perfil7.png";
-import ClienteAugusto from "../../assets/perfil8.png";
+import ClienteStela from "../../assets/ClienteStela.webp";
+import ClienteSheila from "../../assets/ClienteSheila.webp";
+import ClienteMarcos from "../../assets/perfil7.webp";
+import ClienteAugusto from "../../assets/perfil8.webp";
 
 function ServicoComentarios() {
 

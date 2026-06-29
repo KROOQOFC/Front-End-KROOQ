@@ -1,5 +1,5 @@
 import "./GaleriaHome.css";
-import GaleriaImagem from "../../assets/GaleriaImagem.png";
+import GaleriaImagem from "../../assets/GaleriaImagem.webp";
 
 function GaleriaHome() {
   return (

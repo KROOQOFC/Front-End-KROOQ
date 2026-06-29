@@ -1,7 +1,7 @@
 import "./ServicosEspecialistas.css";
-import Arquiteta from "../../assets/ArquitetaServicos.png"
-import Seta from "../../assets/IconSeta.png"
-import IconUsuario from "../../assets/IconUsuario.png"
+import Arquiteta from "../../assets/ArquitetaServicos.webp"
+import Seta from "../../assets/IconSeta.webp"
+import IconUsuario from "../../assets/IconUsuario.webp"
 
 function ServicosEspecialista() {
   return (

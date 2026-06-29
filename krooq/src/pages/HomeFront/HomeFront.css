@@ -1,8 +1,8 @@
 .Container-home {
   min-height: 100vh;
   background-image:
-    url("../../assets/FundoHome1.png"),
-    url("../../assets/FundoHome2.png");
+    url("../../assets/FundoHome1.webp"),
+    url("../../assets/FundoHome2.webp");
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@
 
 /* img*/
 .imagem {
-  background-image: url("../../assets/CasaHome.png");
+  background-image: url("../../assets/CasaHome.webp");
   background-size: cover;
   background-position: center;
 }

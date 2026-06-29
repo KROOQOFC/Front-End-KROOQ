@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navegation.css";
-import logoTipo from "../../assets/logoTipo.png";
+import logoTipo from "../../assets/logoTipo.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { pegarUsuarioLogado, sairDaConta } from "../../services/authService";
 

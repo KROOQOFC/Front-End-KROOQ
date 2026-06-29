@@ -1,5 +1,5 @@
 import "./Comentarios.css";
-import AspasComentario from "../../assets/AspasComentario.png";
+import AspasComentario from "../../assets/AspasComentario.webp";
 
 function Comentarios({ titulo, texto, nome, cargo, foto, ativo = false }) {
   return (

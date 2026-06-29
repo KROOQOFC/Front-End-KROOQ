@@ -1,8 +1,8 @@
 import "./HeroProfissionais.css";
-import perfil8 from "../../assets/perfil8.png";
-import obras from "../../assets/obras(2).png";
+import perfil8 from "../../assets/perfil8.webp";
+import obras from "../../assets/obras(2).webp";
 import { Link } from "react-router-dom";
-import IconeCheck from "../../assets/user-check.png";
+import IconeCheck from "../../assets/user-check.webp";
 
 function HeroProfissionais() {
   return (

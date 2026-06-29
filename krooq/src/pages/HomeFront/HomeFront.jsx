@@ -2,10 +2,10 @@ import "./HomeFront.css";
 import DoisButtons from "../../components/DoisButtons/DoisButtons";
 import Navegation from "../../components/Navegation/Navegation";
 import Card from "../../components/Card/Card";
-import CasaExecu from "../../assets/CasaExecu.png";
-import CasaPlaneja from "../../assets/CasaPlaneja.png";
+import CasaExecu from "../../assets/CasaExecu.webp";
+import CasaPlaneja from "../../assets/CasaPlaneja.webp";
 import ButtonGreen from "../../components/ButtonGreen/ButtonGreen"
-import CasaAlmeria from "../../assets/CasaAlmeria .png";
+import CasaAlmeria from "../../assets/CasaAlmeria .webp";
 import Rodape from "../../components/Rodape/Rodape";
 import GaleriaHome from "../../components/GaleriaHome/GaleriaHome";
 

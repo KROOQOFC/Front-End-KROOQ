@@ -1,7 +1,7 @@
-import pessoasCasa from "../../assets/servicosPessoasCasa.png";
-import linkedin from "../../assets/linkedin.png";
-import instagram from "../../assets/instagram.png";
-import github from "../../assets/git.png";
+import pessoasCasa from "../../assets/servicosPessoasCasa.webp";
+import linkedin from "../../assets/linkedin.webp";
+import instagram from "../../assets/instagram.webp";
+import github from "../../assets/git.webp";
 import CardServicosContainer from "../CardServicos/CardServicos";
 import "./ServicosDesejo.css";
 
