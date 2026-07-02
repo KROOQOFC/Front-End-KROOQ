@@ -4,6 +4,13 @@ import NavegationLateral from "../../components/NavegationLateral/NavegationLate
 import CentralHeader from "../../components/CentralHeader/CentralHeader";
 import BotaoTransparenteAdd from "../../components/BotaoTransparenteAdd/BotaoTransparenteAdd";
 import FundoCentral from "../../assets/FundoCentral.png";
+import mapaNP from "../../assets/mapaNP.png";
+import telefoneNP from "../../assets/telefoneNP.png";
+import emailNP from "../../assets/EmailNP.png";
+import bussolaNP from "../../assets/BussolaNP.png";
+import EnvioNP from "../../assets/EnvioNP.png";
+import instagramNP from "../../assets/InstagramNP.png";
+import linkedinNP from "../../assets/LinkedinNP.png";
 
 function NovoProjeto() {
   return (
@@ -67,29 +74,55 @@ function NovoProjeto() {
 
         <button className="btn-enviar">
           ENVIAR PROJETO
+            <img
+    src={EnvioNP}
+    alt="Enviar"
+    className="icone-envio"
+  />
         </button>
 
       </div>
 
       <div className="area-info">
 
-<div className="mapa-fake">
-  MAPA
+  <div className="mapa-fake">
+    <img src={mapaNP} alt="Mapa" />
+  </div>
+
+  <div className="info-contato">
+
+    <div className="item-contato">
+      <img src={telefoneNP} alt="" />
+      <p>+11 0000 - 0000</p>
+    </div>
+
+    <div className="item-contato">
+      <img src={emailNP} alt="" />
+      <p>projetos@seuprojeto.com</p>
+    </div>
+
+    <div className="item-contato">
+      <img src={bussolaNP} alt="" />
+      <p>O endereço físico do seu escritório em São Paulo.</p>
+    </div>
+
+  </div>
+
+  <div className="linha-card"></div>
+
+  <p className="titulo-redes">
+    Conecte-se conosco
+  </p>
+
+  <div className="redes-sociais">
+
+    <img src={linkedinNP} alt="LinkedIn" />
+
+    <img src={instagramNP} alt="Instagram" />
+
+  </div>
+
 </div>
-
-        <div className="info-contato">
-
-          <p>(11) 0000-0000</p>
-
-          <p>projetos@empresa.com</p>
-
-          <p>
-            O endereço físico do seu escritório.
-          </p>
-
-        </div>
-
-      </div>
 
     </section>
   );
