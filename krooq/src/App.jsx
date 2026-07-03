@@ -24,12 +24,12 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SobreNos from "./pages/SobreNos/SobreNos";
 import NovoProjeto from "./pages/NovoProjeto/NovoProjeto";
 import CentralCliente from "./pages/CentralCliente/CentralCliente";
-import VLibras from "./components/VLibras/VLibras";
+
 
 function App() {
   return (
     <BrowserRouter>
-      <VLibras />
+      
       <ScrollToTop />
 
       <Routes>
