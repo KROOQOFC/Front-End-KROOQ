@@ -40,7 +40,7 @@ function IA() {
             conceito à lista de compras, tudo em um design futurista feito para elevar sua produtividade.
           </p>
 
-          <Link to="/projetos" className="logobtn">
+          <Link to="/chat-ia" className="logobtn">
             Criar Agora <img src={Vector1} alt="ícone de varinha" />
           </Link>
         </section>
