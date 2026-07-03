@@ -19,16 +19,17 @@ import CentralProfissional from "./pages/CentralProfissional/CentralProfissional
 import TarefasProfissional from "./pages/TarefasProfissional/TarefasProfissional";
 import MeusProjetosProfissional from "./pages/MeusProjetosProfissional/MeusProjetosProfissional";
 import ChatIA from "./pages/ChatIA/ChatIA";
-//import Projetos from "./pages/Projetos/Projetos";
 import ProjetosCliente from "./pages/ProjetosCliente/ProjetosCliente";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SobreNos from "./pages/SobreNos/SobreNos";
-import NovoProjeto from"./pages/NovoProjeto/NovoProjeto"
+import NovoProjeto from "./pages/NovoProjeto/NovoProjeto";
 import CentralCliente from "./pages/CentralCliente/CentralCliente";
+import VLibras from "./components/VLibras/VLibras";
 
 function App() {
   return (
     <BrowserRouter>
+      <VLibras />
       <ScrollToTop />
 
       <Routes>
