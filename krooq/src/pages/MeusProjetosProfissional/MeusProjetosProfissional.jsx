@@ -1,4 +1,4 @@
-/*
+
 import "./MeusProjetosProfissional.css";
 
 import { useState } from "react";
@@ -348,7 +348,7 @@ function MeusProjetosProfissional() {
 }
 
 export default MeusProjetosProfissional;
-*/
+/*
 
 import "./MeusProjetosProfissional.css";
 
@@ -497,4 +497,4 @@ function MeusProjetosProfissional() {
   );
 }
 
-export default MeusProjetosProfissional;
+export default MeusProjetosProfissional;*/
