@@ -56,7 +56,7 @@ function NavegationLateralCliente() {
               </li>
 
               <li>
-                <NavLink to="/krooqia" className="linkMenuCliente">
+                <NavLink to="/Ia" className="linkMenuCliente">
                   <img
                     className="imagem-krooq-ia"
                     src={IconeKrooqIa}

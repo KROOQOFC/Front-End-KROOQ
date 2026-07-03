@@ -59,6 +59,7 @@ function App() {
 
         <Route path="/projetos" element={<MeusProjetosProfissional />} />
         <Route path="/projetosCliente" element={<ProjetosCliente />} />
+        <Route path="/chat-ia" element={<ChatIA />} />
         <Route path="/chat-ia/:id" element={<ChatIA />} />
 
         <Route path="*" element={<Navigate to="/" />} />
