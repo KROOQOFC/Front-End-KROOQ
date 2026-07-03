@@ -33,21 +33,7 @@ function App() {
       <ScrollToTop />
 
       <Routes>
-        <Route
-  path="/"
-  element={
-    <div
-      style={{
-        background: "red",
-        color: "white",
-        fontSize: "40px",
-        padding: "30px",
-      }}
-    >
-      TESTE RAILWAY
-    </div>
-  }
-/><Route path="/" element={<HomeFront />} />
+        <Route path="/" element={<HomeFront />} />
         <Route path="/servicos" element={<Servicos />} />
         <Route path="/ia" element={<IA />} />
 
